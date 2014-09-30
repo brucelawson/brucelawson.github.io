@@ -1,0 +1,678 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>HTML.future - what the web needs next</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+    <link rel="stylesheet" href="/shower/themes/lawson/styles/screen.css">
+    <link rel="stylesheet" href="/shower/themes/lawson/styles/print.css" media="print">
+
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		@-webkit-keyframes flex { to { width:30% } }
+		@-moz-keyframes flex { to { width:30% } }
+		@-o-keyframes flex { to { width:30% } }
+		@keyframes flex { to { width:30% } }
+
+		#Flex .wrapper {
+			width:100%;
+			height:350px;
+			display:-webkit-flex;
+			display:-moz-flex;
+			display:flex;
+			}
+			#Flex .wrapper .item {
+				margin:10px;
+				background:#069;
+				}
+			#Flex .wrapper .item:nth-child(1) {
+				-webkit-flex:1;
+				-moz-flex:1;
+				flex:1;
+				}
+			#Flex .wrapper .item:nth-child(2) {
+				-webkit-flex:2;
+				-moz-flex:2;
+				flex:2;
+				}
+			#Flex .wrapper .item:nth-child(3) {
+				-webkit-flex:3;
+				-moz-flex:3;
+				flex:3;
+				}
+		#Flex:target .wrapper {
+			-webkit-animation:flex 3s linear alternate infinite;
+			-moz-animation:flex 3s linear alternate infinite;
+			-o-animation:flex 3s linear alternate infinite;
+			animation:flex 3s linear alternate infinite;
+			-webkit-animation-delay:2s;
+			-moz-animation-delay:2s;
+			-o-animation-delay:2s;
+			animation-delay:2s;
+			}
+
+/* VADIM */
+
+		.first figcaption  {margin-left:40%; bottom:20%; z-index:9999;}
+		#jakob figcaption {top:17px;font-size:1em;}
+		#acks li {font-size:smaller;}
+		.slide.first header {top: 68%;}
+
+		img.wait {display:none;}
+		section.current img.wait {display:block;}
+	</style>
+
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Web+ What the web needs next</h1>
+		<p><a href="http://brucelawson.co.uk">Bruce Lawson</a></p>
+	</header>
+	<section class="slide cover first">
+		<header>
+			<h2>Web+ <br>what the web needs next</h2>
+			<p>Bruce Lawson</p>
+		</header>
+		<img src="pictures/bruce-html.jpg" alt="bruce in front of 'HTML' sign">
+	</section>
+
+
+
+  	<section class="slide">
+  		<h2>The Big Question</h2>
+  		<blockquote>
+Can the Web compete with Native without losing its soul?
+  		</blockquote>
+  	</section>
+
+	<section class="slide cover">
+		<img src="pictures/loveweb.jpg" alt="badge saying 'I love the web'">
+	</section>
+
+<!--
+	<section class="slide cover">
+		<img src="pictures/disclaimer.gif" alt="great big disclaimer">
+	</section>
+
+-->
+
+	<section class="slide cover">
+		<img src="pictures/breakfast.jpg" alt="breakfast: a cup of tea, a boiled egg and the newspaper">
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/bham-mail.jpg" alt="'Download our app' advertisment for Birmingham Mail newspaper">
+	</section>
+
+
+<section class="slide cover"> <img src="pictures/bhammail1.gif" alt="tweet from Marc Reeves 'Users tend to read around five times as many stories via the app vs desktop site'"> </section>
+<section class="slide cover">
+      <div style="width:50%;">
+    <p>July 2011-12: US Mobile Web users
+          <mark>up 82%</mark>
+          from 52,435,000 to 95,176,000</p>
+    <p>Numbers from Nielsen <cite><a href="http://www.nielsen.com/us/en/reports/2012/state-of-the-media-the-social-media-report-2012.html">State of the Media: the social media report 2012</a></cite>.</p>
+  </div>
+      <img  src="pictures/mobile-web.gif" alt=""> </section>
+<section class="slide cover">
+      <p style="width:50%;">July 2011-12: US Mobile App users
+    <mark>up 85%</mark>
+    from 55,001,000 to 101,802,000</p>
+      <img  src="pictures/mobile-app.jpg" alt=""> </section>
+<section class="slide cover">
+      <div style="width:50%;">
+    <p>July 2011-12: Time spent using Mobile Web
+          <mark>up 22%</mark>
+          .</p>
+    <p>(PC use up 4%, although number of unique users down 4% from 213,253,000 to 204,721,000.</p>
+  </div>
+      <img  src="pictures/mobile-web.gif" alt=""> </section>
+<section class="slide cover">
+      <p  style="width:50%;">July 2011-12: Time spent using Mobile Apps
+    <mark>up 120%</mark>
+    .</p>
+      <img  src="pictures/mobile-app.jpg" alt=""> </section>
+      
+      
+<section class="slide">
+	<h2>It's an App World.<br> The Web Just Lives in It</h2>
+    <blockquote>Today, the U.S. consumer spends an average of 2 hours and 38 minutes per day on smartphones and tablets. 80% of that time (2 hours and 7 minutes) is spent inside apps and 20% (31 minutes) is spent on the mobile web.</blockquote>
+    <cite><a href="http://blog.flurry.com/bid/95723/Flurry-Five-Year-Report-It-s-an-App-World-The-Web-Just-Lives-in-It">blog.flurry.com</a> April, 2013</cite>
+</section>
+
+<section class="slide cover">
+	<img src="pictures/flurry.gif" alt="breakdown of time spent: 80% apps, 20% browser (Safari 12%, Android 4%, Opera Mini 2%)">
+</section>
+
+<section class="slide cover">
+	<img src="pictures/flurry-2014.gif" alt="2013: 80% to 20% split between apps and web; 2014: 86% to 14%">
+</section>
+
+
+<section class="slide cover">
+	<img src="pictures/gap.jpg" alt="mind the gap">
+</section>
+
+<section class="slide cover"> <img src="pictures/bhammail2.gif" alt="series of tweets between me and Marc Reeves answering my question 'why do users read 5 times as much on an app with 'Can only speculate that portability and opportunity of the moment encourages engagement during what would otherwise be 'dead' time'"> </section>
+
+<section class="slide cover"> 
+	<img src="pictures/page-not-found.gif" alt="Page not found error message page">
+</section>
+
+
+<section class="slide cover shout">
+		<h2 style="top:20%">Appcache</h2>
+		<figure>
+			<img src="pictures/appcache-party.png" alt="man alone at party, surrounded by kissing couples">
+			<figcaption class="white">http://www.lollercoasterlab.com/2011/05/forever-alone-this-party-is-crp.html</figcaption>
+		</figure>
+	</section>
+
+	<section class="slide">
+    <h2>SlapDache</h2>
+    <blockquote>The appcache API is another big mistake. It’s the best example of not understanding the problem before designing a solution, and I’m still trying to fix that mess.</blockquote>
+    <a href="http://html5doctor.com/interview-with-ian-hickson-html-editor/"><cite>Hixie</cite></a>
+</section>
+
+
+<section class="slide">
+	<h2>What's wrong with AppCache?</h2>
+	<blockquote>AppCache is declarative -- you give the browser a manifest and magic happens. This has well-documented limitations.</blockquote>
+	<cite>Alex Russell</cite> (sinister mastermind at Google)
+</section>
+
+
+
+	<section class="slide cover">
+			<a href="http://alistapart.com/article/application-cache-is-a-douchebag"><img src="pictures/ALA.gif" alt="screenshot of Jake Archibald's A List Apart article 'appcache is a douchebag'">
+			</a>
+
+	</section>
+
+
+<section class="slide cover shout">
+ <img src="pictures/service-workers.jpg" alt="Service Workers">
+</section>
+
+<section class="slide">
+      <h2>Service Workers CheatSheet</h2>
+      <ul>
+      	<li>registered Service Workers are invoked even when offline, so enable apps that are "offline by default"</li>
+    <li>normal resource loading is the fallback behavior</li>
+    <li><mark>it forces you to have URLs!</mark> Some modern apps platforms have foresaken this core principle of the web and suffer for it. The web should never make the same mistake.</li>
+  </ul>
+ </section>
+
+
+ <section class="slide cover">
+ 	<img src="pictures/lm.jpg" alt="cutaway diagram of Apollo lunar module">
+ </section>
+
+
+<section class="slide cover">
+ 	<img src="pictures/walrus.jpg" alt="cartoon walrus in front of lunar module">
+</section>
+
+<section class="slide cover">
+ 	<img src="pictures/lamp.jpg" alt="cartoon leg with lampshade on top, next to walrus and lunar module">
+</section>
+
+
+
+<section class="slide">
+      <pre><code><mark>nnavigator.serviceWorker.register</mark>
+  ("/*", "/assets/v1/wrkr.js").then(
+    function(serviceWorker) {
+		  console.log("success!");
+		  // call window.location.reload()
+		},
+	  function(why) {
+	    console.error("failed!:", why);
+    }
+);</code></pre>
+</section>
+
+
+<section class="slide cover">
+ 	<img src="pictures/no-worker.gif" alt="browser shows nothing when not connected to web">
+</section>
+
+<section class="slide cover">
+ 	<img src="pictures/with-worker.gif" alt="browser shows site when connected to web worker, even though not connected to web">
+</section>
+
+<section class="slide">
+      <h2>Service Workers + IndexedDB = Power</h2>
+      <blockquote>When combined with access to IndexedDB and a new form of Cache, the ability to respond with arbitrary content is incredibly powerful.</blockquote>
+      <cite><a href="https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md">Service Workers Explained</a></cite> 
+</section>
+
+<section class="slide">
+ <pre><code>this.addEventListener('fetch', 
+ 	function(event) {
+  if (event.request.context == 'image' 
+  	&& new Date().getDay() == 4) {
+    event.respondWith(
+      fetch('/kitten.jpg')
+    ) // thx @jaffathecake
+  } // more: http://youtu.be/4uQMl7mFB6g
+});</code></pre>
+</section>
+
+
+<section class="slide cover">
+	<img src="pictures/ewm.jpg" alt="cartoon of a disco, with 1970s-style fonts reading 'Extensible Web Manifesto'">
+</section>
+
+<section class="slide">
+      <h2>Extensible Web Manifesto</h2>
+      <blockquote>Browser vendors should provide <mark>new low-level capabilities that expose the possibilities of the underlying platform</mark> as closely as possible. They should also seed the discussion of <mark>high-level APIs through JavaScript implementations</mark> of new features</blockquote>
+      <cite><a href="http://extensiblewebmanifesto.org/">extensiblewebmanifesto.org</a></cite>
+ </section>
+
+ <section class="slide cover">
+	<img src="pictures/component.gif" alt="2 superheroes: web component and shadow DOM">
+</section>
+
+<section class="slide">
+    <h2>Web Components</h2>
+    <blockquote>Web Components enable Web application authors to <mark>define widgets with a level of visual richness and interactivity</mark> not possible with CSS alone, and <mark>ease of composition and reuse</mark> not possible with script libraries today.</blockquote>
+    <cite><a href="http://w3c.github.io/webcomponents/explainer/">Introduction to Web Components</a></cite>
+</section>
+
+
+<section class="slide cover">
+	<img src="pictures/gap.jpg" alt="mind the gap">
+</section>
+
+<section class="slide">
+	<h2>More capabilities</h2>
+	<ul>
+	<li>They have access to device-specific functions such as geolocation and accelerometers.
+	<li>They can be used offline
+	</ul>
+	<p><a href="http://ux.stackexchange.com/questions/39262/any-research-on-user-experience-perceptions-of-native-apps-vs-web-or-hybrid-apps/">User Experience Stack Exchange: <cite>Any Research on User Experience Perceptions of Native Apps vs Web or Hybrid Apps?</cite></a></p>
+</section>
+
+
+	<section class="slide cover">
+		<img src="pictures/geolocation.jpg" alt="Geolocation" />
+	</section>
+
+	<section class="slide">
+		<h2>There's an <s>app</s> API for that</h2>
+		<ul>
+			<li>File API</li>
+			<li>Orientation</li>
+			<li>Sensors (humidity, ambient light)</li>
+			<li>WebRTC</li>
+			<li>Drag'n'Drop</li>
+		</ul>
+	</section>
+
+<section class="slide cover">
+<figure>
+	<img src="pictures/rectum.jpg" alt="iOS8">
+	<figcaption><a href="https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HealthKit_Constants/index.html#//apple_ref/c/tdef/HKBodyTemperatureSensorLocation">Apple iOS Developer Library — Pre-Release: HealthKit Constants Reference</a></figcaption>
+</figure>
+</section>
+
+<section class="slide cover">
+	<img src="pictures/phonegap.jpg" alt="phonegap diagram and picture of Brian LeRoux">
+</section>
+
+<section class="slide">
+	<h2>App store discoverability</h2>
+	<blockquote>
+	<p>Device APIs not so much anymore, now that many/most of what is needed is now there or soon to be. (Especially so with WebRTC.)</p>
+<p>App Stores for discovery is big.</p>
+	</blockquote>
+	<cite>Brian "Bobbles Bon-Bon" LeRoux, PhoneGap</cite>
+</section>
+
+<section class="slide">
+	<h2>Moneti<s>z</s>sation</h2>
+	<blockquote>
+		I don't buy the monetization story, because if I did, that means I endorse $1 business models based on manufactured scarcity. ;P
+	</blockquote>
+	<cite>Bobbles Bon-Bon</cite>
+	<p>&hellip;but for Web Payments see <a href="https://web-payments.org">web-payments.org</a></p>
+</section>
+
+<section class="slide cover">
+  <h2>web-payments.org</h2>
+  <img src="pictures/payments.gif" alt="unicode generic currency symbol">
+</section>
+
+<section class="slide">
+	<h2>Web Payments</h2>
+	<blockquote><p>We're creating a set of <mark>universal payment technologies</mark> to make sending and receiving money over the Web <mark>as easy as sending an email</mark>.</p>
+	<p>The Web is going to play a key role in achieving a <mark>resilient financial infrastructure</mark> and creating a <mark>more equitable future for all</mark> of us.</p>
+</blockquote>
+</section>
+
+<section class="slide">
+	<h2>Current work</h2>
+	<ul>
+		<li>Identity</li>
+		<li>Payment initiation</li>
+		<li>Digitial receipts</li>
+	</ul>
+	<p>Thanks <a href="http://twitter.com/manusporny">Manu Sporny</a>, Digital Bazaar</p>
+</section>
+<section class="slide cover">
+	<img src="pictures/phonegap.jpg" alt="phonegap diagram and picture of Brian LeRoux">
+</section>
+
+
+<section class="slide">
+	<h2>Engagement</h2>
+	<blockquote>
+		<mark>Push Notifications</mark> for the engagement part of the story.
+	</blockquote>
+	<cite>"Bobbles Bon-Bon"</cite>
+</section>
+
+<section class="slide">
+	<h2>Engagement</h2>
+	<blockquote>
+		Push Notifications for the <mark>engagement</mark> part of the story.
+	</blockquote>
+	<cite>"Bobbles Bon-Bon"</cite>
+</section>
+
+
+<section class="slide">
+<h2>Superior interaction</h2>
+<ul>
+<li>It can also make their <mark>performance faster</mark> by allowing them to store information locally 
+<li>They allow the user to use <mark>device-specific hand gestures</mark>. Android and iOS are gradually developing different conventions for interaction, and a <mark>native app responds the way its user expects</mark>.
+</ul>
+</section>
+
+<section class="slide">
+	<video controls preload height="450">
+		<source src="pictures/coast.webm" type="video/webm">
+		<source src="pictures/coast.mp4" type="video/mp4">
+	</video>
+	<p><a href="http://operacoast.com">Opera Coast download, developer info</a> (iPad, iPhone)</p>
+</section>
+
+<section class="slide shout">
+	<h2>Performance</h2>
+</section>
+
+<section class="slide">
+<h2>Closing the gap</h2>
+<blockquote>Some of the barriers that I've heard mentioned frequently include performance, in particular when it comes to user interfaces (e.g. scrolling), as it can affect the user experience dramatically</blockquote>
+<cite>W3C:  <a href="http://www.w3.org/QA/2013/03/closing_the_gap_with_native_ap.html">Closing the gap with native apps</a></cite>
+</section>
+
+
+<section class="slide">
+	<h2>&lt;img lazyload&hellip;&gt;</h2>
+	<blockquote>the User Agent MUST delay downloading the resource until after all other elements without the lazyload attribute that will be fetching a resource have started downloading</blockquote>
+	<cite>W3C <a href="https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/ResourcePriorities/Overview.html">Resource Priorities Spec</a></cite>
+</section>
+
+<section class="slide">
+      <h2>Not just &lt;img&gt;</h2>
+      <p><code>img</code>, SVG <code>feImage</code>, <code>audio</code>, <code>video</code>, <code>script</code>, <code>link</code>, <code>embed</code>, <code>iframe</code>, <code>object</code></p>
+      <p>IE11 gives more optimized TCP connection if there is a choice between available connections to resources that don't have the "lazyload" attribute</p>
+ </section>
+
+
+<section class="slide shout">
+	<h2>Interaction</h2>
+</section>
+
+
+<section class="slide">
+	<h2>Usability</h2>
+	<ul>
+	<li>People prefer the familiar; Users trust known resources</li>
+	<li>Mobile users bookmark differently. Bookmarks in mobile browsers are used sparingly, instead <mark>mobile users "bookmark" by downloading the native app</mark>.
+	</ul>
+		<p><a href="http://ux.stackexchange.com/questions/39262/any-research-on-user-experience-perceptions-of-native-apps-vs-web-or-hybrid-apps/">User Experience Stack Exchange</a></p>
+</section>
+
+<section class="slide">
+	<h2>Scott Jenson</h2>
+		<ul>
+			<li><mark>integrate in the list of apps directly available to the user.</mark> This means that it should show up on that OS's home screen and be launched just like any other native app.		
+			<li><mark>integrate into the the OS task-switcher.</mark>
+		</ul>
+			<p>W3C: <a href="http://www.w3.org/QA/2013/08/enabling_new_types_of_web_user.html">Enabling new types of web user experiences</a></p>
+</section>
+
+
+
+<section class="slide cover">
+	<img src="pictures/ATHS1.gif" alt="screeshot of weight.aerotwist.com in Chrome for Android">
+</section>
+<section class="slide cover">
+	<img src="pictures/ATHS2.gif" alt="weight.aerotwist.com with Chrome for Android's menu exposed">
+</section>
+
+<section class="slide cover">
+	<img src="pictures/ATHS3.gif" alt="... scroll down the menu and see 'Add to homescreen' option">
+</section>
+
+<section class="slide cover">
+	<img src="pictures/ATHS4.gif" alt="Android home screen with weight.aerotwist.com icon on it">
+</section>
+
+<section class="slide cover">
+	<img src="pictures/ATHS5.gif" alt="Choosing icon starts weight.aerotwist.com with no browser chrome">
+</section>
+
+
+<section class="slide">
+	<h2>Bookmarking = installing</h2>
+	<p><code>&lt;meta name="mobile-web-app-capable" content="yes"&gt;</code> (see <a href="https://developer.chrome.com/multidevice/android/installtohomescreen">Chrome docs</a>)</p>
+	<p><code>&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;</code> (<a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Apple docs</a>)</p>
+
+</section>
+
+
+<section class="slide">
+	<h2>Web Manifest</h2>
+	<ul>
+				<li><code>&lt;link rel="manifest" href="install.json">
+</code>
+		<li>the web application's name, links to icons
+		<li>the preferred URL to open on launch
+		<li>default orientation, <code>fullscreen</code> indicator
+</ul>
+	<p><a href="http://w3c.github.io/manifest/">w3c.github.io/manifest/</a> - Mozilla's Marvellous Mr Marcos' magical manifest</p>
+</section>
+
+<!--
+<section class="slide">
+	<h2>Installability</h2>
+	<ul>
+	<li>install itself from any web page
+	<li>user experience to install a web app should not be just saving a bookmark. Apps should be able to have an ‘install link' on any web page that starts the <mark>safe process of downloading the app package</mark> to the device.
+	</ul>
+	<p>W3C: <a href="http://www.w3.org/QA/2013/08/enabling_new_types_of_web_user.html">Enabling new types of web user experiences</a></p>
+</section>
+-->
+
+<section class="slide">
+	<h2>W3C Widgets</h2>
+	<blockquote>a packaging format and metadata for &hellip;  full-fledged client-side applications that are authored using technologies such as HTML and then packaged for distribution. Examples range from simple clocks &hellip; to complex applications that pull data from multiple sources</blockquote>
+	<cite><a href="http://www.w3.org/TR/widgets/">W3C Widgets spec</a></cite>
+</section>
+
+<section class="slide cover">
+	<img src="pictures/baby.jpg" alt="old woodcut of woman throwing baby out with bathwater">
+</section>
+
+<section class="slide cover">
+	<img src="pictures/convo.jpg" alt="">
+</section>
+
+<section class="slide cover">
+	<img src="pictures/postbox.jpg" alt="photo of scary Stephen King clown staring out from a postbox slot">
+</section>
+
+
+
+<section class="slide cover">
+	<img src="pictures/loon.jpg" alt="ballon from one of Google's Project Loon">
+</section>
+
+<section class="slide cover">
+	<img src="pictures/internet-org.gif" alt="internet.org logo">
+</section>
+
+
+<section class="slide cover">
+	<img src="pictures/world.jpg" alt="image of the world, with a circle encompassing India, Pakistan, China etc and text 'more people live inside this circle than outside of it">
+</section>
+
+<section class="slide">
+	<h2>Africa</h2>
+	<p><a href="http://www.theguardian.com/world/2014/jun/05/internet-use-mobile-phones-africa-predicted-increase-20-fold">Internet use on mobile phones in Africa predicted to increase 20-fold</a>.</p><p>Researchers say increase will take place in next five years and will be double the rate of growth in rest of world.</p>
+</section>
+
+<section class="slide">
+	<h2>The Smartphone myth</h2>
+<p>Smartphone segment grew in sales by 75% last year, it still represented just 8.1% of overall mobile phone sales in India</p>
+<p><cite><a href="http://articles.timesofindia.indiatimes.com/2013-04-02/telecom/38216822_1_handset-market-cybermedia-research-smartphone-shipments">Times of India, April 2013</a></p>
+</section>
+
+<section class="slide cover">
+	<img src="pictures/phones.gif" alt="list of obscure phones">
+</section>
+
+<section class="slide cover">
+	<img src="pictures/mini.gif" alt="Diagram showing how Opera Mini compresses Facebook from 3.5MB to 680K">
+</section>
+
+<section class="slide cover">
+	<h2>What's so funny about Peace, Love and Progressive Enhancement?</h2>
+	<img src="pictures/love.gif">
+</section>
+
+
+<section class="slide">
+	<h2>Holy Grail App</h2>
+	<blockquote> we've launched our first Holy Grail app into production! &hellip;  It looks exactly the same as the app it replaced, however <mark>initial pageload feels drastically quicker</mark> 
+	</blockquote>
+	<cite><a href="http://nerds.airbnb.com/weve-launched-our-first-nodejs-app-to-product/">AirBnB</a></cite>
+</section>
+
+<section class="slide">
+	<h2>Holy Grail App #2</h2>
+	<blockquote>because we serve up <mark>real HTML instead of waiting for the client to download JavaScript before rendering</mark>. Plus, it is <mark>fully crawlable by search engines</mark>. &hellip; It feels <mark>5x faster</mark>.</blockquote>
+	<cite><a href="http://nerds.airbnb.com/weve-launched-our-first-nodejs-app-to-product/">AirBnB</a></cite>
+</section>
+
+<section class="slide cover">
+	<img src="pictures/prerender.gif" alt="screenshot of prerender.io">
+</section>
+
+<section class="slide cover shout">
+	<h2 style="bottom:0; top:auto;">Stop emulating failure</h2>
+	<img src="pictures/qr-ad.jpg" alt="advert: photo of phone with QR code and text 'scan to download timetables in PDF format">
+</section>
+
+<section class="slide">
+	<h2>What the web needs</h2>
+	<ul>
+		<li>Browser vendors to work together for interop
+		<li>Standards that preserve core strengths of Web
+		<li>An end to silos
+		<li>Web developers to preserve core strengths of Web
+	</ul>
+</section>
+
+<section class="slide">
+	<blockquote><p>An increase in Internet maturity similar to the one
+experienced in mature countries over the past 5 years
+creates an <mark>increase in real GDP per capita of $500</mark> on
+average during this period.<p><mark>It took the Industrial Revolution of the 19th century fifty
+years to produce the same result</mark>.</blockquote>
+<cite><a href="http://www.brucelawson.co.uk/2012/what-good-is-the-web-some-numbers/">McKinsey Global Institute</a></cite>
+</section>
+
+<section class="slide cover">
+	<img src="pictures/guardian-lawsuits.gif" alt="complex diagram of who's suing who in mobile">
+</section>
+
+
+<section class="slide cover">
+	<img src="pictures/tv-off.gif" height=800 width=1024 class="wait" alt="video of an old TV being switched off">
+</section>
+
+
+<!-- will there be a Web for next 5 bn users?-->
+
+
+
+<section class="slide" class="acks">
+<h2>Thanks</h2>
+	<ul style="font-size:.7em;">
+		<li>John Allsopp
+		<li>Jake Archibald
+		<li>Andreas Bovens
+		<li>Marcos Caceres
+		<li>Shwetank Dixit
+		<li>Stuart Langridge
+		<li>Brian Leroux
+		<li>Jo Rabin
+		<li>Alex Russell
+		<li>Manu Sporny
+		<li>Rich Tibbett
+</ul>
+</section>
+
+
+<section class="slide" class="acks">
+<h2>Image acknowledgments</h2>
+	<ul>
+		<li>Me by HTML sign in Tokyo by Doug Schepers (@shepazu)</li>
+		<li>Apps vs Web graphs by <a href="http://blog.flurry.com/bid/95723/Flurry-Five-Year-Report-It-s-an-App-World-The-Web-Just-Lives-in-It">Flurry</a>, used by permission
+		<li><a href="http://www.lollercoasterlab.com/2011/05/forever-alone-this-party-is-crp.html">Appcache party</a>
+		<li>Mind the Gap - <a href="http://en.wikipedia.org/wiki/File:Mind_the_gap_2.JPG">Reinhard Dietrich</a>
+					<li><a href="http://en.wikipedia.org/wiki/File:Google_Loon_Balloon_close_up.jpg">Project loon launch - Doug Coldwell</a>
+	<li>PhoneGap diagram: Adobe; Brian LeRoux pic courtesy of <a href="http:brian.io">Brian</a></li>
+
+</ul>
+</section>
+<section class="slide acks">
+	<ul>
+		<h2>More acknowledgments</h2>
+
+		<li><a href="https://secure.flickr.com/photos/chuckp/5766534/">Conversation photo</a> by <a href="https://secure.flickr.com/photos/chuckp/">Chuck Patch</a>
+		<li>Postbox and clown made by <a href="http://twitter.com/murfalizer">Murfalizer</a>. Clown by <a href="https://secure.flickr.com/photos/ch-villa/8371148068/">Nat Ch Villa</a>
+		<li><a href="http://www.theguardian.com/technology/2010/oct/04/microsoft-motorola-android-patent-lawsuit">Guardian law suits diagram</a> (<a href="https://twitter.com/charlesarthur/status/373469177425956864">by permission Charles Arthur</a>)
+		<li>HTML/ CSS Presentation Framework: <a href="https://github.com/shower/shower">Shower</a> by Vadim Makeev.</li>
+	</ul>
+</section>
+
+	<section class="slide last">
+		<ul>
+			<li><a href="mailto:brucel@opera.com">brucel@opera.com</a></li>
+			<li><a href="http://opera.com/developer">opera.com/developer</a></li>
+			<li><a href="http://brucelawson.co.uk">brucelawson.co.uk</a></li>
+			<li><a href="http://twitter.com/brucel">@brucel</a></li>
+		</ul>
+	</section>
+
+
+
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="/shower/shower.min.js"></script>
+
+</body>
+</html>

@@ -545,3 +545,20 @@ body {
 table {font-size:.7em; }
 th {color:#c00;}
 th, td {border-width:1px; border-color:#ccc; padding:.7em;  }
+
+/* sort out weirdness with karl's live regions and video */
+
+.live-region{
+	display:none;
+	}
+.full .live-region {
+	position:absolute;
+	clip:rect(0 0 0 0);
+	overflow:hidden;
+	margin:-1px;
+	padding:0;
+	width:1px;
+	height:1px;
+	border:none;
+	display:block;
+	}

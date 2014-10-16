@@ -1,0 +1,152 @@
+.layout-center{ margin:0 auto; }
+.clear { clear:both; }
+.float-left { float:left; }
+.float-right { float:right; }
+.text-left { text-align:left; }
+.text-right { text-align:right; }
+.text-center { text-align:center; }
+.text-justify { text-align:justify; }
+.bold { font-weight:bold; }
+.italic { font-style:italic; }
+.underline { border-bottom:1px solid; }
+.highlight { background:#ffc; }
+
+.margin-bottom-zero{
+    margin-bottom: 0;
+}
+
+.stroke{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+  
+.nopadding { padding:0; }
+.noindent { margin-left:0;padding-left:0; }
+.nobullet { list-style:none;list-style-image:none; }
+
+.dl-sidebyside dt { float: left; clear: left; width: 4.5em;}
+.dl-sidebyside dd { white-space: nowrap;}
+
+.hide{display:none;}
+.show{display:block;}
+
+.code-sample{
+    font-family: "Courier New", monospace, serif;
+    font-size: 1em; 
+}
+
+.wrap {
+    word-wrap: break-word;
+}
+
+h3{
+    font-weight: bold;
+}
+
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+sub {
+    top: 0.4em;
+}
+
+.offscreen{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    left: -100000px;
+    width: 1px;
+}
+
+.semi-transparent {
+    background-color: rgba(0,0,0,0.6);
+}
+
+.semi-transparent h2, .semi-transparent h3{
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 1); font-size: 4em;
+}
+
+#Cover h2 {
+    margin: 30px 0 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 70px;
+}
+
+#Cover p {
+    margin: 10px 0 0;
+    text-align: center;
+    color: #FFF;
+    font-style: italic;
+    font-size: 20px;
+}
+
+#Cover p a {
+    color: #FFF;
+}
+
+.light * {
+    color: #fff;
+}
+
+.light code{
+    color: #fff;
+}
+
+.light h2, .light h3 {
+    color: #fff;
+    text-align: center;
+}
+.light * {
+    margin: 10px 0 0;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+}
+.light a {
+    color: #FFF;
+}
+
+.light ol, .light ul {
+    margin-left: 2em;
+}
+
+.firstletter {
+    font-size: 1.5em;
+}
+
+.opener{
+    font-size: 1em;
+}
+
+
+/**
+ *     POPUP STYLES
+ */
+#popup{
+    margin:0;
+    padding:0;
+    border:0;
+    font-family: sans-serif;
+}
+
+#popup header{
+    background-color: #BC2300;
+    color: #eee;
+    font-weight: bold;
+    text-align: center;
+}
+
+#popup main{
+    padding: 1em;
+    line-height: 1.5;
+    font-size: .8em;
+}
+
+#popup footer{}

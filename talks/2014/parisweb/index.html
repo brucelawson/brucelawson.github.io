@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web Components Done Right</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1274, user-scalable=no">
+
+    <link rel="stylesheet" href="/shower/themes/lawson/styles/screen.css">
+    <link rel="stylesheet" href="/shower/themes/lawson/styles/print.css" media="print">
+
+    <link rel="stylesheet" href="custom/css/styles.css">
+    <link rel="stylesheet" href="custom/css/examples.css">
+    <script src="custom/js/jquery-1.10.2.min.js"></script>
+    <script src="custom/js/jquery-ui.js"></script>
+    <script src="custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="custom/js/jquery.backstretch.min.js"></script>
+
+    <!-- Importing Web Component's Polyfill -->
+    <script src="bower_components/platform/platform.js"></script>
+
+    <!-- Importing Custom Elements -->
+    <link rel="import" href="bower_components/img-zoom.html">
+
+    <style>
+        @-webkit-keyframes flex {
+            to {
+                width: 30%
+            }
+        }
+
+        @-moz-keyframes flex {
+            to {
+                width: 30%
+            }
+        }
+
+        @-o-keyframes flex {
+            to {
+                width: 30%
+            }
+        }
+
+        @keyframes flex {
+            to {
+                width: 30%
+            }
+        }
+
+        #Flex .wrapper {
+            width: 100%;
+            height: 350px;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: flex;
+        }
+
+        #Flex .wrapper .item {
+            margin: 10px;
+            background: #069;
+        }
+
+        #Flex .wrapper .item:nth-child(1) {
+            -webkit-flex: 1;
+            -moz-flex: 1;
+            flex: 1;
+        }
+
+        #Flex .wrapper .item:nth-child(2) {
+            -webkit-flex: 2;
+            -moz-flex: 2;
+            flex: 2;
+        }
+
+        #Flex .wrapper .item:nth-child(3) {
+            -webkit-flex: 3;
+            -moz-flex: 3;
+            flex: 3;
+        }
+
+        #Flex:target .wrapper {
+            -webkit-animation: flex 3s linear alternate infinite;
+            -moz-animation: flex 3s linear alternate infinite;
+            -o-animation: flex 3s linear alternate infinite;
+            animation: flex 3s linear alternate infinite;
+            -webkit-animation-delay: 2s;
+            -moz-animation-delay: 2s;
+            -o-animation-delay: 2s;
+            animation-delay: 2s;
+        }
+
+        .first figcaption {
+            margin-left: 40%;
+            bottom: 20%;
+            z-index: 9999;
+        }
+
+        #jakob figcaption {
+            top: 17px;
+            font-size: 1em;
+        }
+
+        #acks li {
+            font-size: smaller;
+        }
+
+        .slide.first header {
+            top: 68%;
+        }
+
+        .slide.first header h2 {
+            font-size: 70px;
+        }
+
+        img.wait {
+            display: none;
+        }
+
+        section.current img.wait {
+            display: block;
+        }
+
+        cite + blockquote {
+            margin-top: 2em;
+        }
+
+    </style>
+</head>
+<body class="list">
+<header class="caption">
+    <h1>
+        Web Components Done Right
+    </h1>
+
+    <p>
+        <a href="http://brucelawson.co.uk">Bruce Lawson</a> and <a href="http://www.karlgroves.com">Karl Groves</a>
+    </p>
+</header>
+
+<section class="slide cover">
+    <img src="pictures/bollocks.jpg"
+         alt="Bruce Lawson, Karl Groves, Web Components Done Right (mimics cover of Sex Pistols' Never Mind The Bollocks' album cover"></h2>
+</section>
+
+<section class="slide cover">
+    <img src="pictures/tpg-opera.jpg" alt="Paciello Group and Opera logos">
+</section>
+
+<section class="slide cover">
+    <img src="pictures/yawn.jpg" alt="woman yawning">
+</section>
+
+<section class="slide cover">
+    <img src="pictures/lawsoc.png"
+         alt="screenshot of ancient version of lawsociety.org.uk with old design, fixed widths">
+</section>
+
+<section class="slide cover">
+    <img src="pictures/lawsoc-tables.png"
+         alt="screenshot of ancient version of lawsociety.org.uk with its many layout table cells highlighted">
+</section>
+
+<section class="slide">
+    <h2>
+        Horrors
+    </h2>
+<pre><code>&lt;table summary="this is a layout table"&gt;
+
+    &lt;img src=spacer.gif alt="spacer"&gt;
+
+    &lt;a href="contact.html"
+    title="click here to contact us"&gt;
+    contact us&lt;/a&gt;
+</code>
+</pre>
+</section>
+
+<section class="slide">
+    <h2>
+        WCAG 1 - table summaries
+    </h2>
+    <blockquote>
+        5.5 Provide summaries for tables. [Priority 3] For example, in HTML, use the "summary" attribute of the TABLE
+        element.
+    </blockquote>
+    <cite><a href="http://www.w3.org/TR/WCAG10/#gl-table-markup">Guideline 5. Create tables that transform
+        gracefully.</a></cite>
+</section>
+
+<section class="slide">
+    <h2>
+        WCAG 1 - alt text
+    </h2>
+    <blockquote>
+        1.1 Provide a text equivalent for every non-text element (e.g., via "alt", "longdesc", or in element content).
+        [Priority 1]
+    </blockquote>
+    <cite><a href="http://www.w3.org/TR/WCAG10/#gl-provide-equivalents">Guideline 1. Provide equivalent alternatives to
+        auditory and visual content.</a></cite>
+</section>
+
+<section class="slide">
+    <h2>
+        WCAG 1 - alt text
+    </h2>
+    <blockquote>
+        1.1 Provide a text equivalent for every non-text element (e.g., via "alt", "longdesc", or in element content).
+        [Priority 1]
+    </blockquote>
+    <cite><a href="http://www.w3.org/TR/WCAG10/#gl-provide-equivalents">Guideline 1. Provide equivalent alternatives to
+        auditory and visual content.</a></cite>
+</section>
+
+<section class="slide">
+    <h2>
+        WCAG 1 - titles on links
+    </h2>
+    <blockquote>
+        13.1 Clearly identify the target of each link. [Priority 2] &hellip; In addition to clear link text, content
+        developers may further clarify the target of a link with an informative link title (e.g., in HTML, the "title"
+        attribute)
+    </blockquote>
+    <cite><a href="http://www.w3.org/TR/WCAG10/#gl-provide-equivalents">Guideline 13. Provide clear navigation
+        mechanisms.</a></cite>
+</section>
+
+<section class="slide">
+    <h2>
+        Problems with these "accessibility" features
+    </h2>
+    <ul>
+        <li>they "bolted on"</li>
+        <li>they were to satisfy conformance checkers</li>
+        <li>they gave a sense of false security</li>
+    </ul>
+</section>
+
+<section class="slide cover">
+    <img src="pictures/ajax.jpg" alt="Horror movie-style poster: 'the night of the AJAX websites'">
+</section>
+
+<section class="slide">
+    <h2>Rich Internet Applications</h2>
+    <blockquote>WAI-ARIA provides a framework for
+        <mark>adding attributes</mark>
+        to identify features for user interaction, how they relate to each other, and their current state. WAI-ARIA
+        describes
+        <mark>new navigation techniques</mark>
+        to mark regions and common Web structures as menus, primary content, secondary content, banner information, and
+        other types of Web structures.
+    </blockquote>
+    <cite><a href=="http://www.w3.org/WAI/intro/aria">W3C</a/></cite>
+</section>
+
+<section class="slide">
+    <h2>
+        WAI-ARIA
+    </h2>
+
+    <ul>
+        <li>cheered me up!</li>
+        <li>More to bolt on</li>
+        <li>complex spec ("Content authors MUST NOT use abstract roles because they are not implemented in the API
+            binding.")
+        </li>
+        <li>hard to test</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>
+        Most developers don't use assistive technologies
+    </h2>
+
+    <p>So they either</p>
+    <ul>
+        <li>don't care and don't bolt anything on</li>
+        <li>do care, but don't understand what they're doing</li>
+        <li>bolt stuff on which then suffers
+            <mark>metadata rot</mark>
+        </li>
+    </ul>
+</section>
+
+<section class="slide cover">
+    <img src="pictures/html5.gif" alt="HTML5 logo">
+</section>
+
+<section class="slide">
+    <h2>Built-in beats bolt-on</h2>
+    <blockquote>
+        <mark>Design features to be accessible to users with disabilities.</mark>
+        Access by everyone regardless of ability is essential. This does not mean that features should be omitted
+        entirely if not all users can make full use of them, but alternate mechanisms should be provided.
+    </blockquote>
+    <cite><a href="http://www.w3.org/TR/html-design-principles/#accessibility">HTML Design Principles: Accessibility</a></cite>
+</section>
+
+<section class="slide">
+    <h2>"HTML is too complex"</h2>
+    <blockquote>The vast majority don’t use any of the semantic elements unless it’s by accident like a thoughtless
+        copy-paste &hellip;<mark>Unless there is an immediate visual or behavioural benefit to using an element, most
+            people will ignore it
+        </mark>
+    </blockquote>
+    <cite><a href="http://studiotendra.com/2014/01/29/html-is-too-complex/">HTML is too complex</a></cite>
+</section>
+
+<section class="slide cover">
+    <img src="pictures/html4-structure.gif"
+         alt="diagram showing HTML divs with author-defined IDs and classes for styling">
+</section>
+
+<section class="slide cover">
+    <img src="pictures/aria-structure.gif"
+         alt="diagram showing same HTML divs with ARIA roles banner, navigation, contentinfo">
+</section>
+
+<section class="slide cover">
+    <img src="pictures/html5-structure.gif"
+         alt="diagram showing same page strucutre with HTML5 header, footer, nav, main, article elements">
+</section>
+
+<section class="slide cover">
+    <img src="pictures/rabbit.jpg" alt="photo of a rabbit, with a small bird perched on its back">
+</section>
+
+
+<section class="slide">
+<h2>&lt;dialog&gt; element</h2>
+<pre><code>&lt;dialog>
+  &lt;p>ActiveX Pistols&lt;/p>
+  &lt;button id="close">Close&lt;/button>
+&lt;/dialog>
+&lt;button id="show">Open Dialog!&lt;/button></code></pre>
+</section>
+
+<section class="slide">
+<pre><code>var dialog = document.querySelector('dialog');
+document.querySelector('#show').onclick 
+  = function() {dialog.showModal();
+};
+document.querySelector('#close').onclick 
+  = function() {dialog.close();
+};</code></pre>
+
+<iframe src="dialog.html"></iframe>
+
+</section>
+
+
+<section class="slide">
+    <h2>Things are getting better</h2>
+    <blockquote>For the first time in 5 years of surveys, respondents are more positive about web accessibility progress
+        than in the previous survey. Only 21.8% thought web content has become less accessible, compared to 25.2% in May
+        2012.
+    </blockquote>
+    <cite><a href="http://webaim.org/projects/screenreadersurvey5/#progress">Screen Reader User Survey #5 Results: Web
+        Accessibility Progress</a></cite>
+</section>
+
+
+<section class="slide cover">
+    <img src="pictures/component.gif" alt="Superheros: Web Component and Shadow Dom">
+</section>
+
+
+<section class="slide">
+    <h2>Web Components</h2>
+    <blockquote>Web Components enable Web application authors to
+        <mark>define widgets with a level of visual richness and interactivity</mark>
+        not possible with CSS alone, and
+        <mark>ease of composition and reuse</mark>
+        not possible with script libraries today.
+    </blockquote>
+    <cite><a href="http://w3c.github.io/webcomponents/explainer/">Introduction to Web Components</a></cite>
+</section>
+
+<section class="slide">
+    <h2>Extend existing HTML elements</h2>
+    <pre><code>var p = Object.create(HTMLButtonElement.prototype);
+        var FancyButton = document.registerElement
+        ('fancy-button',
+        {extends: 'button', prototype: p});
+        &hellip;
+        <mark>&lt;button is="fancy-button"&gt;</mark>
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Current mess</h2>
+    <pre style="font-size:smaller;"><code>&lt;DIV id=:rk class="J-K-I J-J5-Ji L3 J-K-I-JO" tabIndex=0
+        unselectable="on" closure_hashCode_l16mgm="182" act="">
+        &lt;DIV class="J-J5-Ji J-K-I-Kv-H" unselectable="on">
+        &lt;DIV class="J-J5-Ji J-K-I-J6-H" unselectable="on">
+        &lt;DIV class=J-K-I-KC unselectable="on">
+        &lt;DIV class=J-K-I-K9-KP unselectable="on">&nbsp;&lt;/DIV>
+        &lt;DIV class=J-K-I-Jz unselectable="on">Search Mail&lt;/DIV>
+        &lt;/DIV>&lt;/DIV>&lt;/DIV>&lt;/DIV></code></pre>
+</section>
+
+<section class="slide">
+    <h2>Custom tags</h2>
+    <blockquote>When there isn't a HTML element that is semantically close to their custom element, authors can omit the
+        extends attribute &hellip; these kinds of elements are called custom tags. A user agent that does not support
+        custom elements will treat this as the semantically undifferentiated <code>HTMLUnknownElement</code>.
+    </blockquote>
+    <cite><a href="http://w3c.github.io/webcomponents/explainer/">Introduction to Web Components</a></cite>
+</section>
+
+<section class="slide cover">
+    <img src="pictures/nutsbolts.jpg" alt="nuts and bolts">
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Good News</h2>
+
+        <p>You can totally make these things accessible. This changes nothing from the accessibility perspective.</p>
+        <img src="pictures/dancing-banana.gif" alt="" class="float-right">
+
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Bad News</h2>
+
+        <p>Web Components are the new jQuery plugins</p>
+
+        <div class="next">
+            <img src="pictures/Theodore_Sturgeon.jpg" class="float-right" alt="">
+            <blockquote>
+                90% of <strike>science fiction</strike> <strike>jQuery plugins</strike> Web Components are shit.
+                <div><cite>-- Theodore Sturgeon</cite></div>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>How to do it right</h2>
+        <div class="text-center"><img src="pictures/stop-overthinking-it.png" alt=""></div>
+
+        <div class="offscreen">
+            Picture I borrowed from Steve Faulkner. It says:
+            <blockquote>
+                Something Karl Groves said:
+                I'm writing a new talk titled &quot;Demystifying Web Components Accessibility&quot;. It has one slide.
+                It says &quot;Same as regular ole web accessibility. Seriously. Stop overthinking it&quot;
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>First: follow all your standard accessibility best practices</h2>
+        <ul>
+            <li class="next">Semantics and structure</li>
+            <li class="next">Keyboard accessibility and focus control</li>
+            <li class="next">Color contrast</li>
+            <li class="next">Proper labeling and alternative formats</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Don't reinvent the wheel</h2>
+        <div class="text-center"><a href="https://rawgit.com/alice/web-components-demos/master/index.html">
+            <img src="pictures/extend.png" alt="Great demo of extending an existing element"></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Solve Real Problems</h2>
+        <div class="text-center"><a href="http://karlgroves.github.io/image-longdesc/"><img src="pictures/longdesc-example.png"
+                                                                                            alt="Longdesc web component"></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Consider the User</h2>
+        <div class="text-center"><a href="https://rawgit.com/karlgroves/bar-graph/accessible/index.html"><img src="pictures/bargraph.png"
+                                                                                                              alt="Example web component"></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>No, really. Consider the User</h2>
+        <div class="text-center"><a href="http://rawgit.com/stevefaulkner/flipbox/master/demo/testpage.html"><img src="pictures/flipbox-example.gif" alt="Flipbox example component"></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Be Creative</h2>
+        <div class="text-center"><a href="https://github.com/karlgroves/image-caption"><img src="pictures/image-caption.png" alt="Example of image-caption" /></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>WAI-ARIA</h2>
+        <div class="text-center"><a href="https://rawgit.com/karlgroves/csv-preview/accessible/example/index.html"><img
+                src="pictures/csv-table.png" alt="CSV-to-HTML table, fixed by Karl to be accessible"></a></div>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Some Cautions</h2>
+        <ul>
+            <li><a href="http://lists.w3.org/Archives/Public/public-webapps/2014OctDec/0034.html">There are some wrinkles</a></li>
+            <li><a href="https://code.google.com/p/chromium/issues/detail?id=415419">like some unforseen challenges</a>
+            <ul>
+                <li><a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=26952">So many unforseen challenges</a></li>
+            </ul>
+            </li>
+            <li><a href="http://www.paciellogroup.com/blog/2014/03/stuff-doesnt-work-dom-shadow-dom/">Don't let the encapsulation trip you up</a> </li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Get a head start</h2>
+    <div class="text-center"><a href="http://www.paciellogroup.com/blog/2014/09/web-components-punch-list/">
+        <img src="pictures/punchlist-screencap.png" alt="Web Components punch list, by Steve Faulkner">
+    </a></div>
+</section>
+
+
+<!--
+
+<section class="slide">
+    <h2>Web Components punch list - keyboard</h2>
+    <ul>
+        <li>focusable Can you get to the control via the keyboard?
+        <li>operable Can you use the control with the keyboard?
+        <li>expected operation Can you use the standard keys for the control type to operate it.
+    </ul>
+        <p><cite><a href="http://www.paciellogroup.com/blog/2014/09/web-components-punch-list/">Web Components punch
+        list</a></cite> - Steve Faulkner</p>
+</section>
+
+<section class="slide">
+    <h2>Roles, states, properties</h2>
+    <ul>
+        <li>label The control has a text label that is exposed as an accessible name in accessibility APIs
+        <li>role The control has an appropriate role exposed in accessibility APIs
+        <li>states and properties The control has any UI states and properties that it has exposed in accessibility APIs
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Design considerations</h2>
+    <ul>
+        <li>clear indication of focus Can you easily see it when the control has focus?
+        <li>color contrast The control label/description/icon is perceivable/usable for low vision users (Use a color
+            contrast checker.)
+        <li>high contrast mode The control is perceivable/usable when High Contrast Mode is enabled (e.g. Windows HC
+            mode)
+    </ul>
+</section>
+
+
+<section class="slide">
+    <h2>Challenges</h2>
+    <ul>
+        <li>Assistive tech vendors have <a
+                href="http://www.webstandards.org/2009/05/13/interview-with-ian-hickson-editor-of-the-html-5-specification/">"little
+            time for the standards process"</a></li>
+        <li>Browser vendors need to add accessibility hooks too - see <a href="http://www.html5accessibility.com">html5accessibility.com</a>
+        </li>
+        <li>Web Components takes us away from built-in, more bolt-on</li>
+    </ul>
+</section>
+
+-->
+
+
+
+<section class="slide cover">
+ <img src="pictures/ewm.jpg" alt="extensible web manifesto">
+</section>
+
+<section class="slide">
+    <h2>HTML imports</h2>
+
+    <p>Custom elements can be loaded from external files using the link tag:</p>
+    <pre><code>&lt;link rel="import" href="goodies.html"></code></pre>
+</section>
+
+<section class="slide">
+    <h2>List of good, curated, open-source web components sites</h2>
+    <ul>
+        <li><a href="http://webcomponents.org">webcomponents.org
+        </a></li>
+        <li><a href="http://customelements.io/">customelements.io</a> </li>
+        <li><a href="http://brick.mozilla.io/">brick.mozilla.io</a></li>
+        <li><a href="https://ibm-js.github.io/deliteful/">delite</a> (IBM)</li>
+    </ul>
+</section>
+
+
+
+<section class="slide">
+    <h2>Passion please?</h2>
+    <blockquote>"This is the kind of passion I want to see from accessibility advocates, these are the voices we need.
+        Not another library to add ARIA to badly thought-out HTML".
+    </blockquote>
+    <cite><a href="http://christianheilmann.com/2013/10/14/the-passion-accessibility-presentations-need/">The passion
+        accessibility presentations need</a> <br>- Christian Heilmann</cite>
+</section>
+
+<section class="slide cover">
+    <img src="pictures/gh-pr.gif" alt="github pull request to add live regions to a wordpress plugin">
+</section>
+
+<section class="slide cover">
+    <img src="pictures/wp-stats.gif" alt="wordpress plugin stats: 44,525 all-time downloads.">
+</section>
+
+<section class="slide cover">
+    <h2>Passion, please&hellip;with pull requests</h2>
+    <img src="pictures/github.jpg" alt="github logo">
+</section>
+
+<section class="slide">
+<h2>Thank you!</h2>
+</section>
+
+<section class="slide">
+<h2>Resources:</h2>
+    <ul>
+    <li><a href="http://www.smashingmagazine.com/2014/03/04/introduction-to-custom-elements/">A Detailed Introduction To Custom Elements</a> by Peter Gasston</li>
+        <li><a href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM Spec</a></li>
+        <li><a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#the-template-element">Template Element Spec</a></li>
+        <li><a href="http://w3c.github.io/webcomponents/spec/imports/">Imports Spec</a></li>
+        <li><a href="http://www.paciellogroup.com/blog/2014/09/web-components-punch-list/">Web components punch list</a></li>
+        <li><a href="http://w3c.github.io/webcomponents/spec/custom/">Custom Elements Spec</a></li>
+    </ul>
+</section>
+
+
+
+
+
+<section class="slide" id="acks">
+    <h2>
+        Thanks
+    </h2>
+    <ul>
+        <li><a href="https://www.flickr.com/photos/jaako/2908762396/">Yawning lady by Kevin Jaako</a></li>
+        <li><a href="http://icant.co.uk/easy-youtube/">Easy YouTube</a> by Christian Heilmann</li>
+        <li>Biscuit and Chica (rabbit and bird) image by permission of Brittany Shaw</li>
+        <li><a href="https://secure.flickr.com/photos/microassist/6990640490/">Nuts and bolts</a> by <a href="http://www.microassist.com/">microassist.com</a></li>
+        <li>Github logo <a href="https://twitter.com/Caged/status/503919046387974145">by permission</a>.</li>
+        <li>HTML/ CSS Presentation Framework: <a href="https://github.com/shower/shower">Shower</a> by Vadim Makeev.
+        </li>
+    </ul>
+</section>
+<section class="slide">
+    <h2>Contact Us</h2>
+    <h3>Bruce</h3>
+    <ul>
+        <li><a href="mailto:brucel@opera.com">brucel@opera.com</a></li>
+        <li><a href="http://opera.com/developer">opera.com/developer</a></li>
+        <li><a href="http://brucelawson.co.uk">brucelawson.co.uk</a></li>
+        <li><a href="http://twitter.com/brucel">@brucel</a></li>
+    </ul>
+    </section>
+<section class="slide">
+    <h2>Contact Us</h2>
+    <h3>Karl</h3>
+    <ul>
+    <li><a href="mailto:kgroves@paciellogroup.com">kgroves@paciellogroup.com</a></li>
+    <li><a href="http://www.paciellogroup.com">paciellogroup.com</a></li>
+    <li><a href="http://www.karlgroves.com">karlgroves.com</a></li>
+    <li><a href="http://twitter.com/karlgroves">@karlgroves</a></li>
+</ul>
+</section>
+
+
+
+<!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+-->
+<div class="progress"></div>
+<script src="/shower/shower.min.js"></script>
+<script src="custom/js/slide-stuff.js"></script>
+</body>
+</html>

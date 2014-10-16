@@ -1,0 +1,11 @@
+<dialog>
+  <p>ActiveX Pistols</p>
+  <button id="b-close">Close</button>
+</dialog>
+<button id="b-show">Open Dialog!</button>
+<script>var dialog = document.querySelector('dialog');
+document.querySelector('#b-show').onclick = function() {
+  dialog.showModal();
+};
+document.querySelector('#b-close').onclick = function() {
+  dialog.close(); }</script>

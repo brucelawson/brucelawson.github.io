@@ -5,8 +5,8 @@
 	<title>Is Blink the new IE6?</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=1274, user-scalable=no">
-    <link rel="stylesheet" href="/shower/themes/lawson/styles/screen.css">
-    <link rel="stylesheet" href="/shower/themes/lawson/styles/print.css" media="print">
+	<link rel="stylesheet" href="themes/lawson/styles/screen.css">
+	<link rel="stylesheet" href="themes/lawson/styles/print.css" media="print">
 	<!--
 		To apply styles to the certain slides
 		set slide ID to get needed elements
@@ -284,7 +284,7 @@ Test Manager, IE</a></cite>
 
 	<section class="slide">
 		<h2>For the losers:</h2>
-		<blockquote>Keywords and property names beginning with -' or '_' are reserved for vendor-specific extensions. For example, if XYZ organization added a property to describe the color of the border on the East side of the display, they might call it <code>-xyz-border-east-color</code>.
+		<blockquote>Keywords and property names beginning with -' or '_' are reserved for vendor-specific extensions.</blockquote><code>-webkit-border-radius</code><br><code>-moz-border-radius</code><br><code>border-radius</code>
 		</blockquote>
 	</section>
 
@@ -305,11 +305,11 @@ Test Manager, IE</a></cite>
 		<h2>I'm an English literature graduate</h2>
 		<blockquote>Vendor prefixes are like skidmarks on the underwear of web standards: <p class="next">sometimes unavoidable, but best washed and rinsed out as soon as possible.</p></blockquote><cite><a href="http://www.brucelawson.co.uk/2014/on-internet-explorer-supporting-webkit-vendor-prefixes/">Bruce "Shakespeare" Lawson</a></cite>
 	</section>
-
+<!--
 	<section class="slide cover">
-		<img src="pictures/ianet.jpg" alt="">
+		<img src="pictures/ianET.jpg" alt="">
 	</section>
-
+-->
 	<section class="slide">
 		<blockquote><mark>We're all acutely aware of what happened with IE and don't want to see that happen again</mark>. All the work on de-prefixing for example came out discussions on that issue and the feedback from Opera in particular.</blockquote>
 		<cite>Ian Ellison-Taylor (@ianet), Google's Director of Web Platform</cite>
@@ -321,7 +321,7 @@ Test Manager, IE</a></cite>
 	</section>
 
 	<section class="slide">
-		<blockquote><mark>For legacy vendor-prefixed features, we will continue to use the -webkit- prefix</mark> because renaming all these prefixes to something else would cause developers unnecessary pain. We've started looking into real world usage of HTML5 and CSS3 features and hope to use data like this to better inform how we can responsibly deprecate prefixed properties and APIs. </blockquote>
+		<blockquote><mark>For legacy vendor-prefixed features, we will continue to use the -webkit- prefix</mark> &hellip;We've started looking into real world usage of HTML5 and CSS3 features and hope to use data like this to better inform how we can responsibly deprecate prefixed properties and APIs. </blockquote>
 	</section>
 
 	<section class="slide">
@@ -364,11 +364,11 @@ Test Manager, IE</a></cite>
 		<cite><a href="http://blogs.msdn.com/b/ie/archive/2014/07/31/the-mobile-web-should-just-work-for-everyone.aspx">IEBlog, 31 July 2014</a></cite>
 	</section>
 
-
+<!--
 	<section class="slide cover">
-		<img src="pictures/ianet.jpg" alt="">
+		<img src="pictures/ianET.jpg" alt="">
 	</section>
-
+-->
 	<section class="slide">
 		<h2>Google's Director of Web Platform</h2>
 		<blockquote><p>I was the Engineering Manager for Client Platforms at Microsoft in the early 2000s and in large part responsible for most of the engineering resource being pulled from IE\Trident. Oops :/</p>
@@ -377,7 +377,7 @@ Test Manager, IE</a></cite>
 
 	<section class="slide">
 		<blockquote>
-		<p>The issue for Microsoft back then was that <mark>a successful web actually went against their business goals, to the tune of many $B</mark>. That's definitely not the case for Google, indeed it's the opposite, as a company we benefit when more people use the web so there's absolutely no conflict of interest.</p></blockquote>
+		<p>The issue for Microsoft back then was that <mark>a successful web actually went against their business goals, to the tune of many $B</mark>. That's definitely not the case for Google, indeed it's the opposite, as a company we benefit when more people use the web.</p></blockquote>
 	</section>
 
 	<section class="slide">
@@ -422,7 +422,7 @@ Test Manager, IE</a></cite>
 
 	<section class="slide">
 		<h2>The webkit vs Blink analysis</h2>
-		<blockquote> the Blink project has been more focused on next-gen webapps with a heavy focus on the compositor, scheduling, and style subsystems. The WebKit project has been more focused on documents and improving existing pages with faster line layout and style selection</blockquote>
+		<blockquote><mark>the Blink project has been more focused on next-gen webapps with a heavy focus on the compositor, scheduling, and style subsystems.</mark> The WebKit project has been more focused on documents and improving existing pages with faster line layout and style selection</blockquote>
 		<cite><a href="http://browserg.nom.es/">A high-profile fork: one year of Blink and Webkit</a></cite>
 	</section>
 
@@ -458,9 +458,9 @@ Test Manager, IE</a></cite>
 
 	<section class="slide">
 		<h2>My initial hopes for Blink</h2>
-		<blockquote>I also hope that it’s easier for smaller players and even individuals to contribute to the new rendering engine, with a more transparent gatekeeping process: “Our goal is for anyone to be able to participate, regardless of organizational affiliation.”
+		<blockquote>I also hope that it’s easier for smaller players and even individuals to contribute to the new rendering engine, with a more transparent gatekeeping process.
 		</blockquote>
-		<cite><a href="http://www.brucelawson.co.uk/2013/hello-blink/">Hello Blink</a></cite> 3 April 2013
+		<cite><a href="http://www.brucelawson.co.uk/2013/hello-blink/">Hello Blink</a></cite>- moi, 3 April 2013
 	</section>
 
 	<section class="slide">
@@ -476,20 +476,22 @@ Test Manager, IE</a></cite>
 	</section>
 
 	<section class="slide cover">
-	<img src="pictures/ricg.jpg" alt="responsive images community group logo">
+	<img src="pictures/RICG.jpg" alt="responsive images community group logo">
 	</section>
 
 	<section class="slide">
 	<h2>&lt;picture> element</h2>
-		<blockquote>the RICG’s main contribution to the web platform wasn’t picture, srcset, or sizes&hellip; To get them done we had to punch a hole through the thick technical, cultural, and institutional walls that separate the people who make browsers from the people who make websites.</blockquote>
+		<blockquote>the RICG’s main contribution to the web platform wasn’t picture, srcset, or sizes&hellip; To get them done <mark>we had to punch a hole through the thick technical, cultural, and institutional walls that separate the people who make browsers from the people who make websites</mark>.</blockquote>
 	
 	</section>
+<!--
 
 	<section class="slide">
 		<h2>Crowd FUNding</h2>
 		<blockquote>Bridging gaps is, of course, significantly easier when you’re able to crowdfund a Renaissance-man like Yoav [Weiss] who can contribute meaningfully at every level.</blockquote>
 		<cite><a href="http://lists.w3.org/Archives/Public/public-respimg/2014Aug/0001.html">Matt Marquis (@wilto)</a></cite>
 	</section>
+	-->
 
 	<section class="slide cover">
 		<h2>Why &lt;picture> not &lt;pic> ?</h2>
@@ -509,15 +511,17 @@ Test Manager, IE</a></cite>
 
 	<section class='slide'>
 	<h2>Is monopoly bad?</h2>
-	<blockquote>only 12.2% of the Fortune 500 companies in 1955 were still on the list &hellip; in 2014, and almost 88% of the companies from 1955 have either gone bankrupt, merged, or still exist but have fallen from the top Fortune 500 companies&hellip; Most of the companies on the list in 1955 are unrecognizable, forgotten companies today.</blockquote>
+	<blockquote><mark>only 12.2% of the Fortune 500 companies in 1955 were still on the list &hellip;in 2014</mark>&hellip;Most of the companies on the list in 1955 are unrecognizable, forgotten companies today.</blockquote>
 	<cite><a href="http://www.aei-ideas.org/2014/08/fortune-500-firms-in-1955-vs-2014-89-are-gone-and-were-all-better-off-because-of-that-dynamic-creative-destruction/">American Enterprise Institute</a></cite>
 	</section>
 
+<!--
 	<section class='slide'>
 	<h2>Is Google a monopoly?</h2>
 	<blockquote>Google is bent on establishing platform domination unlike anything we've ever seen, even from late-1990s Microsoft. Google controls Android, which is winning; Chrome, which is winning; and key Web properties in Search, Youtube, Gmail and Docs, which are all winning.</blockquote>
 	<cite><a href="http://robert.ocallahan.org/2014/08/choose-firefox-now-or-later-you-wont.html">Choose Firefox Now, Or Later You Won't Get A Choice</a> - Robert O'Callahan (Mozilla hacker)</cite>
 	</section>
+-->
 
 	<section class="slide">
 		<h2>Is Blink a monopoly?</h2>
@@ -701,7 +705,7 @@ x
 	<img src="pictures/gap.jpg" alt="mind the gap">
 </section>
 
-
+<!--
 <section class="slide">
 	<h2>User Experience</h2>
 	<ul>
@@ -710,6 +714,14 @@ x
 	</ul>
 		<p><a href="http://ux.stackexchange.com/questions/39262/any-research-on-user-experience-perceptions-of-native-apps-vs-web-or-hybrid-apps/">User Experience Stack Exchange: <cite>Any Research on User Experience Perceptions of Native Apps vs Web or Hybrid Apps?</cite></a></p>
 </section>
+-->
+
+<section class="slide">
+	<h2>User Experience</h2>
+	<blockquote>Mobile users bookmark differently. Bookmarks in mobile browsers are used sparingly, instead <mark>mobile users "bookmark" by downloading the native app.</mark></blockquote>
+		<cite><a href="http://ux.stackexchange.com/questions/39262/any-research-on-user-experience-perceptions-of-native-apps-vs-web-or-hybrid-apps/">User Experience Stack Exchange: <cite>Any Research on User Experience Perceptions of Native Apps vs Web or Hybrid Apps?</a></cite>
+</section>
+
 
 <!--
 
@@ -722,7 +734,6 @@ x
 
 </section>
 
--->
 
 <section class="slide">
 	<h2>Installability</h2>
@@ -732,6 +743,7 @@ x
 	</ul>
 	<p>W3C: <a href="http://www.w3.org/QA/2013/08/enabling_new_types_of_web_user.html">Enabling new types of web user experiences</a></p>
 </section>
+-->
 
 <section class="slide cover">
 	<img src="pictures/ATHS1.gif" alt="screeshot of weight.aerotwist.com in Chrome for Android">
@@ -772,11 +784,14 @@ x
 	<p><a href="http://w3c.github.io/manifest/">w3c.github.io/manifest/</a> - Mozilla's Marvellous Mr Marcos' magical manifest</p>
 </section>
 
+<section class="slide cover">
+	<img src="pictures/ATHS6.gif" alt="Chrome's new Add to homescreen banner">
+</section>
 
 
 <section class="slide">
 	<h2>W3C Widgets</h2>
-	<blockquote>a packaging format and metadata for &hellip;  full-fledged client-side applications that are authored using technologies such as HTML and then packaged for distribution. Examples range from simple clocks &hellip; to complex applications that pull data from multiple sources</blockquote>
+	<blockquote>a <mark>packaging format</mark> and metadata for &hellip;  full-fledged client-side applications that are authored using technologies such as HTML and then <mark>packaged for distribution</mark>.</blockquote>
 	<cite><a href="http://www.w3.org/TR/widgets/">W3C Widgets spec</a></cite>
 </section>
 
@@ -842,7 +857,8 @@ x
 <section class="slide">
 	<h2>TL;DL (Zzz)</h2>
 	<ul>
-		<li class="next">We can't make Blink a monopoly
+		<li class="next">We don't want to make Blink a monopoly
+		<li class="next">We couldn't make Blink a monopoly
 		<li class="next">&hellip;but you could.
 		<li class="next">Please don't!
 		<li class="next"><mark>Love the web.</mark>
@@ -852,7 +868,14 @@ x
 </section>
 
 
-
+	<section class="slide last">
+		<ul>
+			<li><a href="mailto:brucel@opera.com">brucel@opera.com</a></li>
+			<li><a href="http://opera.com/developer">opera.com/developer</a></li>
+			<li><a href="http://brucelawson.co.uk">brucelawson.co.uk</a></li>
+			<li><a href="http://twitter.com/brucel">@brucel</a></li>
+		</ul>
+	</section>
 
 
 <section class="slide" class="acks">
@@ -867,7 +890,7 @@ x
 </section>
 
 
-<section class="slide">
+<section class="slide" class="acks">
 <h2>Image acknowledgments</h2>
 	<ul style="font-size:.7em;">
 		<li>Me by HTML sign in Tokyo by Doug Schepers (@shepazu)</li>
@@ -882,9 +905,10 @@ x
 </ul>
 </section>
 <section class="slide">
-	<h2>More acknowledgments</h2>
 	<ul style="font-size:.7em;">
+		<h2>More acknowledgments</h2>
 		<li>Opera's <a href="https://operasoftware.github.io/upstreamtools/">Blink commits</a> cake photographed by Andreas Bovens</li>
+		<li>Add to Homescreen banner - <a href="http://updates.html5rocks.com/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android">HTML5 Rocks</a></li>
 		<!--
 		<li>PhoneGap diagram: Adobe; Brian LeRoux pic courtesy of <a href="http:brian.io">Brian</a></li>
 		-->
@@ -894,14 +918,7 @@ x
 	</ul>
 </section>
 
-	<section class="slide last">
-		<ul>
-			<li><a href="mailto:brucel@opera.com">brucel@opera.com</a></li>
-			<li><a href="http://opera.com/developer">opera.com/developer</a></li>
-			<li><a href="http://brucelawson.co.uk">brucelawson.co.uk</a></li>
-			<li><a href="http://twitter.com/brucel">@brucel</a></li>
-		</ul>
-	</section>
+
 
 
 
@@ -910,7 +927,7 @@ x
 		just remove “progress” element.
 		-->
 	<div class="progress"><div></div></div>
-    <script src="/shower/shower.min.js"></script>
+	<script src="scripts/script.js"></script>
 
 </body>
 </html>

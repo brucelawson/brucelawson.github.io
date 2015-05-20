@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ensuring a performant web for the next billion people</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1274, user-scalable=no">
+    <link rel="stylesheet" href="/shower/themes/lawson/styles/screen.css">
+    <link rel="stylesheet" href="/shower/themes/lawson/styles/print.css" media="print">
+      
+
+            <style>
+            
+            .first figcaption  {margin-left:40%; bottom:20%; z-index:9999;}
+            .acks li {font-size:50%;}
+            .slide.first header {top: 68%;}
+            .slide.first header h2 {font-size:70px;}
+
+            img.wait {display:none;}
+            section.current img.wait {display:block;}
+            cite+blockquote {margin-top:2em;}
+
+            .slide ol > li:before, .slide ul > li:before {text-align: right; width: 1.5em;}
+            </style>
+        </head>
+        <body class="list">
+            <header class="caption">
+                <h1>
+                    Ensuring a performant web for the next billion people
+                </h1>
+                <p>
+                    <a href="http://brucelawson.co.uk">Bruce Lawson</a>
+                </p>
+            </header>
+
+            <section class="slide cover first">
+                <header>
+                    <h2>Performance for the next billion</h2>
+
+                    <p>
+                        Bruce Lawson, Opera  Software
+                    </p>
+                </header><img src="pictures/bruce-html.jpg" alt="bruce in front of 'HTML' sign">
+        </section>
+
+<section class="slide cover">
+<img src="pictures/opera-logo.gif" alt="opera software logo">
+</section>
+
+
+
+<section class="slide shout">
+<h2>Where will your next customers come from?</h2>
+</section>
+
+<section class="slide cover">
+      <img src="pictures/world-map.jpg" alt="world map with a circle around China, India, S.E. Asia, Indonesia">
+</section>
+
+
+<section class="slide cover">
+      <img src="pictures/asia1.png" alt="Asia: population now 4 billion">
+</section>
+
+<section class="slide cover">
+      <img src="pictures/asia2.png" alt="Asia: population in 2050: 5 billion">
+</section>
+
+<section class="slide cover">
+      <img src="pictures/africa1.png" alt="Africa: population in 2050: 2 billion">
+</section>
+
+<section class="slide cover">
+      <img src="pictures/africa2.png" alt="Africa: population in 2100: 5 billion">
+</section>
+
+<section class="slide cover">
+      <img src="pictures/china.png" alt="China: Population: 1.3 billion, GDP growth: 7.7%">
+</section>
+
+<section class="slide">
+<h2>Shared taxis per day</h2>
+<p>Uber: <mark>1 million</mark>.</p>
+<div class="next">
+<p>Didi: <mark>5 million</mark></p>
+<cite>Sources: KPCB, Uber. Date: May 2014 (Didi), Feb 2015 (Uber)</cite>
+</div>
+</section>
+
+<section class="slide">
+<h2>Ecommerce (top sales day)</h2>
+<p>Black Friday + Cyber Monday: <mark>$2.9 Bn</mark></p>
+<div class="next">
+<p>Double 11 Day: <mark>$9.2 Bn</mark></p>
+<cite>Sources: Nanjing Marketing Group Date: Q4 2014</cite>
+</div>
+</section>
+
+<section class="slide cover">
+      <img src="pictures/indonesia.png" alt="Indonesia: Population: 250 million, GDP growth: 5.8%">
+</section>
+
+<section class="slide cover">
+      <img src="pictures/bangladesh.png" alt="Bangladesh: Population: 157 million, GDP growth: 7%">
+</section>
+
+<!--
+
+<section class="slide cover">
+      <img src="pictures/cambodia.png" alt="Cambodia: 15 million, GDP growth: 7.4%">
+</section>
+
+-->
+
+<section class="slide cover">
+      <img src="pictures/myanmar.png" alt="Myanmar: 53 million, GDP growth: 13.6%">
+</section>
+
+
+<section class="slide cover">
+      <img src="pictures/india.png" alt="India: Population: 1.2 billion, GDP growth: 6.9%">
+</section>
+
+<section class="slide">
+<blockquote>we expect the number of Internet users to at least double, from <mark>190 million in 2014 to 400 million in 2018</mark> &hellip; We expect the Internet to contribute <mark>$200 billion to India’s GDP</mark> (5% of total GDP) by 2020.</blockquote>
+<cite><a href="https://www.bcgperspectives.com/content/articles/center-consumer-customer-insight-marketing-changing-connected-consumer-india/">Boston Consulting Group (BCG)</a>, 23 April 2015</cite> 
+</section>
+
+
+<section class="slide shout">
+<h2>What do these nations have in common?</h2>
+</section>
+
+<section class="slide cover">
+<img src="pictures/smartphones.gif" alt="XXX">
+</section>
+
+
+<section class="slide two">
+<h2>Top domains: USA</h2>
+<ol class="two-cols">
+<li>google.com</li>
+<li>facebook.com</li>
+<li>youtube.com</li>
+<li>wikipedia.org</li>
+<li>yahoo.com</li>
+<li>twitter.com</li>
+<li>wordpress.com</li>
+<li>amazon.com</li>
+<li>tumblr.com</li>
+<li>blogspot.com</li>
+</ol>
+</section>
+
+<section class="slide">
+<h2>Top handsets: USA</h2>
+<ol class="two-cols">
+<li>Apple iPhone</li>
+<li>Apple iPad</li>
+<li>Samsung GT-S7582</li>
+<li>Samsung GT-I9300</li>
+<li>BlackBerry 8520</li>
+<li>Apple iPod</li>
+<li>BlackBerry 9320</li>
+<li>Samsung GT-S7562</li>
+<li>LG 306G</li>
+<li>Samsung GT-I8190
+</li>
+</ol>
+</section>
+
+
+<section class="slide">
+<h2>Top domains: India</h2>
+<ol class="two-cols">
+<li>facebook.com</li>
+<li>google.com</li>
+<li>google.co.in</li>
+<li>youtube.com</li>
+<li>wikipedia.org</li>
+<li>cricbuzz.com</li>
+<li>twitter.com</li>
+<li>in.com</li>
+<li>wordpress.com</li>
+<li>ndtv.com</li>
+</ol>
+</section>
+
+<section class="slide">
+<h2>Top handsets: India</h2>
+<ol class="two-cols">
+<li>Nokia X2-01</li>
+<li>Samsung GT-E1282T</li>
+<li>Nokia 2690</li>
+<li>Nokia C1-01</li>
+<li>Micromax A106</li>
+<li>Nokia 2700c-2</li>
+<li>Samsung GT-S7262</li>
+<li>Nokia C2-00</li>
+<li>Nokia 5130c-2</li>
+<li>Samsung SM-B312E</li>
+</ol>
+</section>
+
+
+<section class="slide">
+<h2>Top domains: Nigeria</h2>
+<ol class="two-cols">
+<li>google.com</li>
+<li>facebook.com</li>
+<li>news24.com</li>
+<li>www.bbc.co.uk</li>
+<li>youtube.com</li>
+<li>wikipedia.org</li>
+<li>livescore.com</li>
+<li>google.com.ng</li>
+<li>goal.com</li>
+<li>naij.com</li>
+</ol>
+</section>
+
+<section class="slide">
+<h2>Top handsets: Nigeria</h2>
+<ol class="two-cols">
+<li>Nokia X2-01</li>
+<li>Nokia 200</li>
+<li>Nokia C3-00</li>
+<li>TECNO P5</li>
+<li>Nokia C1-01</li>
+<li>TECNO M3</li>
+<li>Nokia 2700c-2</li>
+<li>Nokia C2-00</li>
+<li>Nokia 210</li>
+<li>TECNO H5</li>
+</ol>
+</section>  
+
+<section class="slide shout cover">
+<h2>Making the web work on lower-spec devices</h2>
+<img src="pictures/cake.jpg" alt="">
+</section>
+
+
+
+<section class="slide">
+<h2>Installable Web Apps</h2>
+<ul>
+<li class="next">A new manifest file with light metadata and icon</li>
+<li class="next">Icon saved to homescreen</li>
+<li class="next">On tap, goes full-screen to site</li>
+<li class="next">Chrome for Android, Opera for Android, Firefox OS</li>
+<li class="next">Safari iOS (Non-standard)</li>
+<li class="next"><a href="http://html5doctor.com/web-manifest-specification/">The Web Manifest specification</a> tutorial (HTML5Doctor.com)</li>
+</ul>
+
+</section>
+
+<section class="slide cover">
+    <img src="pictures/AHS.jpg" alt="">
+</section>
+</section>
+
+<section class="slide cover">
+    <img src="pictures/convo.jpg" alt="">
+</section>
+
+<section class="slide cover">
+    <img src="pictures/postbox.jpg" alt="photo of scary Stephen King clown staring out from a postbox slot">
+</section>
+
+<section class="slide cover shout">
+<h2>Responsive images</h2>
+    <img src="pictures/art-direction.jpg" alt="XX">
+</section>
+
+<section class="slide cover">
+    <img src="pictures/bl.gif" alt="XX">
+</section>
+
+
+<section class="slide">
+        <h2>New HTML thingies</h2>
+        <ul>
+        <li><code>&lt;picture></code></li>
+        <li><code>srcset</code> attribute</li>
+        <li>x descriptor</li>
+        <li>w descriptor</li>
+        <li><code>sizes</code> attribute</li>
+        </ul>
+<p><a href="https://dev.opera.com/blog/bruce-introduction-responsive-images/">Video, tutorials</a></p>
+</section>
+
+<section class="slide cover">
+    <img src="pictures/images-per-page.gif" alt="XX">
+</section>
+
+
+
+
+<section class="slide">
+<h2>Affordability of access</h2>
+<blockquote>Citizens of rich nations pay on average just 1-2% of their monthly income to connect. In the 51 countries we analysed &hellip; the price for an <mark>entry-level mobile broadband package hovers at just above 10% of monthly incomes</mark>.</blockquote>
+<cite><a href="http://a4ai.org/affordability-report/report/#executive_summary">The Affordability Report, 2014</a></cite>
+</section>
+
+
+<section class="slide shout">
+<h2>What are proxy browsers?</h2>
+</section>
+
+
+<section class="slide">
+<h2>Other proxy browsers are available</h2>
+<ul>
+<li>QQ</li>
+<li>UC browser</li>
+<li>Puffin</li>
+<li><s>Nokia</s> Microsoft Xpress</li>
+</ul>
+</section>
+
+<section class="slide cover">
+<img src="pictures/nokia.gif" alt="XXX">
+</section>
+
+
+<section class="slide cover">
+<img src="pictures/mini-works1.gif" alt="XXX">
+</section>
+
+<section class="slide cover">
+<img src="pictures/mini-works2.gif" alt="XXX">
+</section>
+
+<section class="slide">
+<h2>Testing in India</h2>
+<blockquote>Opera Mini consumes on an average <mark>14% less battery</mark> and <mark>89% less data</mark> when compared to other mobile browsers.</blockquote>
+<cite><a href="http://www.operasoftware.com/press/releases/mobile/2015-05-18">Cigniti Technologies</a> </cite>
+<p><small>(Chrome, UC browser, CM browser and UC Mini on Wi-Fi, 2G and 3G networks in India, March - April 2015)</small></p>
+</section>
+
+<section class="slide cover shout">
+<h2>120k transactions/second<br> 23 PB last month</h2>
+<img src="pictures/cloud.jpg" alt="">
+</section>
+
+<section class="slide">
+<blockquote>Approximately 600 million times per second, particles collide within the Large Hadron Collider (LHC)&hellip;Electronic circuits record the passage of each particle &hellip;and send the data to the CERN Data Centre&hellip; Physicists must sift through the <mark>30 petabytes or so of data produced annually</mark>.</blockquote>
+<cite><a href="http://home.web.cern.ch/about/computing">CERN - computing</a></cite>
+</section>
+
+<section class="slide cover">
+<img src="pictures/top-countries.jpg" alt="XXX">
+</section>
+
+
+<section class="slide cover">
+<img src="pictures/mini-servers.png" alt="XXX">
+</section>
+
+<section class="slide cover">
+<img src="pictures/overloaded.jpg" alt="XXX">
+</section>
+
+<section class="slide">
+<h2>Single connection</h2>
+<p>In India, only 96k of the 736k cell towers are 3G enabled, but more critically, only 35k of those towers have a fiber-optic connection to the backbone, which results in inconsistent connection.</p>
+<cite><a href="http://www.avendus.com/Files/Fund%20Performance%20PDF/Avendus_Report-India%27s_Mobile_Internet-2013.pdf">India's mobile Internet: The revolution has begun</a> - Avdendus (2013)</cite>
+</section>
+
+<section class="slide cover">
+<img src="pictures/mini-servers2.jpg" alt="XXX">
+</section>
+
+
+
+<section class="slide shout cover">
+<h2>Design considerations for developing markets</h2>
+<img src="pictures/monks.jpg" alt="">
+</section>
+
+<section class="slide cover">
+<img src="pictures/red-text.gif" alt="XXX">
+</section>
+
+<section class="slide cover">
+<img src="pictures/surname.gif" alt="XXX">
+</section>
+
+<section class="slide cover">
+<img src="pictures/putri.jpg" alt="XXX">
+</section>
+
+<section class="slide shout cover">
+<h2>Tech constraints for lower-spec markets</h2>
+<img src="pictures/tuktuk.jpg" alt="">
+</section>
+
+<section class="slide">
+<h2>Everything happens on the server</h2>
+<ul>
+<li class="next">Everything needs user interaction</li>
+<li class="next">Everything needs a server round-trip</li>
+<li class="next">JS on page load runs for 5 seconds</li>
+<li class="next">JS-only APIs do NOT work</li>
+</ul>
+<p class="next">More: <a href="https://dev.opera.com/articles/opera-mini-and-javascript/">Opera Mini and JavaScript</a>.</p>
+</section>
+
+<section class="slide">
+<h2>Design won't always be preserved</h2>
+<ul>
+<li class="next">No CSS rounded corners or gradients</li>
+<li class="next">Animations (CSS/ SVG) show only first frame</li>
+<li class="next">No web fonts</li>
+<li class="next">Don't use icon fonts; use SVG</li>
+</ul>
+<p class="next"><a href="https://dev.opera.com/blog/how-media-queries-allow-you-to-optimize-svg-icons-for-several-sizes/">Make SVG icons (even more!) responsive</a>.</p>
+</section>
+
+
+<section class="slide cover">
+<img src="pictures/PE.jpg" alt="Progressive enhancement">
+</section>
+
+<section class="slide cover">
+<img src="pictures/angular.jpg" alt="website on a mobile phone urging users to upgrade">
+</section>
+
+
+
+<section class="slide">
+  <h2>Holy Grail App</h2>
+  <blockquote> we've launched our first Holy Grail app into production! &hellip;  It looks exactly the same as the app it replaced, however <mark>initial pageload feels drastically quicker</mark> </blockquote>
+  <cite><a href="http://nerds.airbnb.com/weve-launched-our-first-nodejs-app-to-product/">AirBnB</a></cite>
+</section>
+
+<section class="slide">
+  <h2>Holy Grail App #2</h2>
+  <blockquote><p>because we serve up <mark>real HTML instead of waiting for the client to download JavaScript before rendering</mark>.</p><p>Plus, it is <mark>fully crawlable by search engines</mark>. &hellip; It feels <mark>5x faster</mark>.<p></blockquote>
+  <cite><a href="http://nerds.airbnb.com/weve-launched-our-first-nodejs-app-to-product/">AirBnB</a></cite>
+</section>
+
+<section class="slide cover shout">
+<h2>Rise of The Smartphones</h2>
+<img src="pictures/rise-smartphones.jpg" alt="XX">
+</section>
+<!--
+<section class="slide cover shout">
+<h2>Android penetration</h2>
+<img src="pictures/android.gif" alt="">
+</section>
+-->
+
+
+
+<section class="slide">
+<blockquote><p><mark>India emerged as the world's third-largest smartphone market after the U.S. and China.</mark> Total smartphone shipments are expected to increase to reach more than 150 million units in 2018.<p>
+</blockquote>
+<cite><a href="http://businesskorea.co.kr/article/10453/poor-performance-samsung-phones-struggling-india-china">Busiess Korea</a> (8 May '15)</cite>
+</section>
+
+<section class="slide">
+<blockquote>Smartphone shipments to the <mark>Middle East and Africa saw unprecedented year-on-year growth of 83% in 2014</mark>&hellip; <mark>Feature phones have been hit hard</mark> &hellip; with shipments down 4.5% year on year in 2014.</blockquote>
+<cite><a href="https://www.idc.com/getdoc.jsp?containerId=prAE25583415">International Data Corporation (IDC)</a> (26 Apr '15)</cite>
+</section>
+
+<section class="slide cover">
+<img src="pictures/phones.gif" alt="XXX">
+</section>
+
+<section class="slide cover">
+<h2>Bruce’s law of Smartness&trade;</h2>
+<img src="pictures/law.gif" alt="It doesn't matter how smart your phone is, if your network is dumb.">
+</section>
+
+
+<section class="slide cover">
+    <img src="pictures/connectivity.jpg" alt="XX">
+</section>
+
+<section class="slide">
+<h2>Infrastructure</h2>
+<p><mark>91.7%</mark> live within range of a <mark>2G network</mark>. At less than a quarter the speed of a 56K dial-up modem, 2G/ GSM (9.6 KBPS) is <mark>insufficient for practical use of the internet</mark>.</p>
+<p><mark>48.7%</mark> live within range of a <mark>3G mobile network</mark>.</p>
+<cite><a href="http://newsroom.fb.com/news/2015/02/the-state-of-global-connectivity/">State of Connectivity 2014</a> - internet.org</cite>
+
+</section>
+
+<!--
+<section class="slide">
+<h2>Indonesia</h2>
+<blockquote>in Indonesia 75% of users are on older 2G, or GSM/EDGE, networks, and the nation’s geography (it is made up of thousands of islands) presents additional challenges&hellip; more than half of Indonesian smartphone users said they experienced network problems daily.</blockquote>
+<cite>Measuring and improving network performance (internet.org) LINK!!!</cite>
+</section>
+-->
+
+<section class="slide cover">
+<img src="pictures/android-growth.gif" alt="XXX">
+</section>
+
+<section class="slide cover">
+<img src="pictures/win-ios.jpg" alt="windows phone and iphone, running Opera Mini">
+</section>
+
+
+
+
+<section class="slide shout">
+<h2>What's next?</h2>
+</section>
+
+<section class="slide">
+<h2>2005 - 2015</h2>
+<p>Last 10 years have focussed on <mark>compression</mark> at expense of compatibility</p>
+<div class="next">
+<h2>2015- </h2>
+<p>focusses on <mark>compatibility</mark>.</p>
+</div>
+</section>
+
+
+<section class="slide cover">
+<h2>Bruce’s law of Smartness&trade;</h2>
+<img src="pictures/law.gif" alt="It doesn't matter how smart your phone is, if your network is dumb.">
+</section>
+
+
+<section class="slide">
+<h2>Preliminary tests</h2>
+<p>On average, we can compresses the document data <mark>30% - 50% better</mark>.</p>
+</section>
+
+
+<section class="slide">
+<blockquote><p>Connectivity is concentrated in developed countries, and sparse in developing countries, where 78% of the population is online compared to 32%, respectively.</p>
+<p><mark>Developing countries are home to 94% of the global offline population.</mark></p>
+</blockquote>
+<cite><a href="http://newsroom.fb.com/news/2015/02/the-state-of-global-connectivity/">State of Connectivity 2014</a> - internet.org</cite>
+</section>
+
+<section class="slide">
+<h2>Internet matters</h2>
+<blockquote>an <mark>increase in Internet maturity</mark> similar to the one experienced in mature countries over the past 5 years creates an <mark>increase in real GDP per capita of $500</mark> on average during this period. It took the Industrial Revolution of the 19th century <mark>50 years to produce the same result</mark>.</blockquote>
+<cite><a href="http://www.mckinsey.com/insights/high_tech_telecoms_internet/internet_matters">The Net’s sweeping impact on growth, jobs, and prosperity</a> (McKinsey Global Institute)</cite>
+</section>
+
+<section class="slide last">
+    <ul>
+        <li>Resources:<br><a href="http://dev.opera.com/mini">dev.opera.com/mini</a></li>
+        <li>
+            Contact: <br><a href="mailto:brucel@opera.com">brucel@opera.com</a>
+        </li>
+        <li>
+            <a href="http://twitter.com/brucel">@brucel</a>
+        </li>
+    </ul>
+</section>
+
+<section class="slide acks">
+<h2>Resources</h2>
+<ul>
+<li><a href="http://www.gapminder.org/videos/dont-panic-the-facts-about-population/">Population forecast video by Hans Rosling</a> (<a href="http://esa.un.org/unpd/wpp/index.htm">raw data from United Nations</a>)</li>
+<li><a href="http://www.washingtonpost.com/blogs/worldviews/wp/2013/05/07/map-more-than-half-of-humanity-lives-within-this-circle/">More than half of humanity lives within this circle</a> (Washington Post))</li>
+<li>Ignighter: <a href="http://www.nytimes.com/2011/02/20/business/20ignite.html?_r=0">Jilted in the U.S., a Site Finds Love in India</a> (New York Times)</li>
+<li><a href="http://mhealth.jmir.org/article/viewFile/mhealth_v3i1e24/2">By 2011, 56% of Bangladeshi households had access to a mobile phone</a></li>
+<li>Myanmar: <a href="http://www.bloomberg.com/bw/articles/2014-09-29/myanmar-opens-its-mobile-phone-market-cuing-carrier-frenzy">When a SIM Card Goes From $2,000 to $1.50</a></li>
+<li>Population and GDP figures from <a href="https://www.cia.gov/library/publications/the-world-factbook/">CIA World Fact Book</a></li>
+<li><a href="https://dev.opera.com/blog/reducing-memory-use/">Opera’s work to reduce Chromium’s memory use</a></li>
+</ul>
+</section>
+
+
+<section class="slide acks">
+    <h2>
+        Thanks
+    </h2>
+    <ul>
+        <li>Me by HTML sign in Tokyo by Doug Schepers (@shepazu)</li>
+                <li>Opera's <a href="https://operasoftware.github.io/upstreamtools/">Blink commits</a> cake photographed by Andreas Bovens</li>
+        <li>Add to Homescreen banner - <a href="http://updates.html5rocks.com/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android">HTML5 Rocks</a></li>
+        <li><a href="https://secure.flickr.com/photos/chuckp/5766534/">Conversation photo</a> by <a href="https://secure.flickr.com/photos/chuckp/">Chuck Patch</a></li>
+        <li>Postbox and clown made by <a href="http://twitter.com/murfalizer">Murfalizer</a>. Clown by <a href="https://secure.flickr.com/photos/ch-villa/8371148068/">Nat Ch Villa</a></li>
+        <li><a href="https://adactio.com/notes/8242">Opera Mini and Angular</a> by Jeremy Keith.</li>
+		
+		
+		<li>Clip art - <a href="http://openclipart.org">openclipart.org</a></li>
+
+
+        <li>HTML/ CSS Presentation Framework: <a href="https://github.com/shower/shower">Shower</a> by Vadim Makeev.</li>
+    </ul>
+</section>
+
+<section class="slide acks">
+<h2>Maps</h2>
+<ul>
+<li><a href="http://www.freevectormaps.com/indonesia/ID-EPS-01-0001?ref=atr">Map of Indonesia</a> - Single Color by <a href="http://www.freevectormaps.com/?ref=atr">FreeVectorMaps.com</a></li>
+    <li><a href="http://www.freevectormaps.com/india/IN-EPS-01-0001?ref=atr">Map of India</a> - Single Color by <a href="http://www.freevectormaps.com/?ref=atr">FreeVectorMaps.com</a></li>
+
+    <li><a href="http://www.freevectormaps.com/bangladesh/BD-EPS-01-0001?ref=atr">Map of Bangladesh</a> - Single Color by <a href="http://www.freevectormaps.com/?ref=atr">FreeVectorMaps.com</a></li>
+<!--
+    <li><a href="http://www.freevectormaps.com/cambodia/KH-EPS-01-0001?ref=atr">Map of Cambodia</a> - Single Color by <a href="http://www.freevectormaps.com/?ref=atr">FreeVectorMaps.com</a></li>
+-->
+    <li><a href="http://www.freevectormaps.com/myanmar/MM-EPS-01-0001?ref=atr">Map of Myanmar</a> - Single Color by <a href="http://www.freevectormaps.com/?ref=atr">FreeVectorMaps.com</a></li>
+
+    <li><a href="http://www.freevectormaps.com/china/CN-EPS-01-0001?ref=atr">Map of China</a> - Single Color by <a href="http://www.freevectormaps.com/?ref=atr">FreeVectorMaps.com</a></li>
+
+    <li><a href="http://www.freevectormaps.com/world-maps/africa/WRLD-AF-01-0001?ref=atr">Map of Africa</a> - Single Color by <a href="http://www.freevectormaps.com/?ref=atr">FreeVectorMaps.com</a></li>
+
+    <li><a href="http://www.freevectormaps.com/world-maps/asia/WRLD-AS-01-0001?ref=atr">Map of Asia</a> - Single Color by <a href="http://www.freevectormaps.com/?ref=atr">FreeVectorMaps.com</a></li>
+    </ul>
+</section>
+
+
+
+
+
+
+            <!--
+                To hide progress bar from entire presentation
+                just remove “progress” element.
+            -->
+            <div class="progress"></div>
+            <script src="/shower/shower.min.js">
+            </script>
+        </section>
+    </body>
+    </html>

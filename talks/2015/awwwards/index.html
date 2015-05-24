@@ -7,11 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1274, user-scalable=no">
     <link rel="stylesheet" href="/shower/themes/lawson/styles/screen.css">
-    <link rel="stylesheet" href="/shower/themes/lawson/styles/print.css" media="print">
-      
+
 
             <style>
-            
+
             .first figcaption  {margin-left:40%; bottom:20%; z-index:9999;}
             #acks li {font-size:smaller;}
             .slide.first header {top: 68%;}
@@ -111,13 +110,13 @@
 
                    <section class="slide">
                    <h2>The ‘retina’ answer</h2>
-                  	<p>A: I can't.</p> 
+                  	<p>A: I can't.</p>
                  	<p><code>&lt;img src="blah.jpg"></code></p>
                  	</section>
 
                    <section class="slide">
                    <h2>CSS to the rescue?</h2>
-                   <pre><code>&lt;img id=lovely <mark>src=mankini.png</mark> 
+                   <pre><code>&lt;img id=lovely <mark>src=mankini.png</mark>
   alt="Bruce in a mankini">
 
 @media all and (<mark>max-width:320px</mark>) {
@@ -267,7 +266,7 @@ height:auto;}
                    <h2>The <code>w</code> descriptor</h2>
                    <pre><code>&lt;img src="medium.png"
 	alt="mankini"
-	srcset="big.png <mark>960w</mark>, 
+	srcset="big.png <mark>960w</mark>,
 	small.png <mark>240w</mark>"></code></pre>
 	</section>
 
@@ -275,7 +274,7 @@ height:auto;}
 	               <h2>Spec change!</h2>
                    <pre><code>&lt;img src="medium.png"
 	alt="mankini"
-	srcset="big.png 960w, 
+	srcset="big.png 960w,
 	small.png 240w"
 	<mark>sizes="100vw"</mark>></code></pre>
 	</section>
@@ -310,7 +309,7 @@ height:auto;}
                         </h2>
                         <blockquote>
                             WebP lossless images are 26% smaller in size compared to PNGs. WebP lossy images are 25-34% smaller in size compared to JPEG images
-                        </blockquote><cite><a href="https://developers.google.com/speed/webp/">More, conversion tools</a></cite>                   
+                        </blockquote><cite><a href="https://developers.google.com/speed/webp/">More, conversion tools</a></cite>
                     </section>
 
 
@@ -390,13 +389,13 @@ height:auto;}
                    <li>Firefox 38 (12 May 2015)</li>
                    <li>IE: <code>srcset</code> "in development", <code>&lt;picture></code> "under consideration"</li>
                    <li>Safari: <code>srcset</code> x descriptors (iOS 8.1), <code>&lt;picture></code> ??</li>
-                   </ul>	
+                   </ul>
                    </section>
 
 <section class="slide">
 <h2>Progressive enhancement</h2>
 <p>Because responsive images <em>require</em> use of <code>&lt;img src></code>, no-one gets a worse experience than they do now.</p>
-</section> 
+</section>
 
 <section class="slide cover">
 			<img src="pictures/end.jpg" alt="fairies and princesses, 'they all lived happily ever after'">

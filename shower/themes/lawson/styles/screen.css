@@ -12,7 +12,23 @@ body {
 	font:30px/2 Arial, sans-serif;
 	}
 
+/* Caption
+------------------------------- */
+.caption {
+	display:none;
+	}
 
+/* Progress
+------------------------------- */
+.progress {
+	display:none;
+	}
+
+/* Live Region
+------------------------------- */
+.live-region{
+	display:none;
+	}
 
 /* Slide
 ------------------------------- */
@@ -20,6 +36,7 @@ body {
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
+	position:relative;
 	padding:110px 120px 0;
 	width:1024px;
 	height:768px;
@@ -126,6 +143,20 @@ body {
 		counter-increment:list;
 		content:counter(list)'.\00A0';
 		}
+
+/* Table */
+.slide table {
+	font-size:.7em;
+	}
+.slide th {
+	color:#c00;
+	}
+.slide th,
+.slide td {
+	border-width:1px;
+	border-color:#ccc;
+	padding:.7em;
+	}
 
 /* Two Columns */
 .slide ol.two-cols,
@@ -301,6 +332,30 @@ body {
 			content:'';
 			}
 
+/* Full
+------------------------------- */
+
+/* Cover */
+.full .slide.cover {
+	z-index:1;
+	}
+	.full .slide.cover:after {
+		content:'';
+		}
+
+/* Shout */
+.full .slide.shout {
+	z-index:1;
+	}
+	.full .slide.shout:after {
+		content:'';
+		}
+
+/* Styles for screen media only
+------------------------------- */
+
+@media screen {
+
 /* Next */
 .next {
 	visibility:hidden;
@@ -323,6 +378,7 @@ body {
 
 /* Caption */
 .list .caption {
+	display:block;
 	margin:0 0 60px;
 	color:#FFF;
 	}
@@ -341,10 +397,8 @@ body {
 			}
 
 /* Slide */
-.list .slide:hover {cursor:pointer;} /* BL*/
 
 .list .slide {
-	position:relative;
 	float:left;
 	margin:0 -432px -284px 0;
 	-webkit-transform-origin:0 0;
@@ -357,6 +411,7 @@ body {
 	-ms-transform:scale(0.5);
 	-o-transform:scale(0.5);
 	transform:scale(0.5);
+	cursor:pointer;
 	}
 	.list .slide:before {
 		position:absolute;
@@ -468,25 +523,10 @@ body {
 		visibility:visible;
 		}
 
-/* Cover */
-.full .slide.cover {
-	z-index:1;
-	}
-	.full .slide.cover:after {
-		content:'';
-		}
-
-/* Shout */
-.full .slide.shout {
-	z-index:1;
-	}
-	.full .slide.shout:after {
-		content:'';
-		}
-
 /* Progress */
 .full .progress {
 	position:absolute;
+	display:block;
 	right:0;
 	bottom:0;
 	left:0;
@@ -513,15 +553,6 @@ body {
 	background:url(../images/grid.png) no-repeat;
 	}
 
-table {font-size:.7em; }
-th {color:#c00;}
-th, td {border-width:1px; border-color:#ccc; padding:.7em;  }
-
-/* sort out weirdness with karl's live regions and video */
-
-.live-region{
-	display:none;
-	}
 .full .live-region {
 	position:absolute;
 	clip:rect(0 0 0 0);
@@ -532,4 +563,13 @@ th, td {border-width:1px; border-color:#ccc; padding:.7em;  }
 	height:1px;
 	border:none;
 	display:block;
+	}
+
+	}
+
+/* Page options for priting */
+
+@page {
+	margin:0;
+	size:1024px 768px;
 	}

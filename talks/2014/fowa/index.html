@@ -6,7 +6,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=1274, user-scalable=no">
     <link rel="stylesheet" href="/shower/themes/lawson/styles/screen.css">
-    <link rel="stylesheet" href="/shower/themes/lawson/styles/print.css" media="print">
 
 	<!--
 		To apply styles to the certain slides
@@ -136,8 +135,8 @@ Can the Web compete with Native without losing its soul?
     <mark>up 120%</mark>
     .</p>
       <img  src="pictures/mobile-app.jpg" alt=""> </section>
-      
-      
+
+
 <section class="slide">
 	<h2>It's an App World.<br> The Web Just Lives in It</h2>
     <blockquote>Today, the U.S. consumer spends an average of 2 hours and 38 minutes per day on smartphones and tablets. 80% of that time (2 hours and 7 minutes) is spent inside apps and 20% (31 minutes) is spent on the mobile web.</blockquote>
@@ -159,7 +158,7 @@ Can the Web compete with Native without losing its soul?
 
 <section class="slide cover"> <img src="pictures/bhammail2.gif" alt="series of tweets between me and Marc Reeves answering my question 'why do users read 5 times as much on an app with 'Can only speculate that portability and opportunity of the moment encourages engagement during what would otherwise be 'dead' time'"> </section>
 
-<section class="slide cover"> 
+<section class="slide cover">
 	<img src="pictures/page-not-found.gif" alt="Page not found error message page">
 </section>
 
@@ -248,13 +247,13 @@ Can the Web compete with Native without losing its soul?
 <section class="slide">
       <h2>Service Workers + IndexedDB = Power</h2>
       <blockquote>When combined with access to IndexedDB and a new form of Cache, the ability to respond with arbitrary content is incredibly powerful.</blockquote>
-      <cite><a href="https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md">Service Workers Explained</a></cite> 
+      <cite><a href="https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md">Service Workers Explained</a></cite>
 </section>
 
 <section class="slide">
- <pre><code>this.addEventListener('fetch', 
+ <pre><code>this.addEventListener('fetch',
  	function(event) {
-  if (event.request.context == 'image' 
+  if (event.request.context == 'image'
   	&& new Date().getDay() == 4) {
     event.respondWith(
       fetch('/kitten.jpg')
@@ -389,7 +388,7 @@ Can the Web compete with Native without losing its soul?
 <section class="slide">
 <h2>Superior interaction</h2>
 <ul>
-<li>It can also make their <mark>performance faster</mark> by allowing them to store information locally 
+<li>It can also make their <mark>performance faster</mark> by allowing them to store information locally
 <li>They allow the user to use <mark>device-specific hand gestures</mark>. Android and iOS are gradually developing different conventions for interaction, and a <mark>native app responds the way its user expects</mark>.
 </ul>
 </section>
@@ -443,7 +442,7 @@ Can the Web compete with Native without losing its soul?
 <section class="slide">
 	<h2>Scott Jenson</h2>
 		<ul>
-			<li><mark>integrate in the list of apps directly available to the user.</mark> This means that it should show up on that OS's home screen and be launched just like any other native app.		
+			<li><mark>integrate in the list of apps directly available to the user.</mark> This means that it should show up on that OS's home screen and be launched just like any other native app.
 			<li><mark>integrate into the the OS task-switcher.</mark>
 		</ul>
 			<p>W3C: <a href="http://www.w3.org/QA/2013/08/enabling_new_types_of_web_user.html">Enabling new types of web user experiences</a></p>
@@ -562,7 +561,7 @@ Can the Web compete with Native without losing its soul?
 
 <section class="slide">
 	<h2>Holy Grail App</h2>
-	<blockquote> we've launched our first Holy Grail app into production! &hellip;  It looks exactly the same as the app it replaced, however <mark>initial pageload feels drastically quicker</mark> 
+	<blockquote> we've launched our first Holy Grail app into production! &hellip;  It looks exactly the same as the app it replaced, however <mark>initial pageload feels drastically quicker</mark>
 	</blockquote>
 	<cite><a href="http://nerds.airbnb.com/weve-launched-our-first-nodejs-app-to-product/">AirBnB</a></cite>
 </section>

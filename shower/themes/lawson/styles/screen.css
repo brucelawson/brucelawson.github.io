@@ -1,6 +1,6 @@
 /*
-	Lawson theme for Shower HTML presentation template: github.com/pepelsbey/shower
-	Copyright © 2010–2012 Vadim Makeev, pepelsbey.net & Bruce Lawson, brucelawson.co.uk
+	Lawson theme for Shower HTML presentation template: github.com/shower/shower
+	Copyright © 2010–2015 Vadim Makeev, pepelsbey.net & Bruce Lawson, brucelawson.co.uk
 	Licensed under MIT license: github.com/pepelsbey/shower/wiki/License-En
 */
 
@@ -12,7 +12,23 @@ body {
 	font:30px/2 Arial, sans-serif;
 	}
 
+/* Caption
+------------------------------- */
+.caption {
+	display:none;
+	}
 
+/* Progress
+------------------------------- */
+.progress {
+	display:none;
+	}
+
+/* Live Region
+------------------------------- */
+.live-region{
+	display:none;
+	}
 
 /* Slide
 ------------------------------- */
@@ -20,6 +36,8 @@ body {
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
+	position:relative;
+	z-index:1;
 	padding:110px 120px 0;
 	width:1024px;
 	height:768px;
@@ -28,15 +46,16 @@ body {
 	}
 	.slide:after {
 		position:absolute;
+		left:0;
+		right:0;
+		bottom:45px;
+		color:#CCC;
 		counter-increment:paging;
 		content:counter(paging, decimal-leading-zero);
+		text-align:center;
 		line-height:1;
+		font-size:30px;
 		}
-
-/* Debug Mode */
-.debug .slide {
-	background:#FFF url(../images/grid.png) no-repeat;
-	}
 
 /* Header */
 .slide h2 {
@@ -127,6 +146,20 @@ body {
 		content:counter(list)'.\00A0';
 		}
 
+/* Table */
+.slide table {
+	font-size:.7em;
+	}
+.slide th {
+	color:#c00;
+	}
+.slide th,
+.slide td {
+	border-width:1px;
+	border-color:#ccc;
+	padding:.7em;
+	}
+
 /* Two Columns */
 .slide ol.two-cols,
 .slide ul.two-cols {
@@ -186,6 +219,9 @@ body {
 .slide.cover {
 	background:#000;
 	}
+	.slide.cover:after {
+		content:'';
+		}
 .slide.cover img,
 .slide.cover svg,
 .slide.cover video,
@@ -301,13 +337,9 @@ body {
 			content:'';
 			}
 
-/* Next */
-.next {
-	visibility:hidden;
-	}
-.next.active {
-	visibility:visible;
-	}
+/* Screen Only
+------------------------------- */
+@media screen {
 
 /* List
 ------------------------------- */
@@ -323,6 +355,7 @@ body {
 
 /* Caption */
 .list .caption {
+	display:block;
 	margin:0 0 60px;
 	color:#FFF;
 	}
@@ -340,11 +373,18 @@ body {
 			color:#5ca4ed;
 			}
 
-/* Slide */
-.list .slide:hover {cursor:pointer;} /* BL*/
+/* Next
+------------------------------- */
+.next {
+	visibility:hidden;
+	}
+.next.active {
+	visibility:visible;
+	}
 
+/* Slide
+------------------------------- */
 .list .slide {
-	position:relative;
 	float:left;
 	margin:0 -432px -284px 0;
 	-webkit-transform-origin:0 0;
@@ -357,6 +397,7 @@ body {
 	-ms-transform:scale(0.5);
 	-o-transform:scale(0.5);
 	transform:scale(0.5);
+	cursor:pointer;
 	}
 	.list .slide:before {
 		position:absolute;
@@ -385,6 +426,7 @@ body {
 		bottom:-100px;
 		left:120px;
 		color:#444;
+		text-align:left;
 		font-size:60px;
 		}
 	.list .slide:hover:before {
@@ -401,8 +443,7 @@ body {
 	.list .slide:target:after {
 		color:#4B86C2;
 		}
-
-@media all and (max-width:1304px) {
+@media (max-width:1304px) {
 	.list .slide {
 		margin:0 -718px -496px 0;
 		-webkit-transform:scale(0.25);
@@ -432,6 +473,11 @@ body {
 			}
 	}
 
+/* Cover */
+.list .slide.cover:after {
+	content:counter(paging, decimal-leading-zero);
+	}
+
 /* Full
 ------------------------------- */
 .full {
@@ -444,9 +490,6 @@ body {
 	height:768px;
 	background:#000;
 	}
-	.full .caption {
-		display:none;
-		}
 	.full .slide {
 		position:absolute;
 		top:0;
@@ -458,7 +501,7 @@ body {
 			position:absolute;
 			left:0;
 			right:0;
-			bottom:45px; /* BL changed; was 75px */
+			bottom:45px;
 			color:#CCC;
 			text-align:center;
 			font-size:30px;
@@ -468,25 +511,11 @@ body {
 		visibility:visible;
 		}
 
-/* Cover */
-.full .slide.cover {
-	z-index:1;
-	}
-	.full .slide.cover:after {
-		content:'';
-		}
-
-/* Shout */
-.full .slide.shout {
-	z-index:1;
-	}
-	.full .slide.shout:after {
-		content:'';
-		}
-
 /* Progress */
 .full .progress {
 	position:absolute;
+	z-index:1;
+	display:block;
 	right:0;
 	bottom:0;
 	left:0;
@@ -513,15 +542,6 @@ body {
 	background:url(../images/grid.png) no-repeat;
 	}
 
-table {font-size:.7em; }
-th {color:#c00;}
-th, td {border-width:1px; border-color:#ccc; padding:.7em;  }
-
-/* sort out weirdness with karl's live regions and video */
-
-.live-region{
-	display:none;
-	}
 .full .live-region {
 	position:absolute;
 	clip:rect(0 0 0 0);
@@ -532,4 +552,13 @@ th, td {border-width:1px; border-color:#ccc; padding:.7em;  }
 	height:1px;
 	border:none;
 	display:block;
+	}
+
+	}
+
+/* Print
+------------------------------- */
+@page {
+	margin:0;
+	size:1024px 768px;
 	}

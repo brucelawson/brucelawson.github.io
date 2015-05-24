@@ -1,6 +1,6 @@
 /*
-	Lawson theme for Shower HTML presentation template: github.com/pepelsbey/shower
-	Copyright © 2010–2012 Vadim Makeev, pepelsbey.net & Bruce Lawson, brucelawson.co.uk
+	Lawson theme for Shower HTML presentation template: github.com/shower/shower
+	Copyright © 2010–2015 Vadim Makeev, pepelsbey.net & Bruce Lawson, brucelawson.co.uk
 	Licensed under MIT license: github.com/pepelsbey/shower/wiki/License-En
 */
 
@@ -37,6 +37,7 @@ body {
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	position:relative;
+	z-index:1;
 	padding:110px 120px 0;
 	width:1024px;
 	height:768px;
@@ -45,15 +46,16 @@ body {
 	}
 	.slide:after {
 		position:absolute;
+		left:0;
+		right:0;
+		bottom:45px;
+		color:#CCC;
 		counter-increment:paging;
 		content:counter(paging, decimal-leading-zero);
+		text-align:center;
 		line-height:1;
+		font-size:30px;
 		}
-
-/* Debug Mode */
-.debug .slide {
-	background:#FFF url(../images/grid.png) no-repeat;
-	}
 
 /* Header */
 .slide h2 {
@@ -217,6 +219,9 @@ body {
 .slide.cover {
 	background:#000;
 	}
+	.slide.cover:after {
+		content:'';
+		}
 .slide.cover img,
 .slide.cover svg,
 .slide.cover video,
@@ -332,37 +337,9 @@ body {
 			content:'';
 			}
 
-/* Full
+/* Screen Only
 ------------------------------- */
-
-/* Cover */
-.full .slide.cover {
-	z-index:1;
-	}
-	.full .slide.cover:after {
-		content:'';
-		}
-
-/* Shout */
-.full .slide.shout {
-	z-index:1;
-	}
-	.full .slide.shout:after {
-		content:'';
-		}
-
-/* Styles for screen media only
-------------------------------- */
-
 @media screen {
-
-/* Next */
-.next {
-	visibility:hidden;
-	}
-.next.active {
-	visibility:visible;
-	}
 
 /* List
 ------------------------------- */
@@ -396,8 +373,17 @@ body {
 			color:#5ca4ed;
 			}
 
-/* Slide */
+/* Next
+------------------------------- */
+.next {
+	visibility:hidden;
+	}
+.next.active {
+	visibility:visible;
+	}
 
+/* Slide
+------------------------------- */
 .list .slide {
 	float:left;
 	margin:0 -432px -284px 0;
@@ -440,6 +426,7 @@ body {
 		bottom:-100px;
 		left:120px;
 		color:#444;
+		text-align:left;
 		font-size:60px;
 		}
 	.list .slide:hover:before {
@@ -456,8 +443,7 @@ body {
 	.list .slide:target:after {
 		color:#4B86C2;
 		}
-
-@media all and (max-width:1304px) {
+@media (max-width:1304px) {
 	.list .slide {
 		margin:0 -718px -496px 0;
 		-webkit-transform:scale(0.25);
@@ -487,6 +473,11 @@ body {
 			}
 	}
 
+/* Cover */
+.list .slide.cover:after {
+	content:counter(paging, decimal-leading-zero);
+	}
+
 /* Full
 ------------------------------- */
 .full {
@@ -499,9 +490,6 @@ body {
 	height:768px;
 	background:#000;
 	}
-	.full .caption {
-		display:none;
-		}
 	.full .slide {
 		position:absolute;
 		top:0;
@@ -513,7 +501,7 @@ body {
 			position:absolute;
 			left:0;
 			right:0;
-			bottom:45px; /* BL changed; was 75px */
+			bottom:45px;
 			color:#CCC;
 			text-align:center;
 			font-size:30px;
@@ -526,6 +514,7 @@ body {
 /* Progress */
 .full .progress {
 	position:absolute;
+	z-index:1;
 	display:block;
 	right:0;
 	bottom:0;
@@ -567,8 +556,8 @@ body {
 
 	}
 
-/* Page options for priting */
-
+/* Print
+------------------------------- */
 @page {
 	margin:0;
 	size:1024px 768px;

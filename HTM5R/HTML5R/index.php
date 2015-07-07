@@ -33,9 +33,10 @@
 
             
             <h2 id="post-<?php the_ID(); ?>">
-                <?php the_title(); ?>
+              <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>">
+                <?php the_title(); ?></a>
             </h2>
-
+            
         </header>
         <?php the_content("Continue reading " . the_title('','',false), 0); ?>
 

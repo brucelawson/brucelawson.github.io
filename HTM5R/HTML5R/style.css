@@ -16,7 +16,30 @@ Text Domain: bruce
 /* HTML 5 ahoy! Jan, Feb, March 09. Can't mark those up as <time>, can I eh?????? */
 /* April 09, contact form gorgeousness */
 /* Aug 10, twitter vulture; removed <ul> for nav. Changed nav for sidebar into <aside> containing <nav> + <section> for stuff that's not nav like tweet, photo and colophon stuff */
-/* Jan 11, added <table> styles */
+/* Jan 11, added <table> styles 
+
+
+TO DO:
+
+REMOVE
+
+- CMS nav styles
+- search box styles
+- article footer styles (metadata now in header)
+
+ADD
+
+- layout (right column, sensible max width)
+- brown paper object fit
+- typefaces
+- Lu's pretty icons
+
+CLARIFY
+- box borders
+- previous/ next links
+- comments styles
+
+*/
 
 @font-face {
 	font-family: "demand";

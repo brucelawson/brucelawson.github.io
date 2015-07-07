@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
+<!-- individual archives page -->
+
 <main id="content" role="main">
     <?php if (have_posts()) : ?>
     <section>

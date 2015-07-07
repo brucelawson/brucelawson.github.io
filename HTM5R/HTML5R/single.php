@@ -12,8 +12,7 @@
             Posted in
             <?php the_category(', ') ?>
             .
-            Follow comments via
-            <?php comments_rss_link('RSS feed.'); ?>
+            
             <?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
                             // Both Comments and Pings are open ?>
             <a href="#respond">Comment.</a>

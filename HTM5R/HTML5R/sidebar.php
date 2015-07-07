@@ -28,19 +28,9 @@
     </div>
 
   </nav>
-
-  
     <!--  get the random image; hardcoded on my site  --> 
   <script src="/randompic.js">
   </script> 
-    <!--end of random images -->
-    <ul>
-      <li><a href="http://www.nsdesign.co.uk/">Web Hosting by NSDesign.</a></li>
-      <li>Proudly powered by <a href="http://wordpress.org">WordPress</a>. </li>
-      <li><a href="feed:<?php bloginfo('rss2_url'); ?>">Entries (RSS)</a> and <a href="feed:<?php bloginfo('comments_rss2_url'); ?>">Comments
-        (RSS)</a>.</li>
-    </ul>
-    
-  <!-- end colophon --> 
+
   
 </aside>

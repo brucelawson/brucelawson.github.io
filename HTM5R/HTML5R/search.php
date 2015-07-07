@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
-	<div id=content role=main>
+	<main id=content role=main>
 
 	<?php if (have_posts()) : ?>
 
@@ -50,7 +50,7 @@
 
 	<?php endif; ?>
 		
-	</div>
+	</main>
 
 
 <?php get_footer(); ?> 

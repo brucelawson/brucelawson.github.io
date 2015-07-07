@@ -7,6 +7,7 @@
   <p>I work for <a href="http://www.opera.com/">Opera</a>, but all opinions contained herein are mine  (and are thus incontrovertibly
     correct) and do not represent the opinions of  my employers. (Comments are copyright their authors, not written by me, and
     are therefore probably the ramblings of mad people.)</p>
+  <p><strong>Contact:</strong> bruce at this domain, or <a href="http://twitter.com/brucel">brucel on twitter</a>.</p>
 </footer>
 
 <!-- </div> </page> -->

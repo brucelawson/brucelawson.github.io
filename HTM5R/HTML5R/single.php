@@ -5,33 +5,39 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <article role=article itemscope itemtype="http://schema.org/BlogPosting">
          <header>
-            <h2 id="post-<?php the_ID(); ?>">
-                <?php the_title(); ?>
-            </h2>
+            <!-- metadata stuff -->
             <time itemprop="dateCreated" datetime="<?php the_time('Y-m-d')?>">
                 <?php the_time('l j F Y') ?>
             </time>
-        </header>
-        <?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
-        <?php link_pages('<p><strong>Pages:</strong> ', '</p>', 'number'); ?>
-        <footer>Posted in
+            Posted in
             <?php the_category(', ') ?>
             .
             Follow comments via
             <?php comments_rss_link('RSS feed.'); ?>
             <?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
-							// Both Comments and Pings are open ?>
+                            // Both Comments and Pings are open ?>
             <a href="#respond">Comment.</a>
             <?php } elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
-							// Only Pings are Open ?>
+                            // Only Pings are Open ?>
             Responses are closed.
             <?php } elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
-							// Comments are open, Pings are not ?>
+                            // Comments are open, Pings are not ?>
             <a href="#respond">Comment.</a>
             <?php } elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
-							// Neither Comments, nor Pings are open ?>
+                            // Neither Comments, nor Pings are open ?>
             Comments are closed.
             <?php } edit_post_link('Edit this entry.','',''); ?>
+
+
+            
+            <h2 id="post-<?php the_ID(); ?>">
+                <?php the_title(); ?>
+            </h2>
+
+        </header>
+        <?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
+        <?php link_pages('<p><strong>Pages:</strong> ', '</p>', 'number'); ?>
+        <footer>
         </footer>	
 	
         <nav>

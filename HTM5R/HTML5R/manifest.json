@@ -1,0 +1,45 @@
+{
+  "short_name": "Bruce Lawson",
+  "name": "Bruce Lawson's wonderful world",
+  "icons": [
+    {
+      "src": "favicon-36.gif",
+      "sizes": "36x36",
+      "type": "image/gif",
+      "density": "0.75"
+    },
+    {
+      "src": "favicon-48.gif",
+      "sizes": "48x48",
+      "type": "image/gif",
+      "density": "1.0"
+    },
+    {
+      "src": "favicon-72.gif",
+      "sizes": "72x72",
+      "type": "image/gif",
+      "density": "1.5"
+    },
+    {
+      "src": "favicon-96.gif",
+      "sizes": "96x96",
+      "type": "image/gif",
+      "density": "2.0"
+    },
+    {
+      "src": "favicon-144.gif",
+      "sizes": "144x144",
+      "type": "image/gif",
+      "density": "3.0"
+    },
+    {
+      "src": "favicon-192.gif",
+      "sizes": "192x192",
+      "type": "image/gif",
+      "density": "4.0"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

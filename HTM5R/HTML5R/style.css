@@ -1,0 +1,651 @@
+/* 7 Jan 09, amended to html 5 */
+/*  31 July 2008 10.39 added div.figure */
+/* HTML 5 ahoy! Jan, Feb, March 09. Can't mark those up as <time>, can I eh?????? */
+/* April 09, contact form gorgeousness */
+/* Aug 10, twitter vulture; removed <ul> for nav. Changed nav for sidebar into <aside> containing <nav> + <section> for stuff that's not nav like tweet, photo and colophon stuff */
+/* Jan 11, added <table> styles */
+
+@font-face {
+	font-family: "demand";
+	src: url("/fonts/demand.ttf") format("truetype");
+}
+* {
+	margin:0;
+	padding:0;
+}
+/* explicitly tell browsers that these elements are block-level, as most browsers don't yet have any defaults for them,even if they "know" about them at all. Otherwise you might see an occurance of rendering weirdnesses - or, to use the technical term, "squonks". */
+
+header, footer, nav, article, section, aside, video {
+	display:block;
+}
+time {
+	display:inline;
+} /* certainly shouldn't need to do this, but hey ho etc */
+html {
+	font-size:100.01%;
+}
+body {
+	font-size:small;
+	font-family:Geneva, Verdana, Helvetica, sans-serif;
+	line-height:1.6;
+	background-color:white;
+}
+mark {
+	background-color:transparent;
+} /* so no browser knows about this now, but future-proof it anyway */
+article mark {
+	background-color:#FFC0CB;
+}
+/* basic layout lumps */
+
+/* wrapper */
+
+body {
+	width: 99%;
+	text-align: left;
+	float:left;
+}
+header {
+	text-align:center;
+	width:auto;
+	margin:0 auto;
+	padding:0;
+}
+header h1 a span {
+	display:block;
+	height:176px;
+}
+body>aside {
+	float: left;
+	width: 210px;
+	margin-left: 20px;
+}
+main {display:block;
+	margin: 0 20px 0 250px; 
+	max-width:800px; /* pesky widescreen monitors! */
+}
+footer {
+	clear:left;
+	background:#FFF url(images/oolongse.gif) no-repeat left bottom;
+	padding-top: 20px;
+	padding-bottom: 80px;
+}
+footer p {
+	text-align:center;
+	font-size:x-small;
+}
+article {
+	float:left;
+	width:100%;
+	margin-bottom:14px;
+} 
+
+ins, del {
+	background-color:#FFC;
+}
+q {
+	quotes:none;
+}
+abbr[title], dfn[title] {
+	font-style:normal;
+	text-decoration:none;
+	border-bottom:1px dotted #999;
+	cursor:help;
+}
+embed {
+	margin-top:1em;
+}
+.pullquote {
+	background:#FFC;
+	display:block;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	border-radius:25px;
+	float:left;
+	margin-right:10px;
+	width:30%;
+	font-size:x-large;
+	line-height:24px;
+	text-align:center;
+	padding:15px;
+}
+blockquote {
+	background:url(images/openquote.gif) no-repeat left center;
+	padding-left:75px;
+	min-height:45px;
+	margin-bottom:1.5em;
+}
+.nb {
+	background:#FFC;
+	border:1px solid red;
+	clear:both;
+	margin:10px 0;
+	padding:5px;
+}
+ul, ol {
+	margin-bottom:10px;
+}
+strong {
+	font-weight:700;
+}
+code {
+	font-size:medium;
+	font-family:"Courier New", Courier, mono;
+}
+img {
+	border:0 none; max-width:100%;
+}
+p {
+	margin:0 0 16px;
+	padding:0;
+}
+p.photocaption {
+	clear:both;
+}
+a {
+	color:#09c;
+	text-decoration:none;
+	font-weight:600;
+}
+a.more-link {
+	display:block;
+	margin-top:1em;
+	text-align:center;
+}
+a:link {
+	color:#09c;
+}
+a:visited {
+	color:#669;
+}
+a:hover, a:active, a:focus {
+	text-decoration:underline;
+}
+h2 {
+	line-height:1.4;
+	font-family:"trebuchet MS", Helvetica, serif;
+	padding-bottom:2px;
+	border-bottom:1px solid #999;
+	font-weight:600;
+	font-size:x-large;
+	margin:0 0 3px;
+}
+h2 a:link, h2 a:visited {
+	color:#000;
+}
+h2 a:hover {
+	color:#09c;
+	text-decoration:none;
+}
+h3 {
+	color:#7F190D;
+	font-size:medium;
+	text-transform:uppercase;
+	font-family:"trebuchet MS", Helvetica, serif;
+}
+h3#comments {
+	clear:left;
+	text-align:center;
+	margin:20px 0;
+}
+h4 {
+	color:#7F190D;
+	font-family:"trebuchet MS", Helvetica, serif;
+	font-size:large;
+	font-weight:400;
+	clear:both;
+}
+.note {
+	font-size:smaller;
+}
+header h1 a {
+	display:block;
+	background:url(images/bruce-logo.jpg) no-repeat center;
+	width:auto;
+	height:176px;
+	text-decoration:none;
+}
+header h1 a span {
+	position:absolute;
+	left:0;
+	top:-500px;
+	overflow:hidden;
+}
+nav h3 {
+	text-decoration:none;
+}
+ul#mainnav {
+	list-style:none;
+	margin-left:0;
+	padding-left:0;
+	float:left;
+	display:inline-block;
+}
+
+ul#mainnav a {
+	display:block;
+}
+ul#mainnav a:hover {
+	text-decoration:none;
+}
+ul#mainnav a span {
+	position:absolute;
+	left:0;
+	top:-500px;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+a#music {
+	background:url(images/music.jpg);
+	width:200px;
+	height:72px;
+}
+a#about {
+	background:url(images/about.jpg);
+	width:184px;
+	height:46px;
+}
+a#photos {
+	background:url(images/photos.jpg);
+	width:200px;
+	height:66px;
+}
+a#writing {
+	background:url(images/writing.jpg);
+	width:200px;
+	height:68px;
+}
+a#links {
+	background:url(images/links.jpg);
+	width:190px;
+	height:77px;
+}
+a#navemail {
+	background:url(images/email.jpg);
+	width:200px;
+	height:88px;
+}
+a#home {
+	background:url(images/nav_home.jpg);
+	width:200px;
+	height:88px;
+}
+#lowlights {
+	text-align:left;
+	float:left;
+	height:455px;
+	background:url(images/brownpaper.jpg) no-repeat;
+	width:164px;
+	padding:15px 15px 15px 0;
+}
+#lowlights h2 {
+	text-align:center;
+	color:#000;
+	border:none;
+	padding-left:20px;
+}
+#lowlights li {
+	margin-bottom:4px;
+	margin-left:34px;
+}
+#lowlights a, #lowlights a:visited {
+	color:#000;
+}
+#CMSnav, #searchbox, aside section {
+	float:left;
+	background:#FFC;
+	border:1px solid;
+	text-align:left;
+	height:auto;
+	width:164px;
+	padding:10px;
+}
+#searchbox {
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+}
+#CMSnav {
+	border-bottom:none;
+	padding-bottom:none;
+	-moz-border-radius-topleft: 15px;
+	-webkit-border-top-left-radius:15px;
+	border-top-left-radius:15px;
+	-moz-border-radius-topright: 15px;
+	-webkit-border-top-right-radius:15px;
+	border-top-right-radius:15px;
+}
+
+#blah
+/*  wanted to use aside section:last-of-type ... but old browsers! */ {
+	border-top:none;
+	margin-top:0;
+	padding-top:0;
+	padding-bottom:0;
+	-moz-border-radius-bottomleft: 15px;
+	-webkit-border-bottom-left-radius:15px;
+	border-bottom-left-radius:15px;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-bottom-right-radius:15px;
+	border-bottom-right-radius:15px;
+}
+body>aside ul {
+	margin-left:5px;
+	padding-left:5px;
+	list-style:disc;
+}
+/*
+#CMSnav ul ul
+
+{
+
+	margin-left:5px;
+
+	padding-left:5px;
+
+	list-style:disc;
+
+}
+*/
+
+
+#CMSnav p {
+	font-size:x-small;
+	line-height:normal;
+}
+body>aside section, .recent {
+	font-size:x-small;
+	line-height:1.2;
+	margin-bottom:.7em;/* BL 22 Jan */
+}
+.randompic {
+	min-height:50px;
+	width:150px;
+	text-align:center;
+	margin:0 auto;
+	padding:5px;
+}
+
+#blah { /* put the twitter vulture there */
+	background: #FFC url(images/twulture.gif) no-repeat left bottom;
+	padding-bottom: 50px;
+}
+#themeswitcher:target {
+	outline: 3px solid red;
+} /* BL 22 Jan */
+#content ul, #content ol {
+	margin-left:1em;
+	padding-left:1em;
+}
+pre {
+	font-family:Geneva, Verdana, Helvetica, sans-serif;
+	width:auto;
+	position:relative;
+	left:auto;
+	top:auto;
+	background:#FFF;
+	border:thin none;
+	text-align:left;
+	float:none;
+	padding:0;
+}
+.poetry {
+	font-weight:700;
+}
+img.intext {
+	float:left;
+	margin:3px 8px;
+}
+img.intextr {
+	float:right;
+	margin:3px 8px;
+}
+.standalone {
+	width:auto;
+	float:none;
+	display:block;
+	margin:0 auto;
+}
+img.border {
+	border:1px solid #999;
+	padding:2px;
+}
+/* image + caption combo in div.figure */
+
+.figure img {
+	border:1px solid #999;
+	padding:2px;
+	width:auto;
+	float:none;
+	display:block;
+	margin:0 auto;
+}
+.figure p {
+	font-size:smaller;
+	text-align:center;
+}
+/* dialogues of cite + blockquote pairs */
+
+.dialogue {
+	background:url(images/openquote.gif) no-repeat left center;
+	padding-left:75px;
+	min-height:45px;
+	margin-bottom:1.5em;
+}
+.dialogue cite {
+	font-style:normal;
+	font-weight:bolder;
+}
+.dialogue q, .dialogue blockquote {
+	display:block;
+	text-indent:1.5em;
+	margin-bottom:.3em;
+	background-image:none;
+	padding-left:0;
+}
+.dialogue p.direction {
+	font-style:italic;
+	margin-top:1em;
+}
+input#searchsubmit {
+	margin-top:5px;
+}
+.screenreader {
+	display:block;
+	height:0;
+	overflow:hidden;
+}
+input[type="submit"] {
+	display:block;
+	padding:10px;
+}
+ol.commentlist {
+	padding-left:1em;
+	margin-left:1em;
+}
+.commentlist li li {
+	padding:0;
+}
+.commenttext {
+	margin-top:15px;
+}
+.authorcomment {
+	padding-left:40px;
+	background:url(images/initials.gif) no-repeat left top;
+	min-height:31px;
+}
+* html .authorcomment {
+	height:31px;
+}
+#commentform {
+	float:left; /* so clearing of the "subscribe to comments" box, which is emitted as inline style by by the plugin just clears this */
+	margin-left:30px;
+}
+label {
+	display:block;
+}
+textarea#comment {
+	width:450px;
+	margin-right:10px;
+	padding:10px;
+}
+.alt {
+	background-color:#f8f8f8;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+.commentauthor {
+	font-style:normal;
+}
+.commentauthor a:hover:after {
+	content:" - " attr(href);
+}
+/* different navs inside the page */
+
+#content article nav span, /* the nav to next, previous posts at bottom of single blog entry is inside the article */ #content>nav /* nav at bottom of archive page/ home page is not inside an article */ {
+	float:left;
+	font-family:demand, arial;
+	color:black;
+}
+nav>div {
+	float:left;
+	width:49%
+}
+/* end of fancy navs */
+
+
+p.subscribe-to-comments {
+	clear:both;
+}
+input#subscribe {
+	width:auto;
+}
+/* fixed-width layout for IE 6,as I'm too stupid to sort out the float drop, and that's tangental to the point */
+
+* html body {
+	width:800px;
+	margin: 0 auto;
+}
+* html #content {
+	width:492px
+}
+/* over rides for now - move further up! Some rules are unnecessary if I could define using the > selector, but I'm being kind to IE 6 users */
+
+article header {
+	text-align:left;
+}
+article header a {
+	background-image:none;
+} /* don't show the main logo if not "main" header on page */
+/* article nav, section nav {float:none; width:auto; margin-left:0;} /* undo styles applied to main nav element */
+article header time {
+	display:block;
+	font-weight:bold;
+	margin-bottom:1em;
+} /* at top of article */
+article article time {
+	display:block;
+} /* top of comment */
+article footer time, h2 time {
+	display:inline;
+}
+article footer {
+	color:#FFF;
+	background-color:#000;
+	background-image:none; /* kill the oolongse image that's on the page's main footer */
+	font:90% "Courier New", Courier, mono;
+	width:50%;
+	margin:30px auto;
+	padding:10px;
+}
+article footer a, article footer a:visited {
+	color:red;
+}
+article article {
+	margin-bottom:1em;
+	counter-increment: comment;
+}
+article article:before {
+	content: counters(comment, ".");
+	font-family: "demand";
+	font-size:x-large;
+	float:left;
+	margin-right:15px;
+	margin-top:-.2em;
+}
+#respond {
+	color:black;
+	font-size:2em;
+	clear:left;
+}
+/* Woo yeah I've got a new contact form! */
+
+fieldset {
+	max-width:500px;
+	padding:1.2em;
+	border:1px solid #ddd;
+	margin-bottom:2em;
+}
+fieldset legend {
+	padding:0 1em;
+	font-weight:bold;
+}
+fieldset label {
+	margin-bottom:.5em;
+}
+fieldset input {
+	margin-bottom:1em;
+	border:1px solid #ddd
+}
+.contact-form input[required], .contact-form textarea[required] {
+	border:2px solid black;
+}
+/* input[required]:hover:before, textarea[required]:hover:before, input[required]:focus:before, textarea[required]:focus:before  {content: "required"; position:absolute; display:block; background-color:yellow; padding:.3em;} */
+p.btc-powered, p.btc-summary {
+	clear:both;
+	font-size:x-small;
+}
+/* in--page forms can be coded into posts */
+#inpage-form {
+	margin-left:10%;
+}
+#inpage-form {
+	display:table-row;
+}
+#inpage-form label, form#inpage-form input {
+	display:table-cell;
+	width:45%;
+	padding-right:4%;
+	margin-top:.6em;
+	padding-top:.3em;
+	padding-bottom:.6em;
+}
+#inpage-form button {
+	margin:1em auto;
+}
+
+/* Sept 4 2010 added link for book stuff */
+
+#book {
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	text-align:center;
+	font-size:1em;}
+
+#book cite {font-style:normal;}
+#book a {margin:0 auto;}
+#book ul {margin-top:1em;}
+
+#book h2 {font-size:large;}
+
+#book .lanyrd-listing {text-align:left;}
+#book .lanyrd-listing li {border-bottom: 1px solid #ccc; margin:.5em;}
+
+
+/* Jan 11, table styles */
+th {background:#FFC;}
+td {border:1px solid #ccc; text-align:center;}
+table {border:1px solid black;}
+

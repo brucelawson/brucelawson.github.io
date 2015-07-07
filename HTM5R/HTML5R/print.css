@@ -1,0 +1,122 @@
+* {margin:0; padding:0}
+
+body {
+	color:#000000;
+	margin:0px;
+	padding:5%;
+	font: 14px/1.6 "Times New Roman", Times, serif;
+	width: 90%;
+}
+h2 a, h2 a:visited, h3 a, h3 a:visited   {color:black;text-decoration:none;}
+p a, p a:visited {margin-left: 4px; color:black;text-decoration:underline;}
+p a:link:after, p a:visited:after {
+   content: " (" attr(href) ") ";
+   font-size: 90%;
+   }
+
+.pullquote {background: #FFFFCC; display:block;
+padding:15px;-moz-border-radius: 25px; float:left; margin-right:10px; width:30%; font-size:x-large; line-height:24px; text-align:center;}
+
+blockquote {no-repeat left center; padding-left: 65px;}
+
+.nb { border: 1px solid #FF0000; padding:5px; margin: 10px 0px;}
+
+ul {margin-bottom: 10px;}
+
+strong {font-weight:bold;} /* cos Moz doesn't do by default*/
+code {font-size:medium; font-family: "Courier New", Courier, mono;}
+img {border: 0px none}
+
+p  {
+	margin:0px 0px 16px 0px;
+	padding:0px;}
+
+p.photocaption {clear:both;}
+
+
+h2 {clear:both;
+	margin:0px;
+    	line-height:1.4;
+	font-family: "trebuchet MS", Helvetica, serif;
+	padding-bottom: 2px;
+	padding-top:14px;
+	margin-bottom: 3px;
+	border-bottom: 1px solid #999;
+	font-weight: 600;
+	font-size: x-large;}
+
+
+
+h3 {
+	font-size: medium; 
+	text-transform: uppercase;
+	font-family:"trebuchet MS", Helvetica, serif;  clear:both;}
+
+h3#comments {text-align:center; page-break-before:always;}
+
+h4 {font-family: "trebuchet MS", Helvetica, serif;
+	font-size: large;font-weight: normal; clear:both;}
+
+
+.note {
+	font-size: smaller;
+}
+
+
+#header{
+	margin:0px auto;
+	padding:0px;
+	height:auto;;
+	text-align: center;
+	width: auto;
+	}
+
+
+
+
+#sidebar {display:none;}
+
+#content li {margin-left:10px; padding-left:10px;}
+
+#footer {display:none;}
+
+
+
+pre {	padding: 0px;
+	width: auto;
+	position: relative;
+	left: auto;
+	top: auto;
+	text-align: left;
+	float: none;}
+
+.poetry {	font: bold Verdana, Arial, Helvetica, sans-serif;}
+
+img.intext {
+	float: left;
+	margin: 3px;} 
+
+img.intextr {
+	float: right;
+	margin: 3px;} 
+
+img.standalone { display: block; margin: 6px auto 2px; width: auto;} 
+
+img.border {
+	margin: 3px 8px; padding: 2px;
+	border: 1px solid #999999;}
+
+
+/*comments - what do they look like?*/
+
+.commenttext {margin-top: 15px;}
+
+
+form, div.capitalistBastard, #respond {display:none;}
+
+ol.commentlist li {padding:10px; margin-bottom: 10px;}
+
+.postmetadata {display:none;}
+
+
+

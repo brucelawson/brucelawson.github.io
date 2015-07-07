@@ -31,6 +31,6 @@
     <!--  get the random image; hardcoded on my site  --> 
   <script src="/randompic.js">
   </script> 
-
   
 </aside>
+

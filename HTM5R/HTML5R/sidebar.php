@@ -1,8 +1,8 @@
 <aside role=complementary>
     <nav role=navigation>
     <div id=searchbox>
-      <?php include (TEMPLATEPATH . '/searchform.php'); ?>
-      <a href="#content">skip to main content</a> </div>
+      <?php include (TEMPLATEPATH . '/searchform.php'); ?> 
+    </div>
       <ul id=mainnav>
         <li><a id=home href="/"><span>Home</span></a></li>
         <li><a id=music href="/category/my-music/"><span>music</span></a></li>
@@ -25,85 +25,21 @@
     <div class="lanyrd-target-splat"><a href="http://lanyrd.com/people/brucel/"  class="lanyrd-splat lanyrd-template-detailed lanyrd-nomicroformats lanyrd-number-10" rel="me">See my conferences on Lanyrd</a></div>
   </section>
 
-    <div id=lowlights>
+    <div id="lowlights">
       <h2>Site Lowlights:</h2>
       <ul>
+        <li><a href="/archive/">Archives</a></li>
         <li><a href="/2004/zengarden/">Geocities 1996 - my CSS
           Zen Garden design</a></li>
-        <li><a href="/category/accessibility-web-standards/">Notes
-          on Web Accessibility</a></li>
-        <li><a href="/category/lists/">Bruce's Top Tens - lists
-          of loves.</a></li>
         <li><a href="/spam-letters/">The Spam Letters</a></li>
         <li><a href="/kazaa/">Letters found on Kazaa</a></li>
         <li> <a href="http://www.amazon.co.uk/gp/registry/registry.html?ie=UTF8&amp;type=wishlist&amp;id=1X8A4ML6ZH3PQ"> My
           Amazon wishlist</a></li>
       </ul>
     </div>
-    <div id=CMSnav> <!-- Wordpress default stuff: --> 
+
       
-      <!-- end tweets -->
-      <?php /* If this is a category archive */ if (is_category()) { ?>
-      <p>You are currently browsing the archives for the
-        <?php single_cat_title(''); ?>
-        category.</p>
-      <?php /* If this is a yearly archive */ } elseif (is_day()) { ?>
-      <p>You are currently browsing the <a href="<?php echo get_settings('siteurl'); ?>"><?php echo bloginfo('name'); ?></a> weblog
-        archives for the day
-        <?php the_time('l, F jS, Y'); ?>
-        .</p>
-      <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-      <p>You are currently browsing the <a href="<?php echo get_settings('siteurl'); ?>"><?php echo bloginfo('name'); ?></a> weblog
-        archives for
-        <?php the_time('F, Y'); ?>
-        .</p>
-      <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-      <p>You are currently browsing the <a href="<?php echo get_settings('siteurl'); ?>"><?php echo bloginfo('name'); ?></a> weblog
-        archives for the year
-        <?php the_time('Y'); ?>
-        .</p>
-      <?php /* If this is a monthly archive */ } elseif (is_search()) { ?>
-      <p>You have searched the <a href="<?php echo get_settings('siteurl'); ?>"><?php echo bloginfo('name'); ?></a> weblog
-        archives for <strong>'<?php echo wp_specialchars($s); ?>'</strong>.
-        If you are unable to find anything in these search results, you
-        can try one of these links.</p>
-      <?php /* If this is a monthly archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-        <p>You are currently browsing the <a href="<?php echo get_settings('siteurl'); ?>"><?php echo bloginfo('name'); ?></a> weblog
-          archives.</p>
-        <?php } ?>
-      <h2>
-        <?php _e('Categories'); ?>
-      </h2>
-      <ul>
-        <?php list_cats(0, '', 'name', 'asc', '', 1, 0, 1, 1, 1, 1, 0,'','','','','') ?>
-      </ul>
-      
-      <!--  not testing if we have pages (cos I know we have) because I don't want WoodProos to wrap the tile in an <li>. Listitis is a shocking thing.-->
-      <h2>Pages</h2>
-      <ul>
-        <?php wp_list_pages('categorize=0&title_li=0' ); ?>
-      </ul>
-      <!-- http://codex.wordpress.org/Function_Reference/wp_list_pages#Markup_and_styling_of_page_items and http://wordpress.org/support/topic/using-wp_list_bookmarks-and-title_li--> 
-      
-      <!--                 <h2>
-                    <?php _e('Archives'); ?>
-                </h2>
-                <ul>
-                    <?php wp_get_archives('type=monthly'); ?>
-                </ul> --> 
-      
-      <!-- get recent comments uses a plugin http://blog.jodies.de/2004/11/recent-comments/-->
-      <?php if (function_exists('get_recent_comments')) { ?>
-      <h2>
-        <?php _e('Recent Comments:'); ?>
-      </h2>
-      <ul class="recent">
-        <?php get_recent_comments(); ?>
-      </ul>
-      <?php } ?>
-      <!-- end recent comments --> 
-      
-    </div>
+  </div>
   
   <!-- colophon sort of stuff -->
   <section id=blah>

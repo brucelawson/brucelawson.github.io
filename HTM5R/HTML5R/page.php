@@ -15,4 +15,7 @@
     <?php endwhile; endif; ?>
     <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 </main>
+
+<?php include("elsewhere.php"); ?>
+
 <?php get_footer(); ?>

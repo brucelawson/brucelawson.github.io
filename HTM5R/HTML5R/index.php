@@ -6,22 +6,41 @@
     <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
     <article role=article itemscope itemtype="http://schema.org/BlogPosting">
-        <header>
-            <h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>">
-                <?php the_title(); ?>
-                </a></h2>
+         <header>
+            <!-- metadata stuff -->
             <time itemprop="dateCreated" datetime="<?php the_time('Y-m-d')?>">
                 <?php the_time('l j F Y') ?>
             </time>
-        </header>
-        <?php the_content("Continue reading " . the_title('','',false), 0); ?>
-        <footer>Posted in
+            Posted in
             <?php the_category(', ') ?>
             .
-            <?php edit_post_link('Edit','','.'); ?>
-            <?php comments_popup_link('Leave a comment', '1 Comment', '% Comments'); ?>
-        </footer>
+            Follow comments via
+            <?php comments_rss_link('RSS feed.'); ?>
+            <?php if (('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
+                            // Both Comments and Pings are open ?>
+            <a href="#respond">Comment.</a>
+            <?php } elseif (!('open' == $post-> comment_status) && ('open' == $post->ping_status)) {
+                            // Only Pings are Open ?>
+            Responses are closed.
+            <?php } elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
+                            // Comments are open, Pings are not ?>
+            <a href="#respond">Comment.</a>
+            <?php } elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
+                            // Neither Comments, nor Pings are open ?>
+            Comments are closed.
+            <?php } edit_post_link('Edit this entry.','',''); ?>
+
+
+            
+            <h2 id="post-<?php the_ID(); ?>">
+                <?php the_title(); ?>
+            </h2>
+
+        </header>
+        <?php the_content("Continue reading " . the_title('','',false), 0); ?>
+
     </article>
+    
     <?php endwhile; ?>
     <nav>
        <!--nav for the page -->

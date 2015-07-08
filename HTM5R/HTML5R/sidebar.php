@@ -1,10 +1,6 @@
 <aside role=complementary>
   <nav role=navigation>
 
-    <div id=searchbox>
-      <?php include (TEMPLATEPATH . '/searchform.php'); ?> 
-    </div>
-
     <ul id=mainnav>
         <li><a id=home href="/"><span>Home</span></a></li>
         <li><a id=music href="/category/my-music/"><span>music</span></a></li>

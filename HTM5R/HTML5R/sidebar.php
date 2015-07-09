@@ -5,7 +5,6 @@
         <li><a id=home href="/"><span>Home</span></a></li>
         <li><a id=music href="/category/my-music/"><span>music</span></a></li>
         <li><a id=about href="/about/"> <span>about</span> </a></li>
-        <li><a id=photos href="http://www.flickr.com/photos/24374884@N08/sets/"><span>photos</span></a></li>
         <li><a id=writing href="/writing/"><span>writing </span></a></li>
         <li><a id=navemail  href="/contact/"><span>email</span></a></li>
     </ul>

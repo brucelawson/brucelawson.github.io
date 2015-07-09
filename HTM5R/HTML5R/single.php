@@ -52,6 +52,5 @@
     </article>
 </main>
 
-<?php include("elsewhere.php"); ?>
 
 <?php get_footer(); ?>

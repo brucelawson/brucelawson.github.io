@@ -1,3 +1,6 @@
+
+<?php include("elsewhere.php"); ?>
+
 <footer role="contentinfo">
   <p>
     <?php bloginfo('name'); ?>

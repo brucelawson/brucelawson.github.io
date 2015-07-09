@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang=en>
 <head>
-<meta charset=utf-8> <!-- simplified version; works on legacy browsers -->
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1">
 <title>
 <?php bloginfo('name'); ?>
 <?php if ( is_single() ) { ?>

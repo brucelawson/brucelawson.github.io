@@ -1,12 +1,12 @@
 <aside role=complementary>
   <nav role=navigation>
 
-    <ul id=mainnav>
-        <li><a id=home href="/"><span>Home</span></a></li>
-        <li><a id=music href="/category/my-music/"><span>music</span></a></li>
-        <li><a id=about href="/about/"> <span>about</span> </a></li>
-        <li><a id=writing href="/writing/"><span>writing </span></a></li>
-        <li><a id=navemail  href="/contact/"><span>email</span></a></li>
+    <ul id="mainnav">
+        <li><a href="/"><img src="images/home.jpg" alt="home"></a></li>
+        <li><a href="/category/my-music/"><img src="images/music.jpg" alt="music"></a></li>
+        <li><a href="/about/"><img src="images/about.jpg" alt="about"></a></li>
+        <li><a href="/writing/"><img src="images/writing.jpg" alt="writing"></a></li>
+        <li><a href="/contact/"><img src="images/email.jpg" alt="email"></a></li>
     </ul>
 
     <div id="lowlights">

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+       &lt;picture> and Responsive Images
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1274, user-scalable=no">
+    <link rel="stylesheet" href="/shower/themes/lawson/styles/screen.css">
+    <link rel="stylesheet" href="/shower/themes/lawson/styles/print.css" media="print">
+      
+
+            <style>
+            
+            .first figcaption  {margin-left:40%; bottom:20%; z-index:9999;}
+            #acks li {font-size:smaller;}
+            .slide.first header {top: 68%;}
+            .slide.first header h2 {font-size:70px;}
+
+            img.wait {display:none;}
+            section.current img.wait {display:block;}
+            cite+blockquote {margin-top:2em;}
+
+			}
+
+            </style>
+        </head>
+<body class="list">
+
+	<header class="caption">
+		<h1>Houdini, Extensible Web, CSS.next</h1>
+		<p><a href="http://brucelawson.co.uk">Bruce Lawson</a></p>
+	</header>
+
+	<section class="slide cover first">
+		<header>
+			<h2>Houdini, Extensible Web, CSS.next</h2>
+			<p>Bruce Lawson, Opera  Software</p>
+		</header>
+		<img src="pictures/bruce-html.jpg" alt="bruce in front of 'HTML' sign">
+	</section>
+
+
+	<section class="slide cover">
+		<img src="pictures/apes.jpg" alt="line drawing of a group of apes">
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/2001.jpg" alt="'2001' Space Odyssey poster image">
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/apes-w3c.jpg" alt="a group of apes in front of a W3C monolith">
+	</section>
+
+	<section class="slide">
+	<h2>XHTML 1.1 (May 2001)</h2>
+	<blockquote>Document developers and user agent designers are constantly discovering new ways to express their ideas through new markup. <mark>In XML, it is relatively easy to introduce new elements or additional element attributes.</mark> The XHTML family is designed to accommodate these extensions through XHTML modules.</blockquote>
+	<cite><a href="http://www.w3.org/TR/xhtml1/#why">Why the need for XHTML?</a></cite>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/ape-yawn.jpg" alt="an ape, yawning">
+	</section>	
+
+
+	<section class="slide cover">
+		<img src="pictures/formats.jpg" alt="microformats, RDFa, HTML5 microdata">
+	</section>
+
+	<section class="slide">
+	<h2>Hixie:</h2>
+	<blockquote>It’s not so much that I dislike microdata so much as I don’t think the problem microdata (and RDF, etc.) solves is an interesting problem that should be solved.</blockquote>
+	<cite><a href="http://html5doctor.com/interview-with-ian-hickson-html-editor/">HTML5 Doctor</a></cite>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/component.gif" alt="Web Component and Shadow DOM">
+	</section>
+
+	<section class="slide">
+	<h2>Promise of Components</h2>
+	<ul>
+		<li>Encapsulation (kind of)</li>
+		<li>Reusability</li>
+		<li>Cleaner code</li>
+		<li>Composition</li>
+	</ul>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/components2.gif" alt="Letters making up 'Web Components' morphing into 'Spec. Own. Entomb.'">
+	</section>
+
+	<section class="slide">
+	<h2>Web Components</h2>
+	<code>&lt;super-button&gt;</code>
+	<p>+ loadsa script</p>
+	</section>
+
+	<section class="slide">
+	<h2>Extend current HTML</h2>
+	<code>&lt;button is="super-button"&gt;</code>
+	<ul>
+		<li>Inherit focussability</li>
+		<li>Inherit activation</li>
+		<li>Inherit role and state</li>
+	</ul>
+	</section>
+
+	<section class="slide">
+	<h2>Intuitive syntax?</h2>
+	<code>&lt;super-button extends="button"&gt;</code>
+	</section>
+
+	<section class="slide">
+	<h2>Compromise syntax?</h2>
+	<code>&lt;button extendedby="super-button"&gt;</code>
+	<p>F2F meeting, July 21</p>
+	</section>
+
+	<section class="slide shout cover">
+	<h2>wwwweeeebbbb</h2>
+		<img src="pictures/web.gif" alt="lomg spider web">
+	</section>
+      
+	<section class="slide">
+		<h2>It's an App World.<br> The Web Just Lives in It</h2>
+	    <blockquote>Today, the U.S. consumer spends an average of 2 hours and 38 minutes per day on smartphones and tablets. 80% of that time (2 hours and 7 minutes) is spent inside apps and 20% (31 minutes) is spent on the mobile web.</blockquote>
+	    <cite><a href="http://blog.flurry.com/bid/95723/Flurry-Five-Year-Report-It-s-an-App-World-The-Web-Just-Lives-in-It">blog.flurry.com</a> April, 2013</cite>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/flurry.gif" alt="breakdown of time spent: 80% apps, 20% browser (Safari 12%, Android 4%, Opera Mini 2%)">
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/flurry-2014.gif" alt="2013: 80% to 20% split between apps and web; 2014: 86% to 14%">
+	</section>
+
+
+
+	<section class="slide">
+	<h2>Why are Standards slow?</h2>
+	<blockquote>Why is everything else around us developing so fast, but the web is so 
+	slow to adopt anything?</blockquote>
+	<cite><a href="http://lists.w3.org/Archives/Public/public-whatwg-archive/2013Oct/0101.html">Mark Roberts' email to WHATWG, 10 Oct 2013</a></cite>
+	</section>
+
+	<section class="slide">
+    <h2>Hixie's reply:</h2>
+    <ol>
+ 		<li class="next">Have someone design the feature.
+		<li class="next">Have someone write a specification for it.
+		<li class="next">Have some people write tests for it.
+		<li class="next">Have one browser implement it.
+		<li class="next">Have another browser implement it.
+		<li class="next">[etc]</li>
+		<li class="next">Have people document it.
+	</ol>
+	</section>
+
+	<section class="slide">
+    <h2>Compared with&hellip;</h2>
+    <blockquote>This is in contrast to "everything else", which just needs:
+		<ol>
+			 <li>Someone to implement it.
+		</ol>
+	</blockquote>
+	</section>
+
+	<section class="slide cover"> 
+		<img src="pictures/page-not-found.gif" alt="Page not found error message page">
+	</section>
+
+<section class="slide cover shout">
+        <h2 style="top:20%">Appcache</h2>
+        <figure>
+            <img src="pictures/appcache-party.png" alt="man alone at party, surrounded by kissing couples">
+            <figcaption class="white">http://www.lollercoasterlab.com/2011/05/forever-alone-this-party-is-crp.html</figcaption>
+        </figure>
+    </section>
+
+
+<section class="slide cover shout">
+<h2 style="top:20%">Appcache</h2>
+        <figure>
+            <img src="pictures/appcache.png" alt="complex diagram showing appcache logic">
+            <figcaption class="white">Thanks, Jake</figcaption>
+        </figure>
+    </section>
+
+
+
+
+<section class="slide">
+    <h2>What's wrong with AppCache?</h2>
+    <blockquote>AppCache is declarative -- you give the browser a manifest and magic happens. This has well-documented limitations.</blockquote>
+    <cite>Alex Russell</cite> (sinister mastermind at Google)
+</section>
+
+<section class="slide cover">
+            <a href="http://alistapart.com/article/application-cache-is-a-douchebag"><img src="pictures/ALA.gif" alt="screenshot of Jake Archibald's A List Apart article 'appcache is a douchebag'">
+            </a>
+</section>
+
+<section class="slide">
+    <h2>SlapDache</h2>
+    <blockquote>The appcache API is another big mistake. It’s the best example of not understanding the problem before designing a solution, and I’m still trying to fix that mess.</blockquote>
+    <a href="http://html5doctor.com/interview-with-ian-hickson-html-editor/"><cite>Hixie</cite></a>
+</section>
+
+
+	<section class="slide cover">
+		<img src="pictures/ewm.jpg" alt="Extensible Web Manifesto">
+	</section>
+
+	<section class="slide">
+	<h2>Include developers</h2>
+	<blockquote>In order for the open web to compete with its walled competitors, there must be a clear path for good ideas by web developers to become part of the infrastructure of the web. We must enable web developers to build the future web.</blockquote>
+	<cite><a href="http://extensiblewebmanifesto.org/">extensiblewebmanifesto.org</a></cite>
+	</section>
+
+
+	<section class="slide">
+	    <h2>Extensible Web Manifesto</h2>
+	    <blockquote><mark>Browser vendors should provide new low-level capabilities that expose the possibilities of the underlying platform as closely as possible.</mark> They should also seed the discussion of high-level APIs through JavaScript implementations of new features</blockquote>
+	<cite><a href="http://extensiblewebmanifesto.org/">extensiblewebmanifesto.org</a></cite>
+	</section>
+
+
+	<section class="slide cover shout">
+	 <img src="pictures/service-workers.jpg" alt="Service Workers">
+	</section>
+
+	<section class="slide">
+	      <h2>Service Workers CheatSheet</h2>
+	      <ul>
+	      	<li>registered Service Workers are invoked even when offline, so enable apps that are "offline by default"</li>
+	    <li>normal resource loading is the fallback behavior</li>
+	    <li><mark>it forces you to have URLs! Some modern apps platforms have foresaken this core principle of the web and suffer for it.</mark> The web should never make the same mistake.</li>
+	  </ul>
+	 </section>
+
+
+	 <section class="slide cover">
+	 	<img src="pictures/lm.jpg" alt="cutaway diagram of Apollo lunar module">
+	 </section>
+
+
+	<section class="slide cover">
+	 	<img src="pictures/walrus.jpg" alt="cartoon walrus in front of lunar module">
+	</section>
+
+	<section class="slide cover">
+	 	<img src="pictures/lamp.jpg" alt="cartoon leg with lampshade on top, next to walrus and lunar module">
+	</section>
+
+
+
+<section class="slide">
+      <pre><code><mark>nnavigator.serviceWorker.register</mark>
+  ("/*", "/assets/v1/wrkr.js").then(
+    function(serviceWorker) {
+		  console.log("success!");
+		  // call window.location.reload()
+		},
+	  function(why) {
+	    console.error("failed!:", why);
+    }
+);</code></pre>
+    </section>
+
+	<section class="slide cover">
+	 	<img src="pictures/no-worker.gif" alt="browser shows nothing when not connected to web">
+	</section>
+
+	<section class="slide cover">
+	 	<img src="pictures/with-worker.gif" alt="browser shows site when connected to web worker, even though not connected to web">
+	</section>
+
+	<section class="slide">
+	<h2><code>Fetch</code> standard</h2>
+	<blockquote><p>At a high level, fetching a resource is a fairly simple operation. A request goes in, a response comes out. The details of that operation are however quite involved and used to not be written down carefully and differ from one API to the next.</p>
+	</blockquote>
+	</section>
+
+	<section class="slide">
+	<h2>Explaining the platform</h2>
+	<blockquote><p>The Fetch Standard provides a unified architecture for these features so they are all consistent when it comes to various aspects of fetching, such as redirects and the CORS protocol.</p></blockquote>
+	</section>
+
+	<section class="slide">
+	<h2><code>Fetch</code> API</h2>
+	<blockquote>The Fetch Standard also defines the fetch() JavaScript API, which exposes most of the networking functionality at a fairly low level of abstraction.</blockquote>
+	<cite><a href="https://fetch.spec.whatwg.org/"><code>Fetch</code> Living Standard</a></cite>
+	</section>
+
+	<section class="slide cover">
+	<img src="pictures/ricg.jpg" alt="responsive images community group">
+	<div style="margin-top:40%; text-align:center;">
+	<p><a href="http://responsiveimages.org">responsiveimages.org</a></p>
+	<p><a href="http://twitter.com/respimg">@respimg</a></p>
+	</div>
+	</section>
+
+	<section  class="slide">
+	<h2>HTML5 video with MQs</h2>
+	<pre><code>&lt;video&gt;
+  &lt;source src=foo-lowres.webm media="max-width:480px"&gt;
+  &lt;source src=foo-hires.webm&gt;
+    &lt;!-- Fallback content --&gt;
+&lt;/video&gt;</code></pre>
+	<p><cite><a href="http://www.brucelawson.co.uk/2011/notes-on-adaptive-images-yet-again/">Notes on Adaptive Images (yet again!)</a> (Dec 2011)</cite></p>
+	</section>
+
+
+
+	<section  class="slide">
+	<h2>My &lt;picture&gt; strawman</h2>
+	<pre><code>&lt;picture&gt;
+  &lt;source src=foo-lores.jpg media="max-width:480px"&gt;
+  &lt;source src=foo-full.jpg&gt;
+    &lt;!-- Fallback content --&gt;
+    &lt;img src="foo-lores.jpg" alt="&hellip;">
+&lt;/picture&gt;</code></pre>
+	</section>
+
+    <section class="slide cover">
+	<img src="pictures/wilto.jpg" alt="Mat Marquis">
+	</section>
+
+	<section class="slide cover">
+	<img src="pictures/marcos.jpg" alt="Marcos Caceres">
+	</section>
+
+	 
+	<section class="slide cover">
+	<img src="pictures/tab.jpg" alt="Tab Atkins">
+	</section>
+
+	<section class="slide cover">
+	<img src="pictures/zcorpan.jpg" alt="Simon Pieters">
+	</section>
+
+	<section class="slide cover">
+	<img src="pictures/yoav.jpg" alt="Yoav Weiss">
+	</section>
+
+	<section class="slide">
+	<h2>&lt;picture> element</h2>
+		<blockquote>the RICG’s main contribution to the web platform wasn’t picture, srcset, or sizes&hellip; To get them done we had to punch a hole through the thick technical, cultural, and institutional walls that separate the people who make browsers from the people who make websites.</blockquote>
+	</section>
+
+	<section class="slide">
+		<h2>Crowd FUNding</h2>
+		<blockquote>Bridging gaps is, of course, significantly easier when you’re able to crowdfund a Renaissance-man like Yoav [Weiss] who can contribute meaningfully at every level.</blockquote>
+		<cite><a href="http://lists.w3.org/Archives/Public/public-respimg/2014Aug/0001.html">Matt Marquis (@wilto)</a></cite>
+	</section>
+
+	<section class="slide cover">
+		<h2>Why &lt;picture> not &lt;pic> ?</h2>
+		<img src="pictures/batman.gif" alt="Robin says 'it's only 8 bytes extta'. Batman slaps him sayig 'Perf matters!'">
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/pitcher2.jpg" alt="6 pitchers of beer on a bar">
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/magic.gif" alt="Magic">
+	</section>
+
+	<section class="slide">
+	<h2>Magic</h2>
+	<p><code>&lt;input&gt;</code>
+	<input></p>
+	<p><code>&lt;video controls&gt;</code></p>
+	<p><code>&lt;img&gt;</code></p>
+	</section>
+
+
+	<section class="slide cover">
+	<img src="pictures/html-custom-elements.gif" alt="HTML as custom elements">
+	</section>
+
+	<section class="slide">
+	<h2>The JavaScriptification of the Web?</h2>
+	<blockquote><mark>We want web developers to write more declarative code, not less.</mark> This calls for eliminating the standards bottleneck to introducing new declarative forms, and giving library and framework authors the tools to create them.</blockquote>
+	<cite><a href="http://extensiblewebmanifesto.org/">extensiblewebmanifesto.org</a></cite>
+	</section>
+
+	<section class="slide cover">
+	<img src="pictures/houdini.jpg" alt="Houdini">
+	</section>
+
+	<section class="slide">
+	<h2>CSS Magic</h2>
+	<ul>
+		<li class="next">Parsing when it drops unknown stuff</li>
+		<li class="next">specificity, inheritance, imports, @-rules</li>
+		<li class="next">shorthands</li>
+		<li class="next">apply it live, as the page is still loading</li>
+		<li class="next">re-apply any time the DOM changes</li>
+	</ul>
+	</section>
+
+	<section class="slide">
+	<h2>Parser API</h2>
+	<p>Existing pre-processors and polyfills aren’t fully capable, or fully compatible and they don’t agree on the output, and need to be updated.</p>
+	</section>
+
+	<section class="slide">
+	<h2>CSS Property and Value Extensions API</h2>
+	<p>Define something that the browser shouldn’t throw away as an invalid property or value. Allow us to do stuff like 'CSS Regions' by extending rather than tons of native code.</p>
+	</section>
+
+	<section class="slide cover">
+	<h2>CSS Regions</h2>
+	<img src="pictures/regions-logo.gif" alt="CSS Regions diagram">
+	</section>
+
+	<section class="slide">
+	<h2>CSS Aliases, Custom Pseudo-classes</h2>
+	<code>@custom-selector :--button
+	input[type='button'],
+	input[type='submit'],
+	input[type='reset'],
+	[role='button'], button;<br><br>
+
+	:--button { color:green }</code>
+	</section>
+
+
+	<section class="slide cover">
+	<h2>Font Metrics API</h2>
+	<img src="pictures/dc1.gif" alt="English drop caps">
+	</section>
+
+	<section class="slide cover">
+	<img src="pictures/dc2.gif" alt="French drop caps, accents above top line of paragraph">
+	</section>
+
+	<section class="slide cover">
+	<img src="pictures/dc3.gif" alt="Devangari initial letter aligned with hanging baseline.">
+	</section>
+
+	<section class="slide cover">
+	<img src="pictures/dc4.gif" alt="Vertical text 'drop cap' that's two lines wide">
+	</section>
+
+	<section class="slide">
+	<h2>Custom Layout</h2>
+	<p>Custom layouts will allow us to register a custom display value and own layout computations making whole classes of new proposals possible to figure out in the community and without impossibly complex barriers.</p>
+	</section>
+
+	<section class="slide">
+	<h2>Custom Paint</h2>
+	<p>Custom visuals like effects and gradients, without abusing the DOM.</p>
+	</section>
+
+	<section class="slide">
+	<h2>Input Extensions</h2>
+	<p>Create (or re-create) good custom or experimental user experiences such as those on scroll, pull-to-refresh, with correct physics.</p>
+	</section>
+
+	<section class="slide">
+	<h2>Travis Leithead (Microsoft):</h2>
+	<blockquote>[The most exciting thing was] that nobody was arguing. We’ve wanted a lot of this since the 90s and now is the first time when someone hasn’t said “no” or “it can’t be done”.</blockquote>
+	</section>
+
+	<section class="slide">
+	<h2>Brian Kardell:</h2>
+	<blockquote>This extensibility and ability to adapt, refine and share sensible high-level features are the cornerstone on which we will <mark>allow the Web not just to generally improve</mark>, but to remain <mark>interesting and competitive for decades</mark> — and recapture <mark>some of the most important things that made it successful in the first place</mark>.</blockquote>
+	</section>
+
+	<section class="slide cover">
+	<h2>Join WICG</h2>
+	<img src="pictures/wicg.gif" alt="web platform incubator community group">
+	</section>
+
+<section class="slide">
+<h2>Read more:</h2>
+<ul>
+<li><a href="https://dev.opera.com/articles/houdini/">Sex, Houdini and the Extensible Web</a> by Brian Kardell (2015)</li>
+<li><a href="http://blog.yoav.ws/by_the_people/">By the people</a> by Yoav Weiss</li>
+<li><a href="http://www.w3.org/blog/2015/07/wicg/"> Web Platform Incubator Community Group (WICG)</a> (2015)</li>
+<li><a href="https://extensiblewebmanifesto.org/">The Extensible Web Manifesto</a> (2013)</li>
+<li><a href="http://yehudakatz.com/2013/05/21/extend-the-web-forward/">Extend the Web forward</a> by Yehuda Katz (2013)</li>
+<li><a href="https://infrequently.org/2012/04/bedrock/">Bedrock</a> by Alex Russell, sinister mastermind (2012)</li>
+</ul>
+</section>
+
+
+<section class="slide" id="acks">
+    <h2>
+        Thanks
+    </h2>
+    <ul>
+        <li>Me by HTML sign in Tokyo by Doug Schepers (@shepazu), used with permission</li>
+		<li><a href="https://www.flickr.com/photos/internetarchivebookimages/14581730528/">Apes drawing</a></li>
+		<li><a href="https://www.flickr.com/photos/poplinre/572658346/">Yawning ape</a> - Ryan Poplin</li>
+		<li>Apps vs Web graphs by <a href="http://blog.flurry.com/bid/95723/Flurry-Five-Year-Report-It-s-an-App-World-The-Web-Just-Lives-in-It">Flurry</a>, used by permission</li>
+        <li>HTML/ CSS Presentation Framework: <a href="https://github.com/shower/shower">Shower</a> by Vadim Makeev.</li>
+    </ul>
+</section>
+
+
+
+
+<section class="slide last">
+    <ul>
+        <li>
+            <a href="mailto:brucel@opera.com">brucel@opera.com</a>
+        </li>
+        <li>
+            <a href="http://opera.com/developer">opera.com/developer</a>
+        </li>
+        <li>
+            <a href="http://brucelawson.co.uk">brucelawson.co.uk</a>
+        </li>
+        <li>
+            <a href="http://twitter.com/brucel">@brucel</a>
+        </li>
+    </ul>
+            </section>
+
+
+
+            <!--
+                To hide progress bar from entire presentation
+                just remove “progress” element.
+            -->
+            <div class="progress"></div>
+            <script src="/shower/shower.min.js">
+            </script>
+        </section>
+    </body>
+    </html>

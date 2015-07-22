@@ -237,6 +237,20 @@ body {
 	max-width:100%;
 	max-height:100%;
 	}
+.slide.cover.w img,
+.slide.cover.w svg,
+.slide.cover.w video,
+.slide.cover.w object {
+	width:100%;
+	max-height:none;
+	}
+.slide.cover.h img,
+.slide.cover.h svg,
+.slide.cover.h video,
+.slide.cover.h object {
+	height:100%;
+	max-width:none;
+	}
 .slide.cover img + figcaption,
 .slide.cover svg + figcaption,
 .slide.cover video + figcaption,

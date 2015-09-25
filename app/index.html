@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>useless web app</title>
+<link rel="manifest" href="/manifest.json">
+<style>
+@media all and (display-mode: minimal-ui) {
+  h1:after {content:" minimal UI";}
+}
+
+@media all and (display-mode: standalone) {
+  h1:after {content:" standalone";}
+}
+
+@media all and (display-mode: fullscreen) {
+  h1:after {content:" fullscreen";}
+}
+
+@media all and (display-mode: browser) {
+  h1:after {content:" browser";}
+}
+</style>
+
+<h1>Just like native!</h1>

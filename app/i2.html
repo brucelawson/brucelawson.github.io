@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>useless web app</title>
+<link rel="manifest" href="manifest.json">
+<style>
+@media all and (display-mode: minimal-ui) {
+   .minimal:after { content:" minimal UI"}
+}
+
+@media all and (display-mode: standalone) {
+   .standalone:after { content:" standalone"}
+}
+
+@media all and (display-mode: fullscreen) {
+   .fullscreen:after { content:" fullscreen"}
+}
+
+@media all and (display-mode: browser) {
+   .browser:after { content:" browser"}
+}
+</style>
+
+<h1>What mode(s)?</h1>
+
+<p class="minimal"></p>
+<p class="standalone"></p>
+<p class="fullscreen"></p>
+<p class="browser"></p>

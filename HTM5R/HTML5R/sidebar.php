@@ -2,11 +2,11 @@
   <nav role=navigation>
 
     <ul id="mainnav">
-        <li><a href="/"><img src="images/home.jpg" alt="home"></a></li>
-        <li><a href="/category/my-music/"><img src="images/music.jpg" alt="music"></a></li>
-        <li><a href="/about/"><img src="images/about.jpg" alt="about"></a></li>
-        <li><a href="/writing/"><img src="images/writing.jpg" alt="writing"></a></li>
-        <li><a href="/contact/"><img src="images/email.jpg" alt="email"></a></li>
+        <li><a href="/"><img src="/wp-content/themes/HTML5R/images/home.jpg" alt="home"></a></li>
+        <li><a href="/category/my-music/"><img src="/wp-content/themes/HTML5R/images/music.jpg" alt="music"></a></li>
+        <li><a href="/about/"><img src="/wp-content/themes/HTML5R/images/about.jpg" alt="about"></a></li>
+        <li><a href="/writing/"><img src="/wp-content/themes/HTML5R/images/writing.jpg" alt="writing"></a></li>
+        <li><a href="/contact/"><img src="/wp-content/themes/HTML5R/images/email.jpg" alt="email"></a></li>
     </ul>
 
     <div id="lowlights">

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+       &lt;picture> and Responsive Images
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1274, user-scalable=no">
+    <link rel="stylesheet" href="/shower/themes/lawson/styles/screen.css">
+
+
+            <style>
+
+            .first figcaption  {margin-left:40%; bottom:20%; z-index:9999;}
+            #acks li {font-size:smaller;}
+            .slide.first header {top: 68%;}
+            .slide.first header h2 {font-size:70px;}
+
+            img.wait {display:none;}
+            section.current img.wait {display:block;}
+            cite+blockquote {margin-top:2em;}
+
+            </style>
+        </head>
+        <body class="list">
+            <header class="caption">
+                <h1>
+                    Responsive Images
+                </h1>
+                <p>
+                    <a href="http://brucelawson.co.uk">Bruce Lawson</a>
+                </p>
+            </header>
+
+            <section class="slide cover first">
+                <header>
+                    <h2>
+                        Responsive Images
+                    </h2>
+
+                    <p>
+                        Bruce Lawson, Opera  Software
+                    </p>
+                </header><img src="pictures/bruce-html.jpg" alt="bruce in front of 'HTML' sign">
+        </section>
+
+        <section class="slide">
+        <h2>New HTML thingies</h2>
+        <ul>
+        <li><code>&lt;picture></code></li>
+        <li><code>srcset</code> attribute</li>
+        <li>x descriptor</li>
+        <li>w descriptor</li>
+        <li><code>sizes</code> attribute</li>
+        </ul>
+        </section>
+
+        <section class="slide">
+        <h2>&lt;dfn>Responsive&lt;/dfn></h2>
+        <blockquote>quick to react in the way that is needed, <mark>suitable, or right for a particular situation</mark></blockquote>
+        <cite><a href="http://www.macmillandictionary.com/dictionary/british/responsive">Macmillan Dictionary</a></cite>
+        </section>
+
+        <section class="slide">
+        <h2>&lt;dfn>Responsive&lt;/dfn></h2>
+        <blockquote><mark>quick to react</mark> in the way that is needed, suitable, or right for a particular situation</blockquote>
+        <cite><a href="http://www.macmillandictionary.com/dictionary/british/responsive">Macmillan Dictionary</a></cite>
+        </section>
+
+
+
+<section class="slide">
+	<h2>Speed is part of ‘responsive’</h2>
+    <blockquote>
+        0.5 second delay = 20% drop in traffic (Google). 100ms delay = 1% decrease in sales (Amazon)
+    </blockquote><cite><a href="http://www.peer1.com/knowledgebase/how-slow-website-impacts-your-visitors-and-sales">How a Slow Website Impacts Your Visitors and Sales</a></cite>
+</section>
+
+<section class="slide">
+    <blockquote>
+        1 sec delay causes 7% drop in conversions (GlassesDirect)
+    </blockquote><cite><a href="http://blog.tagman.com/2012/03/just-one-second-delay-in-page-load-can-cause-7-loss-in-customer-conversions/">Tag Management Blog</a></cite>
+        <blockquote>
+        5 sec improvement in page load time resulted in 5% – 12% increase in revenue (Shopzilla)
+    </blockquote><cite><a href="http://velocityconf.com/velocity2009/public/schedule/detail/7709/">Velocity Conference</a></cite>
+</section>
+
+
+
+
+                    <section class="slide shout">
+                    <h2>The problem with images</h2>
+                    </section>
+
+                    <section class="slide cover">
+                    	<h2>Images are big</h2>
+                        <img src="pictures/images-size.gif" alt="average page-weight is 1.9MB, of which 1.2MB is images">
+                    </section>
+
+
+                   <section class="slide cover">
+                   <h2>&hellip;and getting bigger.</h2>
+                   <img src="pictures/images-trend.gif" alt="Over last 8 years, number of images per page has remained quite static but size of images has increased dramatically">
+                   </section>
+
+                   <section class="slide">
+                  <h2>The ‘retina’ question</h2>
+                  <p>Q: How can I send super high-quality (=huge) images to retina devices but normal quality images (=smaller file size) to devices with non-retina/ small screens?</p>
+                   </section>
+
+                   <section class="slide">
+                   <h2>The ‘retina’ answer</h2>
+                  	<p>A: I can't.</p>
+                 	<p><code>&lt;img src="blah.jpg"></code></p>
+                 	</section>
+
+                   <section class="slide">
+                   <h2>CSS to the rescue?</h2>
+                   <pre><code>&lt;img id=lovely <mark>src=mankini.png</mark>
+  alt="Bruce in a mankini">
+
+@media all and (<mark>max-width:320px</mark>) {
+ #lovely {<mark>content: url(lowres-mankini.png)</mark>;}
+ }
+</code></pre>
+                   </section>
+
+                   <section class="slide cover">
+                   		<h2>Double download - WTF?</h2>
+                        <img src="pictures/double-dl.gif" alt="Both images are downloaded!">
+                   </section>
+
+                   <section class="slide cover">
+                        <img src="pictures/browser-fairyland.gif" alt="A cartoon fairyland">
+                   </section>
+
+                   <section class="slide cover">
+                   <h2>The Browser Fairy Queen</h2>
+                        <img src="pictures/browser-fairy.gif" alt="A fairy queen turning some HTML into a DOM tree">
+                   </section>
+
+                   <section class="slide cover">
+                   <h2>Image Helper Elves</h2>
+                        <img src="pictures/browser-elves.gif" alt="Elves flying off to get images">
+                   </section>
+
+
+                   <section class="slide">
+                   <h2>Preloader</h2>
+                   <blockquote><p>One study showed preloading makes pages load ~20% faster.</p><p>I think preloading is the <mark>single biggest performance improvement browsers have ever made</mark>.</p></blockquote>
+                   <cite><a href="http://www.stevesouders.com/blog/2013/04/26/i/">Steve Souders</a></cite>
+	               </section>
+
+<section  class="slide">
+	<h2>HTML5 video with MQs</h2>
+	<pre><code>&lt;video&gt;
+&lt;source src=foo-lowres.webm media="max-width:480px"&gt;
+&lt;source src=foo-hires.webm&gt;
+  &lt;!-- Fallback content --&gt;
+&lt;/video&gt;</code></pre>
+<p><cite><a href="http://www.brucelawson.co.uk/2011/notes-on-adaptive-images-yet-again/">Notes on Adaptive Images (yet again!)</a> (Dec 2011)</cite></p>
+</section>
+
+<section  class="slide">
+	<h2>My &lt;picture&gt; strawman</h2>
+	<pre><code>&lt;picture&gt;
+&lt;source src=foo-lores.jpg media="max-width:480px"&gt;
+&lt;source src=foo-full.jpg&gt;
+  &lt;!-- Fallback content --&gt;
+  &lt;img src="foo-lores.jpg" alt="&hellip;">
+&lt;/picture&gt;</code></pre>
+
+</section>
+
+<section class="slide cover">
+<img src="pictures/ricg.jpg" alt="responsive images community group">
+<div style="margin-top:40%; text-align:center;">
+<p><a href="http://responsiveimages.org">responsiveimages.org</a></p>
+<p><a href="http://twitter.com/respimg">@respimg</a></p>
+</div>
+</section>
+
+
+
+
+                   <section class="slide cover">
+					<img src="pictures/wilto.jpg" alt="Mat Marquis">
+				   </section>
+
+                   <section class="slide cover">
+					<img src="pictures/marcos.jpg" alt="Marcos Caceres">
+					</section>
+
+                   <section class="slide cover">
+					<img src="pictures/tab.jpg" alt="Tab Atkins">
+				   </section>
+
+                   <section class="slide cover">
+					<img src="pictures/zcorpan.jpg" alt="Simon Pieters">
+				   </section>
+
+                   <section class="slide cover">
+					<img src="pictures/yoav.jpg" alt="Yoav Weiss">
+				   </section>
+
+
+<!--
+
+                   <section class="slide">
+                   <p>picture/ pitcher gag</p>
+                   </section>
+
+-->
+
+                   <section class="slide shout">
+                   <h2>Optimising for high-dpi screens</h2>
+                   </section>
+
+
+
+                   <section class="slide">
+                   <h2><code>srcset</code> x descriptor</h2>
+                   <pre><code>&lt;img src="normal.jpg"
+<mark>srcset="hi-res.jpg 2x"</mark>
+alt="&hellip;"></code></pre>
+                   </section>
+
+                   <section class="slide">
+                   <h2><code>srcset</code> x descriptor</h2>
+                   <pre><code>&lt;img src="normal.jpg"
+<mark>srcset="hi-res.jpg 2x, super-res.jpg 3x"</mark>
+alt="&hellip;"></code></pre>
+                   </section>
+
+                   <section class="slide cover">
+                   <img src="pictures/candidates.jpg" alt="candy, dates, Lizst">
+                   </section>
+
+                   <section class="slide cover">
+                   <h2>Candidates list</h2>
+                   <img src="pictures/candidates2.jpg" alt="srcset is a 'candidates list'">
+                   </section>
+
+                   <section class="slide cover">
+                   <h2>This is not you</h2>
+                   <img src="pictures/fairy.jpg" alt="Browser Fairy Queen">
+                   </section>
+
+                   <section class="slide cover">
+                   <img src="pictures/opera-mini.gif" alt="Opera Mini settings options (allows you to select image quality)">
+                   </section>
+
+
+                   <section class="slide shout">
+                   <h2>Stretchy ("responsive") images</h2>
+                   </section>
+
+
+                   <section class="slide">
+                   <h2>Previously&hellip;</h2>
+                   <pre><code>&lt;img src="mankini.png" alt="lovely">
+&hellip;
+img {<mark>max-width:100%;</mark>
+height:auto;}
+                   </section>
+
+                   <section class="slide">
+                   <h2>Makes the browser work</h2>
+                   <blockquote>On the test page with 6x images (not unusual at the moment on many responsive sites), the combination of resizes and decodes added <mark>an additional 278ms in Chrome and 95.17ms in IE</mark> (perhaps more &hellip;) to the time it took to display those 10 images.</blockquote>
+                   <cite><a href="http://timkadlec.com/2013/11/why-we-need-responsive-images-part-deux/">Why We Need Responsive Images: Part Deux <br>- Tim Kadlec</a></cite>
+                   </section>
+
+                   <section class="slide">
+                   <h2>The <code>w</code> descriptor</h2>
+                   <pre><code>&lt;img src="fallback.png"
+	alt="mankini"
+	srcset="big.png <mark>960w</mark>,
+	small.png <mark>240w</mark>"></code></pre>
+	</section>
+
+					<section class="slide">
+	               <h2>Spec change!</h2>
+                   <pre><code>&lt;img src="fallback.png"
+	alt="mankini"
+	srcset="big.png 960w,
+	small.png 240w"
+	<mark>sizes="100vw"</mark>></code></pre>
+	</section>
+
+					<section class="slide">
+					<h2>Changing image sizes</h2>
+					<pre><code>&lt;img
+	src="opera-400.jpg" alt="The Oslo Opera House"
+	sizes="<mark>(min-width: 640px) 60vw, 100vw</mark>"
+	srcset="opera-200.jpg 200w,
+			opera-800.jpg 800w,
+			opera-1200.jpg 1200w,
+			opera-2000.jpg 2000w"></code></pre>
+					</section>
+
+				<section class="slide cover">
+				<img src="pictures/WP.gif" alt="WordPress RICG plugin">
+				</section>
+
+                   <section class="slide shout">
+                   <h2>Sending different image formats</h2>
+                   </section>
+
+
+                   <section class="slide cover">
+                   <h2>Current formats (Jan '15)</h2>
+                   <img src="pictures/images-formats.gif" alt="pie chart of image formats used in Jan 2015 websites: JPG 47%, PNG 29%, GIF 22%, Other 2%">
+                   </section>
+
+
+
+                    <section class="slide">
+                        <h2>
+                            WebP
+                        </h2>
+                        <blockquote>
+                            WebP lossless images are 26% smaller in size compared to PNGs. WebP lossy images are 25-34% smaller in size compared to JPEG images
+                        </blockquote><cite><a href="https://developers.google.com/speed/webp/">More, conversion tools</a></cite>
+                    </section>
+
+
+
+
+<!--
+                    <section class="slide">
+                        <h2>Content negotiation</h2>
+                        <code>Accept: text/html,application/xhtml+xml,
+                            application/xml;q=0.9,<mark>image/webp</mark>,*/*;q=0.8</code>
+                            <p><a href="http://www.igvita.com/2013/05/01/deploying-webp-via-accept-content-negotiation/">Deploying WebP via Accept Content Negotiation</a></p>
+                    </section>
+-->
+
+<section class="slide">
+	<h2>HTML5 video</h2>
+	<pre><code>&lt;video&gt;
+	&lt;source src=foo.webm type=video/webm&gt;
+	&lt;source src=foo.mp4 type=video/mp4&gt;
+	  &lt;!-- Fallback content --&gt;
+&lt;/video&gt;
+</section>
+
+<!--
+<section  class="slide">
+	<h2>Proposal: &lt;picture&gt;</h2>
+	<pre><code>&lt;picture&gt;
+  &lt;source src=foo.webp type=image/webp&gt;
+  &lt;source src=foo.png type=image/png&gt;
+    &lt;!-- Fallback content --&gt;
+&lt;/picture&gt;
+</section>
+-->
+
+<section class="slide">
+<h2>Real &lt;picture> format switch</h2>
+<pre><code>&lt;picture>
+  &lt;source <mark>srcset</mark>="tree.webp" <mark>type="image/webp"</mark>>
+  &lt;img src="tree.jpg" alt="tree">
+&lt;/picture></code></pre>
+<p>webp= 25K, jpg=38K</p>
+</section>
+
+
+<section class="slide cover">
+<h2>&lt;picture> magic</h2>
+<p>&lt;picture> just magically changes which image the &lt;img> pulls in to display.</p>
+<p>Check <code>currentSrc</code> in JavaScript to see what’s chosen by the browser.
+<img src="pictures/fairy-bg.gif" alt="">
+</section>
+
+
+<section class="slide shout">
+<h2>Art direction</h2>
+</section>
+
+<section class="slide cover" style="backgound:white;">
+<img src="pictures/art-direction.jpg" alt="art directed images on variety of devices">
+</section>
+
+                   <section class="slide">
+                   <h2>&lt;picture> for art direction</h2>
+                   <pre><code>&lt;picture>
+  &lt;source
+    media="(min-width: 1024px)"
+    srcset="whitehouse-fullshot.jpg">
+  &lt;img src="whitehouse-closeup.jpg"
+    alt="Dog in front of white house">
+&lt;/picture></code></pre>
+                   </section>
+
+                   <section class="slide">
+                   <h2>Summary</h2>
+                   <p>Responsive image is for</p>
+                   <ul>
+                   	<li>resolution switching</li>
+                   	<li>width switching</li>
+                   	<li>alternate formats</li>
+                   	<li>art direction</li>
+                   </ul>
+                   </section>
+
+
+
+                   <section class="slide">
+                   <h2>When?</h2>
+                   <ul><li>Opera</li>
+                   <li>Chrome</li>
+                   <li>Firefox 38</li>
+                   <li>MS Edge, in public builds</li>
+                   <li>Safari: <code>srcset</code> x descriptors (iOS 8.1), <code>&lt;picture></code> i WebKit.</li>
+                   </ul>
+                   </section>
+
+        <section class="slide cover">
+        <img src="pictures/guardian.gif" alt="tweet from Patrick Hamann: 'Happy to say that http://www.theguardian.com/  has been using native responsive images for over two weeks now with no issues'">
+        </section>
+
+<section class="slide">
+<h2>Progressive enhancement</h2>
+<p>Because responsive images <em>require</em> use of <code>&lt;img src></code>, no-one gets a worse experience than they do now.</p>
+</section>
+
+<section class="slide cover">
+			<img src="pictures/end.jpg" alt="fairies and princesses, 'they all lived happily ever after'">
+</section>
+
+<section class="slide">
+<h2>Resources</h2>
+<ul>
+<li><a href="https://dev.opera.com/articles/responsive-images/">Responsive Images: Use Cases and Documented Code Snippets to Get You Started</a></li>
+<li><a href="https://dev.opera.com/articles/native-responsive-images/">Native Responsive Images</a> by Yoav Weiss (Blink implementor)</li>
+<li><a href="http://www.brucelawson.co.uk/2015/why-we-cant-do-real-responsive-images-with-css-or-javascript/">Why we can’t do real responsive images with CSS or JavaScript</a> by Me!</li>
+<li><a href="https://bradfrost.github.io/this-is-responsive/resources.html#case-studies">Responsive Resources</a> - Brad Frost</li>
+
+</ul>
+</section>
+
+
+<section class="slide" id="acks">
+    <h2>
+        Thanks
+    </h2>
+    <ul>
+        <li>Me by HTML sign in Tokyo by Doug Schepers (@shepazu)</li>
+		<li>Web trend charts - <a href="http://httparchive.org/">httparchive.org</a></li>
+		<li>Clip art - <a href="http://openclipart.org">openclipart.org</a></li>
+		<li>Pic of Mattypoo "Wilto" Marquis by <a href="http://twitter.com/hellogeri">Geri Coady</a></li>
+        <li>HTML/ CSS Presentation Framework: <a href="https://github.com/shower/shower">Shower</a> by Vadim Makeev.</li>
+    </ul>
+</section>
+
+
+
+
+<section class="slide last">
+    <ul>
+        <li>
+            <a href="mailto:brucel@opera.com">brucel@opera.com</a>
+        </li>
+        <li>
+            <a href="http://opera.com/developer">opera.com/developer</a>
+        </li>
+        <li>
+            <a href="http://brucelawson.co.uk">brucelawson.co.uk</a>
+        </li>
+        <li>
+            <a href="http://twitter.com/brucel">@brucel</a>
+        </li>
+    </ul>
+            </section>
+
+
+
+            <!--
+                To hide progress bar from entire presentation
+                just remove “progress” element.
+            -->
+            <div class="progress"><div></div></div>
+            <script src="/shower/shower.min.js"></script>
+        </section>
+    </body>
+    </html>

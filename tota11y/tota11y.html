@@ -6,18 +6,18 @@
 	<title>Tota11y bookmarklet test</title>
 	<meta name="viewport" content="width=device-width">
 	<style>
-		a {
+		a.cta {
 			font-size: x-large;
 		}
 	</style>
 </head>
-<a
+<a class=cta
 	href="javascript:(function()%7Bvar tota11y%3Ddocument.createElement(%27SCRIPT%27)%3Btota11y.type%3D%27text/javascript%27%3Btota11y.src%3D%27https://brucelawson.github.io/tota11y/tota11y.min.js%27%3Bdocument.getElementsByTagName(%27head%27)%5B0%5D.appendChild(tota11y)%3B%7D)()%3B">Drag
 	me to your bookmarks bar!</a>
 <h1>Version 2.4 "Insousciant hedgehog"</h1>
 <ul>
 	<li>Fixed clean-up bug in new Titles module</li>
-	<li>New Titles module to show missing titles on iframes, and superfluous titles on other things to placate the false
+	<li>New Titles module to show missing titles on iframes, and superfluous titles on other things erroneously put there to placate the false
 		god of Search Engine Optimists</li>
 	<li>Correct calculation of contrast ratio in the contrast module to take account of boldness of text and not just
 		rely on height. (Thanks Mozilla dev tools!)</li>

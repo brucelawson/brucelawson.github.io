@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-ca">
+
 <head>
-  <meta charset="utf-8">
-      <title>Tota11y bookmarklet test</title>
-  <meta name="viewport" content="width=device-width">
-  <style>a {font-size: x-large;}</style>
+	<meta charset="utf-8">
+	<title>Tota11y bookmarklet test</title>
+	<meta name="viewport" content="width=device-width">
+	<style>
+		a {
+			font-size: x-large;
+		}
+	</style>
 </head>
-<a href="javascript:(function()%7Bvar tota11y%3Ddocument.createElement(%27SCRIPT%27)%3Btota11y.type%3D%27text/javascript%27%3Btota11y.src%3D%27https://brucelawson.github.io/tota11y/tota11y.min.js%27%3Bdocument.getElementsByTagName(%27head%27)%5B0%5D.appendChild(tota11y)%3B%7D)()%3B">Drag me to your bookmarks bar!</a>
+<a
+	href="javascript:(function()%7Bvar tota11y%3Ddocument.createElement(%27SCRIPT%27)%3Btota11y.type%3D%27text/javascript%27%3Btota11y.src%3D%27https://brucelawson.github.io/tota11y/tota11y.min.js%27%3Bdocument.getElementsByTagName(%27head%27)%5B0%5D.appendChild(tota11y)%3B%7D)()%3B">Drag
+	me to your bookmarks bar!</a>
 <h1>Version 2.4 "Insousciant hedgehog"</h1>
 <ul>
 	<li>Fixed clean-up bug in new Titles module</li>
-	<li>New Titles module to show missing titles on iframes, and superfluous titles on other things to placate the false god of Search Engine Optimists</li>
-	<li>Correct calculation of contrast ratio in the contrast module to take account of boldness of text and not just rely on height. (Thanks Mozilla dev tools!)</li>
-	<li>New module to highlight empty elements, eg heading and paragrapsh, which was a constant bugbear on US marketing site</li>
-	<li>Tweaked img/alt module to ask users to check accuracy of alt text (rather than perhaps falsely-reassure that presence of alt text is actually useful)</li>
+	<li>New Titles module to show missing titles on iframes, and superfluous titles on other things to placate the false
+		god of Search Engine Optimists</li>
+	<li>Correct calculation of contrast ratio in the contrast module to take account of boldness of text and not just
+		rely on height. (Thanks Mozilla dev tools!)</li>
+	<li>New module to highlight empty elements, eg heading and paragrapsh, which was a constant bugbear on US marketing
+		site</li>
+	<li>Tweaked img/alt module to ask users to check accuracy of alt text (rather than perhaps falsely-reassure that
+		presence of alt text is actually useful)</li>
 	<li>Add links to Babylon DNA guidance where applicable</li>
-	<li>New module to expose HTML5 landmarks (footer, header etc) and explicitly set ARIA roles (but not those that are implicit, because that's not as useful for diagnosing coder errors)</li>
-	<li>Tweaked name and description module to stop referring to 'screen readers'; added exposure of value attribute on <code>input type=submit</code> fields (as that is what gets exposed and wasn't being reported). Add value of <code>aria-describedby</code> attributes as that is also passed to AT, especially as <a href="https://developer.paciellogroup.com/blog/2014/12/using-aria-describedby-to-provide-helpful-form-hints/">hints/ instructions on form fields</a></li>
+	<li>New module to expose HTML5 landmarks (footer, header etc) and explicitly set ARIA roles (but not those that are
+		implicit, because that's not as useful for diagnosing coder errors)</li>
+	<li>Tweaked name and description module to stop referring to 'screen readers'; added exposure of value attribute on
+		<code>input type=submit</code> fields (as that is what gets exposed and wasn't being reported). Add value of
+		<code>aria-describedby</code> attributes as that is also passed to AT, especially as <a
+			href="https://developer.paciellogroup.com/blog/2014/12/using-aria-describedby-to-provide-helpful-form-hints/">hints/
+			instructions on form fields</a></li>
 
 	<h2>To Do:</h2>
 	<ol>
-		<li>Make it responsive when screen is zoomed</li>
+		<li>A criminally ugly hack to suppress reporting contrast violations if text is visually hidden using the common <a
+				href="https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/">clip pattern</a> which we use
+			on Babylon. This is to reduce false positives which erode trust in the test.</li>
+		<li>Make it responsive when screen is zoomed, as discovered by Taylar.</li>
 		<li>Get it designed and content reviewed</li>
 	</ol>
 

@@ -21,7 +21,7 @@
 		and make them furiously grumpy.</li>
 	<li>When hovering over a tota11y label, bump its z-index in case it is obscured by a nearby label in busy pages.
 	</li>
-	<li>Make it responsive when screen is zoomed, as discovered by Taylar.</li>
+	<li>Make the menu responsive when screen is zoomed, as discovered by Taylar.</li>
 	<li>A criminally ugly hack to suppress reporting contrast violations if text is visually hidden using the common <a
 			href="https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/">clip pattern</a> which we use
 		on Babylon. This is to reduce false positives which erode trust in the test.</li>
@@ -51,6 +51,8 @@
 <h2>To Do:</h2>
 <ol>
 	<li>Get it designed and content reviewed</li>
+	<li>Understand why the accessible name & desc viewer throws console errors on news.bbc.co.uk (it did before i forked it)</li>
+	<li>Consider dropping axs stuff (deprecated) and replace with code from Moz devtools,which may also fix the bbc error.</li>
 </ol>
 
 <p>Forked from <a href="https://github.com/Khan/tota11y">Khan Academy</a> (who seem to have abandoned it) by Brucie for

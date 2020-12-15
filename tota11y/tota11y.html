@@ -16,17 +16,23 @@
 	me to your bookmarks bar!</a>
 <h1>Version 2.5 "Concupiscent Cormorant"</h1>
 <ul>
-	<li>When hovering over a tota11y label, bump its z-index in case it is obscured by a nearby label in busy pages.</li>
+	<li>Empty elements plugin: show yellow warning for empty <code>p</code> and multiple <code>br</code> elements, as they may indicate shonky CSS but aren't a disaster for a11y</li>
+	<li>Add tests for empty nav, header, main, aside, footer, figcaption. These will be announced to screen reader users
+		and make them furiously grumpy.</li>
+	<li>When hovering over a tota11y label, bump its z-index in case it is obscured by a nearby label in busy pages.
+	</li>
 	<li>Make it responsive when screen is zoomed, as discovered by Taylar.</li>
 	<li>A criminally ugly hack to suppress reporting contrast violations if text is visually hidden using the common <a
-		href="https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/">clip pattern</a> which we use
-	on Babylon. This is to reduce false positives which erode trust in the test.</li>
+			href="https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/">clip pattern</a> which we use
+		on Babylon. This is to reduce false positives which erode trust in the test.</li>
 	<li>Fixed clean-up bug in new Titles module</li>
 	<li>New Titles module to show missing titles on iframes, and superfluous titles on other things erroneously put
 		there to placate the false
 		god of Search Engine Optimists</li>
 	<li>Correct calculation of contrast ratio in the contrast module to take account of boldness of text and not just
-		rely on font-size. (Thanks <a href="https://searchfox.org/mozilla-central/source/devtools/shared/accessibility.js#23">Mozilla dev tools</a>!)</li>
+		rely on font-size. (Thanks <a
+			href="https://searchfox.org/mozilla-central/source/devtools/shared/accessibility.js#23">Mozilla dev
+			tools</a>!)</li>
 	<li>New module to highlight empty elements, eg heading and paragraphs, which was a constant bugbear on US marketing
 		site</li>
 	<li>Tweaked img/alt module to ask users to check accuracy of alt text (rather than perhaps falsely-reassure that
@@ -39,11 +45,13 @@
 		<code>input type=submit</code> fields (as that is what gets exposed and wasn't being reported). Add value of
 		<code>aria-describedby</code> attributes as that is also passed to AT, especially as <a
 			href="https://developer.paciellogroup.com/blog/2014/12/using-aria-describedby-to-provide-helpful-form-hints/">hints/
-			instructions on form fields</a></li>
+			instructions on form fields</a>
+	</li>
 </ul>
 <h2>To Do:</h2>
 <ol>
 	<li>Get it designed and content reviewed</li>
 </ol>
 
-<p>Forked from <a href="https://github.com/Khan/tota11y">Khan Academy</a> (who seem to have abandoned it) by Brucie for Babz.</p>
+<p>Forked from <a href="https://github.com/Khan/tota11y">Khan Academy</a> (who seem to have abandoned it) by Brucie for
+	Babz.</p>

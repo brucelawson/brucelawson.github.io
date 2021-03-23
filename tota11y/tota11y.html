@@ -15,11 +15,13 @@
 <a class=cta
 	href="javascript:(function()%7Bvar tota11y%3Ddocument.createElement(%27SCRIPT%27)%3Btota11y.type%3D%27text/javascript%27%3Btota11y.src%3D%27https://brucelawson.github.io/tota11y/tota11y.min.js%27%3Bdocument.getElementsByTagName(%27head%27)%5B0%5D.appendChild(tota11y)%3B%7D)()%3B">Drag
 	me to your bookmarks bar!</a>
-<h2>Version 2.6 ("Psychopathic Tapeworm")</h2>
+<h2>Version 1! ("Justifiably melancholic otter")</h2>
+<p>Jackified the design (<a href="https://www.figma.com/file/HZ8mIxbyepOAMrXGpDG0Fg/Tota11y-tool?node-id=11%3A905">kind of</a>) so it doesn't look 100% like a slug vommed all over the browser. Huzzah!</p>
+<h2>Version 0.7 ("Psychopathic Tapeworm")</h2>
 <ul>
 	<li>Contrast checker now ignores transparent (therefore, invisible) text, eg on Amazon, Guardian</li>
 </ul>
-<h2>Version 2.5 ("Concupiscent Cormorant")</h2>
+<h2>Version 0.6 ("Concupiscent Cormorant")</h2>
 <ul>
 	<li>Empty elements plugin: downgrade empty <code>p</code> and multiple <code>br</code> elements to warning (was
 		error), as
@@ -31,14 +33,14 @@
 	</li>
 	<li>Make the menu responsive when screen is zoomed to 200%</li>
 </ul>
-<h2>Version 2.4 ("Insouciant hedgehog")</h2>
+<h2>Version 0.5 ("Insouciant hedgehog")</h2>
 <ul>
 	<li>A criminally ugly test to suppress reporting contrast violations if text is visually hidden using the common <a
 			href="https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/">clip pattern</a> which we use
 		on Babylon. This is to reduce false positives which erode trust in the test.</li>
 	<li>Feelthy hack to fix clean-up bug in new Titles module</li>
 </ul>
-<h2>Version 2.3 ("Sultry panda")</h2>
+<h2>Version 0.4 ("Sultry panda")</h2>
 <ul>
 	<li>New Titles module to show missing titles on iframes (error), and warnings for superfluous titles on other things
 		erroneously put
@@ -47,26 +49,26 @@
 			href="https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/">The Trials and
 			Tribulations of the Title Attribute</a>)</li>
 </ul>
-<h2>Version 2.2 ("Mellifluous ostrich")</h2>
+<h2>Version 0.3 ("Mellifluous ostrich")</h2>
 <ul>
 	<li>Correct calculation of contrast ratio in the contrast module to take account of boldness of text and not just
 		rely on font-size. (Thanks <a
 			href="https://searchfox.org/mozilla-central/source/devtools/shared/accessibility.js#23">Mozilla dev
 			tools</a>!)</li>
 </ul>
-<h2>Version 2.1 ("Uninhibited gibbon")</h2>
+<h2>Version 0.2 ("Uninhibited gibbon")</h2>
 <ul>
 	<li>New module to highlight empty elements, eg heading and paragraphs, which was a constant bugbear on US marketing
 		site</li>
 	<li>Tweaked img/alt module to ask users to check accuracy of alt text (rather than perhaps falsely-reassure that
 		presence of alt text is actually useful)</li>
 </ul>
-<h2>Version 2.076303987 ("Obstreperous rhinoceros")</h2>
+<h2>Version 0.176303987 ("Obstreperous rhinoceros")</h2>
 <ul>
 	<li>Add links to Babylon DNA guidance where applicable</li>
 	<li>Split out modules into 'designers'/ content editors and Developers (was 'Experimental')</li>
 </ul>
-<h2>Version 2 ("Lachrymose Lemur")</h2>
+<h2>Version 0.1 ("Lachrymose Lemur")</h2>
 <ul>
 	<li>New module to expose HTML5 landmarks (footer, header etc) and explicitly set ARIA roles (but not those that are
 		implicit, because that's not as useful for diagnosing coder errors)</li>
@@ -77,16 +79,7 @@
 			instructions on form fields</a>
 	</li>
 </ul>
-<h2>To Do:</h2>
-<ol>
-	<li>Name/ Desc viewer should ignore the Tota11y menu</li>
-	<li>Get it designed and content reviewed</li>
-	<li>Understand why the accessible name & desc viewer throws console errors on news.bbc.co.uk (it did before i forked
-		it)</li>
-	<li>Consider dropping axs stuff (deprecated) and replace with code from Moz devtools, which may also fix the bbc
-		error.</li>
-	<li>tart up repo for publishing</li>
-</ol>
+
 <h2>Blah blah</h2>
 <p>Forked from <a href="https://github.com/Khan/tota11y">Khan Academy</a> (who seem to have abandoned it) by Brucie for
 	Babz. MIT licensed; contains <a href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0 code</a> from Moz devtools

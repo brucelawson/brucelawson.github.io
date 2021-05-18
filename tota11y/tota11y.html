@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <style>
         a.cta {
+            margin: 1.5em auto;
             font-size: 2em;
             padding: 5px;
             border: 3px ridge goldenrod;
@@ -16,6 +17,7 @@
 <h1>Babylon-flavoured Tota11y One-stop Turnkey Enterprise Visual Accessibility Checking Solution</h1>
 <p>Drag this link to your Firefox/ Chromium/ Safari bookmarks bar:</p>
 <a class=cta href="javascript:(function()%7Bvar tota11y%3Ddocument.createElement(%27SCRIPT%27)%3Btota11y.type%3D%27text/javascript%27%3Btota11y.src%3D%27https://totally.ops.babylontech.co.uk/tota11y.min.js%27%3Bdocument.getElementsByTagName(%27head%27)%5B0%5D.appendChild(tota11y)%3B%7D)()%3B">Tota11y</a>
+<p><a href="https://github.com/babylonhealth/Tota11y/">See code on Github</a>.</p>
 <h2>Version 1! ("Justifiably melancholic otter")</h2>
 <p>Tarted up the design so it has a nice border and will show up against dark cookie banners etc.</p>
 <h2>Version 0.7 ("Psychopathic Tapeworm")</h2>
@@ -25,7 +27,7 @@
 <h2>Version 0.6 ("Concupiscent Cormorant")</h2>
 <ul>
     <li>Empty elements plugin: downgrade empty <code>p</code> and multiple <code>br</code> elements to warning (was error), as they may indicate shonky CSS but aren't a disaster for a11y</li>
-    <li>Add tests for empty nav, header, main, aside, footer, figcaption. These will be announced to screen reader users (but will be empty) and justifiably make people furiously grumpy.</li>
+    <li>Add tests for empty nav, header, main, aside, footer, figcaption. These might be announced to screen reader users (but will be empty) and justifiably make people grumpy.</li>
     <li>When hovering over a tota11y label, max its z-index in case it is obscured by a nearby label in busy pages.
     </li>
     <li>Make the menu responsive when screen is zoomed to 200%</li>
@@ -68,6 +70,5 @@
 </ul>
 
 <h2>Blah blah</h2>
-<p><a href="https://github.com/babylonhealth/Tota11y/">See code on Github</a>. Forked from <a href="https://github.com/Khan/tota11y">Khan Academy</a> (who seem to have abandoned it) by <a href="https://twitter.com/brucel">Bruce</a> for <a href="https://babylonhealth.com/">Babylon Health</a>.
-    Contains <a href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0 code</a> from Firefox devtools (module plugins/contrast/index.js).
+<p>Forked from <a href="https://github.com/Khan/tota11y">Khan Academy</a> (who seem to have abandoned it) by <a href="https://twitter.com/brucel">Bruce</a> for <a href="https://babylonhealth.com/">Babylon Health</a>. Contains <a href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0 code</a>    from Firefox devtools (module plugins/contrast/index.js).
 </p>

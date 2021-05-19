@@ -20,11 +20,11 @@
 <p><a href="https://github.com/babylonhealth/Tota11y/">See code on Github</a>.</p>
 <h2>Version 1! ("Justifiably melancholic otter")</h2>
 <p>Tarted up the design so it has a nice border and will show up against dark cookie banners etc.</p>
-<h2>Version 0.7 ("Psychopathic Tapeworm")</h2>
+<h2>Version 0.7 ("Psychopathic tapeworm")</h2>
 <ul>
     <li>Contrast checker now ignores transparent (therefore, invisible) text, eg on Amazon, Guardian</li>
 </ul>
-<h2>Version 0.6 ("Concupiscent Cormorant")</h2>
+<h2>Version 0.6 ("Concupiscent hedgehog")</h2>
 <ul>
     <li>Empty elements plugin: downgrade empty <code>p</code> and multiple <code>br</code> elements to warning (was error), as they may indicate shonky CSS but aren't a disaster for a11y</li>
     <li>Add tests for empty nav, header, main, aside, footer, figcaption. These might be announced to screen reader users (but will be empty) and justifiably make people grumpy.</li>
@@ -32,7 +32,7 @@
     </li>
     <li>Make the menu responsive when screen is zoomed to 200%</li>
 </ul>
-<h2>Version 0.5 ("Insouciant hedgehog")</h2>
+<h2>Version 0.5 ("Insouciant cormorant")</h2>
 <ul>
     <li>A criminally ugly test to suppress reporting contrast violations if text is visually hidden using the common <a href="https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/">clip pattern</a> which we use on Babylon. This is to reduce false
         positives which erode trust in the test.</li>
@@ -50,8 +50,7 @@
 </ul>
 <h2>Version 0.2 ("Uninhibited gibbon")</h2>
 <ul>
-    <li>New module to highlight empty elements, eg heading and paragraphs, which was a constant bugbear on US marketing site
-    </li>
+    <li>New module to highlight empty elements, eg heading and paragraphs, which was a constant bugbear</li>
     <li>Tweaked img/alt module to ask users to check accuracy of alt text (rather than perhaps falsely-reassure that presence of alt text is actually useful)</li>
 </ul>
 <h2>Version 0.176303987 ("Lachrymose rhinoceros")</h2>
@@ -59,10 +58,10 @@
     <li>Add links to Babylon DNA guidance where applicable</li>
     <li>Split out modules into 'designers'/ content editors and Developers (was 'Experimental')</li>
 </ul>
-<h2>Version 0.1 ("Obstreperous Lemur")</h2>
+<h2>Version 0.1 ("Obstreperous lemur")</h2>
 <ul>
     <li>New module to expose HTML5 landmarks (footer, header etc) and explicitly set ARIA roles (but not those that are implicit, because that's not as useful for diagnosing coder errors)</li>
-    <li>Tweaked name and description module to stop referring to 'screen readers'; added exposure of value attribute on
+    <li>Tweaked name and description module to stop referring to 'screen readers', because that rather over-promises; added exposure of value attribute on
         <code>input type=submit</code> fields (as that is what gets exposed and wasn't being reported). Add value of
         <code>aria-describedby</code> attributes as that is also passed to AT, especially as <a href="https://developer.paciellogroup.com/blog/2014/12/using-aria-describedby-to-provide-helpful-form-hints/">hints/
 			instructions on form fields</a>

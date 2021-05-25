@@ -61,7 +61,8 @@
 <h2>Version 0.1 ("Obstreperous lemur")</h2>
 <ul>
     <li>New module to expose HTML5 landmarks (footer, header etc) and explicitly set ARIA roles (but not those that are implicit, because that's not as useful for diagnosing coder errors)</li>
-    <li>Tweaked name and description module to stop referring to 'screen readers', because that rather over-promises; added exposure of value attribute on
+    <li>change the name of "screenreader wand", which over-promises (screen readers often give other info about form fields, e.g. required). Don't want to suggest that Tota11y replaces testing with Assistive Technologies. added exposure of value attribute
+        on
         <code>input type=submit</code> fields (as that is what gets exposed and wasn't being reported). Add value of
         <code>aria-describedby</code> attributes as that is also passed to AT, especially as <a href="https://developer.paciellogroup.com/blog/2014/12/using-aria-describedby-to-provide-helpful-form-hints/">hints/
 			instructions on form fields</a>

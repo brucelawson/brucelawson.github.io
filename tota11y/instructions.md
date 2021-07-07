@@ -2,7 +2,8 @@
     <style>
 		header p {color:black;}
 		footer p {color:white;}
-		p.view, p.view+ul {color:white;}
+		p.view, p.view+ul li{color:white;}
+		img {border: solid 1px #ccc;}
     </style>
 </head>
 

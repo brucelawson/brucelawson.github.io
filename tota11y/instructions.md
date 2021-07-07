@@ -1,3 +1,10 @@
+<head>
+    <style>
+		header p {color:black;}
+		footer p {color:white;}
+    </style>
+</head>
+
 # Tota11y
 
 To help you do a quick check of a web page for the most common accessibility errors, we have a visual tool called Tota11y. It won't catch every problem, but it will catch the [most common problems](https://webaim.org/projects/million/#wcag) that we find on Babylon sites, and highlights them in your browser window, so you can check pages while you're editing content, before they ever go live.

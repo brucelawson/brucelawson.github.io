@@ -1,5 +1,11 @@
 <head>
     <style>
+	 a.cta {
+            margin: 1.5em auto;
+            font-size: 2em;
+            padding: 5px;
+            border: 3px ridge goldenrod;
+        }
 		header p {color:black;}
 		footer p {color:white;}
 		p.view {display:block!important;}
@@ -14,7 +20,7 @@
 
 To help you do a quick check of a web page for the most common accessibility errors, we have a visual tool called Tota11y. It won't catch every problem, but it will catch the [most common problems](https://webaim.org/projects/million/#wcag) that we find on Babylon sites, and highlights them in your browser window, so you can check pages while you're editing content, before they ever go live.
 
- To install it, plase drag this link to your browser's bookmark bar: <a href=" javascript:(function()%7Bvar tota11y%3Ddocument.createElement(%27SCRIPT%27)%3Btota11y.type%3D%27text/javascript%27%3Btota11y.src%3D%27https://totally.ops.babylontech.co.uk/tota11y.min.js%27%3Bdocument.getElementsByTagName(%27head%27)%5B0%5D.appendChild(tota11y)%3B%7D)()%3B">Tota11y!</a>
+ To install it, please drag this link to your browser's bookmark bar: <a class="cta" href=" javascript:(function()%7Bvar tota11y%3Ddocument.createElement(%27SCRIPT%27)%3Btota11y.type%3D%27text/javascript%27%3Btota11y.src%3D%27https://totally.ops.babylontech.co.uk/tota11y.min.js%27%3Bdocument.getElementsByTagName(%27head%27)%5B0%5D.appendChild(tota11y)%3B%7D)()%3B">Tota11y!</a>
 
 You should now see a button in your bookmark bar:
 

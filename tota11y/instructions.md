@@ -2,7 +2,7 @@
     <style>
 		header p {color:black;}
 		footer p {color:white;}
-		p.view {display:none;}
+		p.view, p.view+ul {color:white;}
     </style>
 </head>
 

@@ -8,7 +8,7 @@ You should now see a button in your bookmark bar:
 
  ![Tota11y bookmark in bookmarks bar](bookmarklet.png)
 
- Clicking this button will summon Tota11y to the bottom left of the webpage you're currently on. You may have to accept cookies or otherwise dismiss any banners that appear on the bottom of the page if they are obscuring the Tota11y icon. 
+ Clicking this button will summon Tota11y to the bottom left of the webpage you're currently on. You may have to accept cookies or otherwise dismiss any banners that appear on the bottom of the page if they are obscuring the Tota11y icon.
 
  ![Tota11y icon on bottom left of the current webpage](totally-small.png)
 
@@ -20,11 +20,11 @@ If the expanded menu is obscuring some information, you can shrink it again by c
 
 The bookmark button injects Tota11y into the current page. If you refresh it, or navigate to another page, you'll need to click the bookmark button again. To remove the Tota11y menu, refresh the current page.
 
- ## Instructions
+## Instructions
 
- The menu is split into two sections. The upper section is mostly applicable  for content editors, and the lower section for 'developers' (i.e., people with control over HTML blocks and form fields). 
+ The menu is split into two sections. The upper section is mostly applicable  for content editors, and the lower section for 'developers' (i.e., people with control over HTML blocks and form fields).
 
- ### Headings
+### Headings
 
  A good heading structure is vital for people using assistive technology such as screen readers. The first heading on a page should be an &lt;h1>, and after that there should be a logical hierarchy, with no heading levels skipped.
 
@@ -42,7 +42,7 @@ On the top right of the error explanation you'll see an icon called the "sniper 
 
 ### Contrast
 
-Insufficient contrast [was reported as a problem](https://websitesetup.org/web-accessibility-checklist/#post-16747:~:text=respondents%20with%20disabilities%20were%20asked%20what%20the%20main%20blocks%20to%20them%20completing%20purchases%20were) by 56% of disabled web users in a 2019 survey. The rules for contrast are relatively complex (it depends on the size of the text, its opacity and so on). Tota11y will check text against its background colour, but **it doesn't analyse pixels**, so isn't able to check text that overlays a gradient, pattern or an image (but we shouldn't really do that, anyway). 
+Insufficient contrast [was reported as a problem](https://websitesetup.org/web-accessibility-checklist/#post-16747:~:text=respondents%20with%20disabilities%20were%20asked%20what%20the%20main%20blocks%20to%20them%20completing%20purchases%20were) by 56% of disabled web users in a 2019 survey. The rules for contrast are relatively complex (it depends on the size of the text, its opacity and so on). Tota11y will check text against its background colour, but **it doesn't analyse pixels**, so isn't able to check text that overlays a gradient, pattern or an image (but we shouldn't really do that, anyway).
 
 Choosing the Contrast option will overlay green or red indicators. A green overlay shows adequate contrast (and its computed ratio);
 
@@ -56,11 +56,11 @@ Areas with inadequate contrast are highlighted in red. The Info Panel will sugge
 
 [77% of screen reader users](https://websitesetup.org/web-accessibility-checklist/#post-16747:~:text=respondents%20with%20disabilities%20were%20asked%20what%20the%20main%20blocks%20to%20them%20completing%20purchases%20were) reported poor link text as a problem for them. It's important that the same text doesn't link to different places, and that link text gives an idea of where the link will take them, as keyboard users can tab from link to link—if each link reads "click here" or "read more", it's not helpful.
 
-This menu option checks link text against a dictionary of commonly used phrases such as these. In the case of "About", used once on each Babylon page, our judgement is that this is acceptable. 
+This menu option checks link text against a dictionary of commonly used phrases such as these. In the case of "About", used once on each Babylon page, our judgement is that this is acceptable.
 
 ### Image-alt text
 
-"A picture is worth a thousand words" goes the old saying. But for someone with low vision, or on a very slow device, that picture may not be visible, so it needs **alternate text** to describe it. 
+"A picture is worth a thousand words" goes the old saying. But for someone with low vision, or on a very slow device, that picture may not be visible, so it needs **alternate text** to describe it.
 
 ```<img src="weasel.png" alt="an angry weasel dancing flamenco">```
 
@@ -111,24 +111,16 @@ It also exposes authored ARIA roles, so you can check whether a role is overridi
 
 ![landmarks and roles outlined and exposed](landmarks.png)
 
-#### Title attributes 
+#### Title attributes
 
 Nothing on Babylon sites should have a ```title``` attribute, due to its historical mis-use to placate the false idols of Search Engine Optimists (see [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/). The only exception  for ```<iframe>```, where it's required. This module exposes titular naughtiness; red for errors which **must** be corrected, amber for superfluous titles which should be removed when possible.
 
 ![an erroneously missing title, and a superfluous title](title.png)
 
-#### Accessible name + description 
+#### Accessible name + description
 
 This module allows developers to hover over form input fields and see authored information that is passed to assistive technology. (Other information, such as whether the field is required, disabled, checked, or selected may also be communicated to the user, depending on the screen reader).
 
 The primary use of this module is to verify that every input field (whether textual, a radio button or a checkbox) gives enough information so someone who can't see the label is able to fill it in. In the example below, the label **and the instructions** are passed to a user who tabs into th form field (by being part of the ```<label>``` element or associated with an ```aria-describedby``` attribute, for example.)
 
 ![info panel reveals that the form's label and associated information are associated programmatically to the input being hovered](last.png)
-
-
-
-
-
-
-
-

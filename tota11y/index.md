@@ -8,7 +8,7 @@
         }
 		header p {color:black;}
 		footer p {color:white;}
-		header a {color:white;}
+		header li {color:white!important;}
     </style>
 </head>
 

@@ -8,7 +8,8 @@
         }
 		header p {color:black;}
 		footer p {color:white;}
-		header li {color:white!important;}
+		p.view {display:block!important;}
+		header ul {display:none!important;}
     </style>
 </head>
 

@@ -142,3 +142,5 @@ This module allows developers to hover over form input fields and see authored i
 The primary use of this module is to verify that every input field (whether textual, a radio button or a checkbox) gives enough information so someone who can't see the label is able to fill it in. In the example below, the label **and the instructions** are passed to a user who tabs into th form field (by being part of the ```<label>``` element or associated with an ```aria-describedby``` attribute, for example.)
 
 ![info panel reveals that the form's label and associated information are associated programmatically to the input being hovered](last.png)
+
+Hope it's useful! Here's the [license information and version history](/tota11y/).

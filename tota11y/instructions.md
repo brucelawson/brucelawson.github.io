@@ -2,8 +2,9 @@
     <style>
 		header p {color:black;}
 		footer p {color:white;}
-		p.view {color:black;
+		p.view {
 		display:block!important;}
+		p.view a {color:black!important; text-decoration:underline;}
 		header ul {display:none!important;}
 		img {border: solid 1px #ccc;}
     </style>

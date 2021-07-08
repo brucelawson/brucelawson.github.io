@@ -141,7 +141,7 @@ Nothing on Babylon sites should have a ```title``` attribute, due to its histori
 
 This module allows developers to hover over form input fields and see authored information that is passed to assistive technology. (Other information, such as whether the field is required, disabled, checked, or selected may also be communicated to the user, depending on the screen reader).
 
-The primary use of this module is to verify that every input field (whether textual, a radio button or a checkbox) gives enough information so someone who can't see the label is able to fill it in. In the example below, the label **and the instructions** are passed to a user who tabs into th form field (by being part of the ```<label>``` element or associated with an ```aria-describedby``` attribute, for example.)
+The primary use of this module is to verify that every input field (whether textual, a radio button or a checkbox) gives enough information so someone who can't see the label is able to fill it in. In the example below, a blind user navigating a page with the keyboard uses the <kbd>tab</kbd> key to move between form fields, and bypassing the visible labels. The label **and the instructions** are passed to a user, because they are part of the ```<label>``` element or associated with an ```aria-describedby``` attribute, for example.)
 
 ![info panel reveals that the form's label and associated information are associated programmatically to the input being hovered](last.png)
 

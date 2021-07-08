@@ -84,7 +84,9 @@ This menu option checks link text against a dictionary of commonly used phrases 
 
 (Note that we don't prefix it with "image of" or "picture of" because assistive technology will do that automatically.)
 
-Images that are purely decorative or which repeat information already presented in textual format (for example, a pie chart that reinforces the text of an article), the alt text can be blank.
+Images that are purely decorative or which repeat information already presented in textual format (for example, a pie chart that reinforces the text of an article), the alt text can be blank (opening and closing quotes without content):
+
+```<img src="purely-decorative.png" alt="">```
 
 In the case of images which are links, for example, the Babylon logo in the website header which links to the home page, the alt text should describe the destination, not the image:
 
@@ -98,7 +100,7 @@ Any image it finds with blank alt text will be marked as "decorative". It's up t
 
 ![amber-coloured overlay reading "This image is decorative"](decorative.png)
 
-It can't verify that any text it finds is useful, but will ask you to check that by hovering over the overlay. Here's an example of bad alternate text:
+It can't verify that any text it finds is useful, but will ask you to check that by hovering over the yellow warning. Here's an example of bad alternate text:
 
 ![amber-coloured overlay showing bad alt text](bad-alt.png)
 
@@ -106,7 +108,7 @@ This text doesn't describe the image in a useful way, and should be rewritten be
 
 ### Empty Elements
 
-When we remediated the marketing sites in 2020, we noticed lots of empty headings, or multiple ```<br>``` elements, presumably for spacing. These can be announced to assistive technology users, but with no further information (because they're blank), amd so will be confusing and give a worse experience
+When we remediated the marketing sites in 2020, we noticed lots of empty headings, or multiple ```<br>``` elements, presumably for spacing. Empty headings might be announced to assistive technology users (depending on the screen reader and user settings) but offer no further information (because they're blank), amd so will be confusing and give a worse experience.
 
 Multiple ```<br>``` tags are shown in yellow as a warning, as they won't hurt user experience (but which may indicate that the component needs some designer/ developer love):
 

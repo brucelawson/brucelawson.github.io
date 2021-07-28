@@ -92,7 +92,7 @@ In the case of images which are links, for example, the Babylon logo in the webs
 
 ```<img src="logo.png" alt="Babylon Health homepage">```
 
-The image-alt text option of Tota11y will check that each image has alternate text. Images without alt text will be highlighted in red, indicating they must be corrected before the page is made live. (This example is not from Babylon as I couldn't find one, luckily.)
+The image-alt text option of Tota11y will check that each image has alternate text. Images without alt text will be highlighted in red, indicating they must be corrected before the page is made live. (This example is not from Babylon as I couldn't find one, luckily. The developer should add ```alt="Oily chancer in a suit attempting to catch flies in his lying mouth"```)
 
 ![red overlay reading "Image is missing alt text"](no-alt.png)
 
@@ -108,7 +108,7 @@ This text doesn't describe the image in a useful way, and should be rewritten be
 
 ### Empty Elements
 
-When we remediated the marketing sites in 2020, we noticed lots of empty headings, or multiple ```<br>``` elements, presumably for spacing. Empty headings might be announced to assistive technology users (depending on the screen reader and user settings) but offer no further information (because they're blank), amd so will be confusing and give a worse experience.
+When we remediated the marketing sites in 2020, we noticed lots of empty headings, or multiple ```<br>``` elements, presumably for spacing. Empty headings might be announced to assistive technology users (depending on the screen reader and user settings) but offer no further information (because they're blank), and so will be confusing and give a worse experience.
 
 Multiple ```<br>``` tags are shown in yellow as a warning, as they won't hurt user experience (but which may indicate that the component needs some designer/ developer love):
 

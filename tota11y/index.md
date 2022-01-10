@@ -22,7 +22,9 @@
 <a class=cta href="javascript:(function()%7Bvar tota11y%3Ddocument.createElement(%27SCRIPT%27)%3Btota11y.type%3D%27text/javascript%27%3Btota11y.src%3D%27https://totally.ops.babylontech.co.uk/tota11y.min.js%27%3Bdocument.getElementsByTagName(%27head%27)%5B0%5D.appendChild(tota11y)%3B%7D)()%3B">Tota11y</a>
 <p><a href="https://github.com/babylonhealth/Tota11y/">See code on Github</a>.</p>
 <p>(Here's the bookmarklet for <b>testing the <a href="javascript:(function()%7Bvar tota11y%3Ddocument.createElement(%27SCRIPT%27)%3Btota11y.type%3D%27text/javascript%27%3Btota11y.src%3D%27https://totally-dev.ops.babylontech.co.uk/tota11y.min.js%27%3Bdocument.getElementsByTagName(%27head%27)%5B0%5D.appendChild(tota11y)%3B%7D)()%3B">dev version</a></b>)</p>
-<h2>Version 1.1 ("Rusty trombone")</h2>
+<h2>Version 1.1.0 ("Recalcitrant piccolo")</h2>
+<p>A <a href="https://github.com/babylonhealth/Tota11y/pull/6">PR from an external org</a>! This uncomments out the <b>Labels</b> plugin that I had commented out. (Didn't hurt to restore it as they needed it). I'd commented it out because I was going to make it more intelligent, by checking if an input had an aria-label or a (working) aria-labelledby IDref before "failing" it for not having an associated &lt;label for=""&gt;. Will do it, one day. Or feel free to do it!</p>
+<h2>Version 1.0.1 ("Rusty trombone")</h2>
 <p>New naming convention replaces <i>adjective+animal I've never eaten</i>. Version 1+ are <i>adjective+musical instrument I've never tried to play</i>.</p>
 
 <ul>

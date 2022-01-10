@@ -26,7 +26,7 @@
 <p>A <a href="https://github.com/babylonhealth/Tota11y/pull/6">PR from an external org</a>! This uncomments out the <b>Labels</b> plugin that I had commented out. (Didn't hurt to restore it as they needed it). I'd commented it out because I was going to make it more intelligent, by checking if an input had an aria-label or a (working) aria-labelledby IDref before "failing" it for not having an associated &lt;label for=""&gt;. Will do it, one day. Or feel free to do it!</p>
 <h2>Version 1.0.1 ("Rusty trombone")</h2>
 <p>New naming convention replaces <i>adjective+animal I've never eaten</i>. Version 1+ are <i>adjective+musical instrument I've never tried to play</i>.</p>
-
+<p>Bug fixes:</p>
 <ul>
     <li>Tweaked CSS to never transform text style. (whitehouse.gov was setting all labels to be uppercase)</li>
     <li>Main overlay now has scroll:auto</li>

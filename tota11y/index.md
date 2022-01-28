@@ -24,7 +24,7 @@
 <p>(Here's the bookmarklet for <b>testing the <a href="javascript:(function()%7Bvar tota11y%3Ddocument.createElement(%27SCRIPT%27)%3Btota11y.type%3D%27text/javascript%27%3Btota11y.src%3D%27https://totally-dev.ops.babylontech.co.uk/tota11y.min.js%27%3Bdocument.getElementsByTagName(%27head%27)%5B0%5D.appendChild(tota11y)%3B%7D)()%3B">dev version</a></b>)</p>
 <h2>Version 1.3.0 ("Saxon Violins")</h2>
 <p>Adds Focus order plugin exposes elements that naturally take focus, or have a tabindex applied to make them focussable. Basically, if you have a pseudo-button or similar control made out of divs and JS and it is not highlighted, you have a problem.</p> <p>It will guess at the tab order (not guaranteed due to <a href="https://html.spec.whatwg.org/multipage/interaction.html#attr-tabindex">under-specification of tabindex</a>, different browser behaviours, and also clickable things in iframes). Verify any weirdness by simply advancing through the page with the 'tab' key.</p>
-Thanks to flame-haired FOSS Adonis <a href="https://kryogenix.org/">Stuart Langridge</a> for help with some jQuery.</p>
+<p>Thanks to flame-haired FOSS Adonis <a href="https://kryogenix.org/">Stuart Langridge</a> for help with some jQuery.</p>
 <h2>Version 1.2.0 ("Lame Duckcaller")</h2>
 <p>Version 1.2.0 adds Black Duck security testing.</p>
 <h2>Version 1.1.0 ("Recalcitrant piccolo")</h2>

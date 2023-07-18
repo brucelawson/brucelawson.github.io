@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>Details test</title>
+<style>
+	label {display:block; margin-bottom:1em;}
+	input {display:block;}
+	details {margin-bottom:1em; border:1px dotted pink}
+	#a {display:table-row;}
+	#a label, #a summary {display:table-cell;}
+</style>
+<form>
+	<label>Name? <input></label>
+	<label>Email? <input type=email></label>
+	<div id="a">
+<label>Token code?<input ></label>
+<details>
+<summary aria-label="information">ⓘ</summary>
+<p>A token's like a lovely thing.</p>
+<p>Wanna know <a target="_blank" href="https://www.google/com/">some more</a>?</p>
+</details>
+</div>
+	<label>Shoe size? <input></label>
+
+
+
+<button type=submit>Get in!</button>
+</form>

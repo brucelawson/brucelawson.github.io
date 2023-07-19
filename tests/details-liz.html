@@ -40,12 +40,12 @@ Ut egestas lectus quam, et ultricies erat ullamcorper a. Donec non elit interdum
 <form>
 	<label>Name? <input></label>
 	<label>Email? <input type=email></label>
-	<div id="a">
-<label>Token code?<input ></label>
+	<div id="a"> <!-- this is to style the i next to the field only -->
+<label>Token code?<input aria-describedby="b"></label>
 <details>
 <summary aria-label="information">ⓘ</summary>
-<p>A token's like a lovely thing.</p>
-<p>Wanna know <a target="_blank" href="https://www.google/com/">some more</a>?</p>
+<p id="b">A token's like a lovely thing.</p>
+<p>Wanna know <a target="_blank" href="https://www.google.com/">some more</a>?</p>
 </details>
 </div>
 	<label>Shoe size? <input></label>
@@ -54,6 +54,14 @@ Ut egestas lectus quam, et ultricies erat ullamcorper a. Donec non elit interdum
 
 <button type=submit>Get in!</button>
 </form>
+<script>
+	// progressive enhance to close details if user clicks outside it 
+	const dt=document.querySelector("details");
+document.documentElement.addEventListener("click", e=>{
+    if (dt.contains(e.target)) return;
+    if (dt.open) dt.open = false; 
+})
+</script>
 <h2>A magic spell. Do not speak this out loud.</h2>
 <p>
 Nam a ligula congue, fermentum sapien cursus, dictum orci. Nullam justo leo, dapibus ut tempus nec, pharetra sed mi. Praesent vel blandit libero. Praesent aliquam augue rhoncus, efficitur nunc ac, placerat nisi. Donec pretium, justo et sollicitudin volutpat, sem tortor venenatis ipsum, vel scelerisque felis magna at tortor. In rhoncus, mauris nec pretium maximus, lorem orci tristique odio, eu aliquam lectus mi sit amet felis. Vivamus porttitor aliquet convallis.

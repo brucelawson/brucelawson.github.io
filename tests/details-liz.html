@@ -8,7 +8,10 @@
 	#a {display:table-row;}
 	#a label, #a summary {display:table-cell;}
 	details[open] {background: yellow; border: 1px solid black;}
-	 summary {cursor: pointer; list-style-type:square;}
+summary {cursor:pointer;}
+summary::marker, /* Latest Chrome, Edge, Firefox */ 
+ summary::-webkit-details-marker /* Safari */ {
+  visibility:hidden;}
 </style>
 <h1>Details test</h1>
 <h2>Some crap to test scrolling</h2>
